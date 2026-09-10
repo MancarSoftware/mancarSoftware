@@ -5,7 +5,7 @@
 
 <p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>
 
-Mancar Software builds the places where customers meet your business and the tools your team relies on behind the scenes. Our focus is practical: clear digital experiences, less fragmented work, and software that can grow with the business.
+A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.
 
 [Capabilities](#capabilities) &nbsp; / &nbsp; [Selected work](#selected-work) &nbsp; / &nbsp; [Working together](#working-together) &nbsp; / &nbsp; [Let’s talk](https://www.instagram.com/mancarsoftware/)
 
@@ -61,6 +61,8 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 [Explore OdontoCare →](https://github.com/MancarSoftware/odonto_care)
 
+[Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)
+
 <a href="https://github.com/MancarSoftware/vetCarePro">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/project-vetcare-mobile.svg" />
@@ -85,12 +87,21 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 
 [Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
 
+[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)
+
 <a href="https://github.com/MancarSoftware/beauty-business-template">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/project-beauty-mobile.svg" />
   <img src="assets/project-beauty.svg" width="100%" alt="Beauty Business — explore the repository." />
 </picture>
 </a>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/beauty-business-preview-mobile.png" />
+  <img src="assets/beauty-business-preview.png" width="100%" alt="Actual rendered BarberPro template: dark barbershop imagery, service introduction, and yellow appointment buttons. Demonstration with sample business content." />
+</picture>
+
+<sub>Actual interface rendered from the Beauty Business repository. BarberPro is a template demonstration; business details, ratings, and offers shown are sample content.</sub>
 
 Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.
 
@@ -108,6 +119,8 @@ A reusable website foundation with shared components and centralized business co
 </details>
 
 [Explore Beauty Business →](https://github.com/MancarSoftware/beauty-business-template)
+
+[Inspect the example’s content structure](https://github.com/MancarSoftware/beauty-business-template/blob/5ae0e3bd3186fa6aee8a703a0cd4b6e359537018/src/data/barberiaData.js)
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.svg" />
@@ -137,6 +150,14 @@ Hosting, ongoing maintenance, future features, and support arrangements belong i
 
 </details>
 
+## Decisions that shape the product
+
+**Connectivity is a requirement.** A public website and a clinic's internal system have different needs. We consider where people work, how they connect, and what must remain available when the internet is down.
+
+**Recovery belongs in the plan.** Installation, backups, updates, and operating instructions affect the usefulness of a business system as much as its screens. The clinical project guides above make these concerns concrete.
+
+**Design continues after the first screen.** Navigation, validation, empty states, and feedback deserve the same attention as the opening impression. The aim is a product people can understand and keep using.
+
 ## Our toolkit
 
 A focused ecosystem reflected in the projects above. We choose tools around the product’s needs, deployment environment, and long-term maintenance.
@@ -144,6 +165,36 @@ A focused ecosystem reflected in the projects above. We choose tools around the 
 **Interface** &nbsp; React · TypeScript · JavaScript · Tailwind CSS<br>
 **Application** &nbsp; Node.js · NestJS · Electron<br>
 **Foundation** &nbsp; PostgreSQL · Prisma · Docker · Git
+
+## Before we start
+
+<details>
+<summary>Do I need a complete specification?</summary>
+
+Start with the problem, the people affected, and an example of how the work happens today. Screenshots, spreadsheets, or a description of your existing process can help shape the first scope.
+
+</details>
+
+<details>
+<summary>Can the software work with our existing tools?</summary>
+
+We first review the available APIs, data formats, access permissions, and workflow. Integration and data migration need to be scoped around what those systems actually support.
+
+</details>
+
+<details>
+<summary>What determines the timeline and budget?</summary>
+
+The critical workflows, design scope, integrations, data migration, and deployment environment. Sharing a target date and budget range helps define a realistic first release and what can follow later.
+
+</details>
+
+<details>
+<summary>What happens after delivery?</summary>
+
+Maintenance, hosting, updates, and support responsibilities are defined in the project scope. They should be clear before development starts, alongside the documentation and handover requirements.
+
+</details>
 
 <a href="https://www.instagram.com/mancarsoftware/">
 <picture>

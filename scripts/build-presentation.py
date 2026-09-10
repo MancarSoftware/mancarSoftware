@@ -42,7 +42,8 @@ for mobile in (False,True):
 
     projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE'),('beauty','03','Beauty Business','WEBSITES FOR SERVICE BUSINESSES','Make the first impression count.','BARBERSHOPS / SALONS / SPAS')]
     for slug,num,name,category,tag,meta in projects:
-        p=Panel(w,280 if mobile else 270)
+        clinical = slug != 'beauty'
+        p=Panel(w,(436 if mobile else 386) if clinical else (280 if mobile else 270))
         p.line(0,0,0,p.h,LIME,5)
         p.text(32,28,category,17,LIME,True)
         p.text(30,76,name,48 if mobile else 58,bold=True)
@@ -54,6 +55,17 @@ for mobile in (False,True):
             # Abstract structural motif, deliberately not a product screenshot.
             for j in range(3):
                 p.line(770+j*35,174-j*30,875+j*35,174-j*30,LIME if j==1 else LINE,3)
+        if clinical:
+            p.text(32,278,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
+            steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
+            if mobile:
+                p.text(32,316,steps[0]+'  /  '+steps[1],24,bold=True)
+                p.text(32,358,steps[2],24,bold=True)
+            else:
+                for j,step in enumerate(steps):
+                    x=32+j*340
+                    p.text(x,320,step,24,bold=True)
+                    if j<2: p.text(x+295,318,'→',26,LIME)
         p.save('project-'+slug+suffix)
 
     p=Panel(w,400 if mobile else 260)
@@ -76,7 +88,7 @@ def picture(name,alt):
 hero=(ROOT/'profile/README.md').read_text(encoding='utf-8').split('</picture>',1)[0]+'</picture>'
 parts=[hero,
     '<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>',
-    'Mancar Software builds the places where customers meet your business and the tools your team relies on behind the scenes. Our focus is practical: clear digital experiences, less fragmented work, and software that can grow with the business.',
+    'A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.',
     '[Capabilities](#capabilities) &nbsp; / &nbsp; [Selected work](#selected-work) &nbsp; / &nbsp; [Working together](#working-together) &nbsp; / &nbsp; [Let’s talk](https://www.instagram.com/mancarsoftware/)',
     picture('mancar-capabilities','What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases.'),
     '''## Capabilities
@@ -138,11 +150,24 @@ A reusable website foundation with shared components and centralized business co
 
 </details>'''
 }
+project_evidence = {
+    'odontocare': '[Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)',
+    'vetcare': '[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)',
+    'beauty': '[Inspect the example’s content structure](https://github.com/MancarSoftware/beauty-business-template/blob/5ae0e3bd3186fa6aee8a703a0cd4b6e359537018/src/data/barberiaData.js)'
+}
 for slug,name,url,description in [
     ('odontocare','OdontoCare','odonto_care','Patient records, appointments, treatments, and payments in a Windows application that works offline.'),
     ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.'),
     ('beauty','Beauty Business','beauty-business-template','Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.')]:
-    parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' — explore the repository.')+'\n</a>',description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')']
+    parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' — explore the repository.')+'\n</a>']
+    if slug == 'beauty':
+        parts += ['''<picture>
+  <source media="(max-width: 600px)" srcset="assets/beauty-business-preview-mobile.png" />
+  <img src="assets/beauty-business-preview.png" width="100%" alt="Actual rendered BarberPro template: dark barbershop imagery, service introduction, and yellow appointment buttons. Demonstration with sample business content." />
+</picture>
+
+<sub>Actual interface rendered from the Beauty Business repository. BarberPro is a template demonstration; business details, ratings, and offers shown are sample content.</sub>''']
+    parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
 parts += [
     picture('mancar-approach','How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve.'),
     '''## Working together
@@ -167,9 +192,45 @@ parts += [
 Hosting, ongoing maintenance, future features, and support arrangements belong in the project scope so expectations are clear from the beginning.
 
 </details>''',
+    '''## Decisions that shape the product
+
+**Connectivity is a requirement.** A public website and a clinic's internal system have different needs. We consider where people work, how they connect, and what must remain available when the internet is down.
+
+**Recovery belongs in the plan.** Installation, backups, updates, and operating instructions affect the usefulness of a business system as much as its screens. The clinical project guides above make these concerns concrete.
+
+**Design continues after the first screen.** Navigation, validation, empty states, and feedback deserve the same attention as the opening impression. The aim is a product people can understand and keep using.''',
     '## Our toolkit',
     'A focused ecosystem reflected in the projects above. We choose tools around the product’s needs, deployment environment, and long-term maintenance.',
     '**Interface** &nbsp; React · TypeScript · JavaScript · Tailwind CSS<br>\n**Application** &nbsp; Node.js · NestJS · Electron<br>\n**Foundation** &nbsp; PostgreSQL · Prisma · Docker · Git',
+    '''## Before we start
+
+<details>
+<summary>Do I need a complete specification?</summary>
+
+Start with the problem, the people affected, and an example of how the work happens today. Screenshots, spreadsheets, or a description of your existing process can help shape the first scope.
+
+</details>
+
+<details>
+<summary>Can the software work with our existing tools?</summary>
+
+We first review the available APIs, data formats, access permissions, and workflow. Integration and data migration need to be scoped around what those systems actually support.
+
+</details>
+
+<details>
+<summary>What determines the timeline and budget?</summary>
+
+The critical workflows, design scope, integrations, data migration, and deployment environment. Sharing a target date and budget range helps define a realistic first release and what can follow later.
+
+</details>
+
+<details>
+<summary>What happens after delivery?</summary>
+
+Maintenance, hosting, updates, and support responsibilities are defined in the project scope. They should be clear before development starts, alongside the documentation and handover requirements.
+
+</details>''',
     '<a href="https://www.instagram.com/mancarsoftware/">\n'+picture('mancar-contact','What could work better? Talk to Mancar Software about your next project on Instagram.')+'\n</a>',
     '''## Start with the problem
 

@@ -1,0 +1,165 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mancar Software — local README preview</title><style>body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1012px;margin:auto;padding:32px}img{max-width:100%;height:auto}a{color:#79b8ff;text-decoration:none}a:hover{text-decoration:underline}p{margin:0 0 16px}h2{font-size:24px;border-bottom:1px solid #30363d;padding-bottom:8px;margin:32px 0 16px}details{border-top:1px solid #30363d;padding:12px 0}summary{cursor:pointer}details[open] summary{margin-bottom:12px}sub{font-size:12px}li{margin:8px 0}a:focus-visible,summary:focus-visible{outline:2px solid #b4e878;outline-offset:4px}@media(max-width:600px){main{padding:16px}body{font-size:16px}}</style><main><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="../profile/assets/mancar-header-static.png" />
+  <img src="../profile/assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
+</picture>
+
+<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>
+
+<p>A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.</p>
+<p><a href="#capabilities">Capabilities</a> &nbsp; / &nbsp; <a href="#selected-work">Selected work</a> &nbsp; / &nbsp; <a href="#working-together">Working together</a> &nbsp; / &nbsp; <a href="https://www.instagram.com/mancarsoftware/">Let’s talk</a></p>
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/mancar-capabilities-mobile.svg" />
+  <img src="../profile/assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
+</picture>
+
+<h2 id="capabilities">Capabilities</h2>
+<p><strong>Build your digital presence.</strong> Corporate websites, landing pages, and catalogs that explain your services, express your identity, and guide visitors toward an inquiry. Responsive layouts and clear content help people find what matters on any screen.</p>
+<p><strong>Bring your operations together.</strong> Business applications for records, appointments, inventory, payments, and reporting. We shape the workflow around the people doing the work, with roles and access appropriate to each responsibility.</p>
+<p><strong>Create a product around a specific need.</strong> Custom web applications and desktop software that connect interfaces, business logic, and data. The scope can include authentication, APIs, and integrations with existing tools.</p>
+<details>
+<summary>Where the software runs</summary>
+
+<ul>
+<li><strong>Web:</strong> for products and experiences accessed through a browser.</li>
+<li><strong>Local desktop:</strong> for work on a dedicated computer, including workflows that need to operate offline.</li>
+<li><strong>Local network:</strong> for teams sharing a system across computers at the same location.</li>
+</ul>
+<p>We choose the setup around connectivity, access, data handling, and maintenance needs. Our featured clinical products demonstrate local and LAN approaches; deployment requirements are defined for each project.</p>
+</details>
+
+<h2 id="selected-work">Selected work</h2>
+<p>A closer look at our work for dental practices, veterinary clinics, and local service businesses. Explore the repositories for implementation details and setup documentation.</p>
+<a href="https://github.com/MancarSoftware/odonto_care">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-odontocare-mobile.svg" />
+  <img src="../profile/assets/project-odontocare.svg" width="100%" alt="OdontoCare — explore the repository." />
+</picture>
+</a>
+
+<p>Patient records, appointments, treatments, and payments in a Windows application that works offline.</p>
+<p><strong>For:</strong> dental clinics managing clinical and administrative work in one place.</p>
+<p><strong>Inside the product:</strong> patient histories, appointments, odontograms, treatments, payments, inventory, and reporting. Its documented workflows also cover roles, audit records, backups, and restoration.</p>
+<p><strong>Built with:</strong> Electron, React, TypeScript, NestJS, PostgreSQL, and Prisma.</p>
+<details>
+<summary>Deployment and engineering details</summary>
+
+<p>Designed as an installable Windows application with local PostgreSQL storage. The production installer manages the application services so the clinic can work offline. The repository documents verification for critical workflows, packaging, backup restoration, and installation.</p>
+</details>
+
+<p><a href="https://github.com/MancarSoftware/odonto_care">Explore OdontoCare →</a></p>
+<p><a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md">Read the user guide</a> · <a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md">Review the release checklist</a></p>
+<a href="https://github.com/MancarSoftware/vetCarePro">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-vetcare-mobile.svg" />
+  <img src="../profile/assets/project-vetcare.svg" width="100%" alt="VetCare Pro — explore the repository." />
+</picture>
+</a>
+
+<p>Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.</p>
+<p><strong>For:</strong> veterinary teams working from one computer or several computers in the same clinic.</p>
+<p><strong>Inside the product:</strong> pet records, clinical histories, appointments, vaccines, treatments, images, and payments. Local network operation lets reception, veterinary staff, and the payment desk work with the shared system.</p>
+<p><strong>Built with:</strong> Electron, Node.js, and PostgreSQL.</p>
+<details>
+<summary>Deployment and engineering details</summary>
+
+<p>Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data; the others connect over the clinic&#39;s network. Internet access is not required for this local workflow. The repository includes installation, network configuration, and backup guidance.</p>
+</details>
+
+<p><a href="https://github.com/MancarSoftware/vetCarePro">Explore VetCare Pro →</a></p>
+<p><a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md">Review the LAN test plan</a> · <a href="https://github.com/MancarSoftware/vetCarePro#readme">Read the setup guide</a></p>
+<a href="https://github.com/MancarSoftware/beauty-business-template">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-beauty-mobile.svg" />
+  <img src="../profile/assets/project-beauty.svg" width="100%" alt="Beauty Business — explore the repository." />
+</picture>
+</a>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/beauty-business-preview-mobile.png" />
+  <img src="../profile/assets/beauty-business-preview.png" width="100%" alt="Actual rendered BarberPro template: dark barbershop imagery, service introduction, and yellow appointment buttons. Demonstration with sample business content." />
+</picture>
+
+<p><sub>Actual interface rendered from the Beauty Business repository. BarberPro is a template demonstration; business details, ratings, and offers shown are sample content.</sub></p>
+<p>Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.</p>
+<p><strong>For:</strong> barbershops, salons, spas, and beauty businesses presenting their services online.</p>
+<p><strong>Inside the project:</strong> service listings, galleries, packages, and contact sections. Content and business data are organized so the website can be adapted to a different service business without rewriting its interface.</p>
+<p><strong>Built with:</strong> React, JavaScript, Vite, and Tailwind CSS.</p>
+<details>
+<summary>Design and implementation details</summary>
+
+<p>A reusable website foundation with shared components and centralized business content. The project separates presentation from business-specific data, making it easier to change the offer, imagery, and contact information together.</p>
+</details>
+
+<p><a href="https://github.com/MancarSoftware/beauty-business-template">Explore Beauty Business →</a></p>
+<p><a href="https://github.com/MancarSoftware/beauty-business-template/blob/5ae0e3bd3186fa6aee8a703a0cd4b6e359537018/src/data/barberiaData.js">Inspect the example’s content structure</a></p>
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/mancar-approach-mobile.svg" />
+  <img src="../profile/assets/mancar-approach.svg" width="100%" alt="How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve." />
+</picture>
+
+<h2 id="working-together">Working together</h2>
+<p><strong>01 / Define the right scope.</strong> Start with the business goal, the users, and the current workflow. Identify the essential features, constraints, integrations, and what a successful first release needs to achieve.</p>
+<p><strong>02 / Make the experience concrete.</strong> Organize the information and map the important user journeys. Establish a visual direction and review the key screens before expanding the implementation.</p>
+<p><strong>03 / Build in useful increments.</strong> Develop around complete workflows, with clear responsibilities in the code and feedback as the product takes shape. Add complexity when the requirements justify it.</p>
+<p><strong>04 / Validate and prepare delivery.</strong> Check the critical paths, permissions, error handling, and deployment setup. Define the installation and operating documentation needed for the agreed environment.</p>
+<details>
+<summary>What we plan for beyond the first release</summary>
+
+<ul>
+<li><strong>Maintainability:</strong> readable code, clear boundaries, and documented setup.</li>
+<li><strong>Usability:</strong> accessible interaction, useful feedback, and recovery from errors.</li>
+<li><strong>Data protection:</strong> input validation, appropriate access controls, and backup planning where relevant.</li>
+<li><strong>Performance:</strong> attention to real loading, rendering, and data-access bottlenecks.</li>
+<li><strong>Handover:</strong> installation, configuration, and operating instructions appropriate to the product.</li>
+</ul>
+<p>Hosting, ongoing maintenance, future features, and support arrangements belong in the project scope so expectations are clear from the beginning.</p>
+</details>
+
+<h2 id="decisions-that-shape-the-product">Decisions that shape the product</h2>
+<p><strong>Connectivity is a requirement.</strong> A public website and a clinic&#39;s internal system have different needs. We consider where people work, how they connect, and what must remain available when the internet is down.</p>
+<p><strong>Recovery belongs in the plan.</strong> Installation, backups, updates, and operating instructions affect the usefulness of a business system as much as its screens. The clinical project guides above make these concerns concrete.</p>
+<p><strong>Design continues after the first screen.</strong> Navigation, validation, empty states, and feedback deserve the same attention as the opening impression. The aim is a product people can understand and keep using.</p>
+<h2 id="our-toolkit">Our toolkit</h2>
+<p>A focused ecosystem reflected in the projects above. We choose tools around the product’s needs, deployment environment, and long-term maintenance.</p>
+<p><strong>Interface</strong> &nbsp; React · TypeScript · JavaScript · Tailwind CSS<br>
+<strong>Application</strong> &nbsp; Node.js · NestJS · Electron<br>
+<strong>Foundation</strong> &nbsp; PostgreSQL · Prisma · Docker · Git</p>
+<h2 id="before-we-start">Before we start</h2>
+<details>
+<summary>Do I need a complete specification?</summary>
+
+<p>Start with the problem, the people affected, and an example of how the work happens today. Screenshots, spreadsheets, or a description of your existing process can help shape the first scope.</p>
+</details>
+
+<details>
+<summary>Can the software work with our existing tools?</summary>
+
+<p>We first review the available APIs, data formats, access permissions, and workflow. Integration and data migration need to be scoped around what those systems actually support.</p>
+</details>
+
+<details>
+<summary>What determines the timeline and budget?</summary>
+
+<p>The critical workflows, design scope, integrations, data migration, and deployment environment. Sharing a target date and budget range helps define a realistic first release and what can follow later.</p>
+</details>
+
+<details>
+<summary>What happens after delivery?</summary>
+
+<p>Maintenance, hosting, updates, and support responsibilities are defined in the project scope. They should be clear before development starts, alongside the documentation and handover requirements.</p>
+</details>
+
+<a href="https://www.instagram.com/mancarsoftware/">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/mancar-contact-mobile.svg" />
+  <img src="../profile/assets/mancar-contact.svg" width="100%" alt="What could work better? Talk to Mancar Software about your next project on Instagram." />
+</picture>
+</a>
+
+<h2 id="start-with-the-problem">Start with the problem</h2>
+<p>Tell us what your business does, who will use the software, and what is difficult today. A rough idea is enough to start the conversation.</p>
+<p>Helpful details include the features you have in mind, existing tools or data, whether the product needs to work locally or online, and your target timeline and budget range.</p>
+<p><strong>For developers and collaborators:</strong> explore the repositories for stack choices, setup instructions, and implementation details. For a collaboration proposal, introduce your area of expertise and the project you would like to discuss.</p>
+<p><a href="https://www.instagram.com/mancarsoftware/">Discuss a project on Instagram →</a> &nbsp; / &nbsp; <a href="https://github.com/MancarSoftware?tab=repositories">Browse our repositories</a></p>
+<p><sub>MANCAR SOFTWARE · Designed for people. Engineered for business.</sub></p>
+</main></html>

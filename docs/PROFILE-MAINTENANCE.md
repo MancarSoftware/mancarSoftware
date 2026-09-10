@@ -14,6 +14,14 @@ Keep all visual assets in `profile/assets/`. The public presentation uses an ani
 
 ## Editorial updates
 
+### Evidence and browser review
+
+- The Beauty Business screenshots were captured from the actual public repository at commit `5ae0e3bd3186fa6aee8a703a0cd4b6e359537018`, running locally. The source checkout was kept outside this repository. Its lockfile needed resolution in that temporary checkout before the preview could run; application source was unchanged.
+- The screenshots show the template's BarberPro example, including sample ratings, prices, and other business content. The public caption identifies it as a demonstration, not a customer endorsement or a verified business result.
+- Clinical project artwork describes workflows documented in the public repositories. It is not an application screenshot. The public user guide, release checklist, and LAN test plan are linked from the respective entries; a test plan is not evidence that all tests have passed.
+- `docs/presentation-preview.html` is a local HTML rendering of the complete README with approximate GitHub styling. It includes native copy, disclosure sections, and project images. Its CSS is only for local review and is not embedded in the README.
+- Browser review at 390 px and 960 px confirmed that mobile/desktop image variants load, no image is broken, content has no horizontal overflow, and an expandable answer opens. `docs/presentation-mobile-check.png` records the mobile project layout. This is not a published GitHub verification.
+
 The presentation now includes custom SVG service, project, process, and contact panels. Each has a mobile variant selected below 600 px through `picture` sources. Regenerate these panels and both README files with `scripts/build-presentation.py` (Python, Pillow, and Windows Segoe UI). Edit the copy in that generator before regenerating. The original animated hero is preserved.
 
 `docs/artwork-desktop.png` and `docs/artwork-mobile.png` are artwork contact sheets, not screenshots of GitHub rendering. PNG copies are inspection artifacts; the README embeds the SVG versions. Native project summaries, navigation, and toolkit text are not included in these contact sheets. Validate the final composition and responsive source selection on GitHub after publishing.
