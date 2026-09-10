@@ -14,6 +14,10 @@ Keep all visual assets in `profile/assets/`. The public presentation uses an ani
 
 ## Editorial updates
 
+The presentation now includes custom SVG service, project, process, and contact panels. Each has a mobile variant selected below 600 px through `picture` sources. Regenerate these panels and both README files with `scripts/build-presentation.py` (Python, Pillow, and Windows Segoe UI). Edit the copy in that generator before regenerating. The original animated hero is preserved.
+
+`docs/artwork-desktop.png` and `docs/artwork-mobile.png` are artwork contact sheets, not screenshots of GitHub rendering. PNG copies are inspection artifacts; the README embeds the SVG versions. Native project summaries, navigation, and toolkit text are not included in these contact sheets. Validate the final composition and responsive source selection on GitHub after publishing.
+
 Keep both README files synchronized, preserving their respective image paths. Add projects only with verified descriptions and public repository or case-study links. The current project details come from their public repository READMEs; Instagram comes from the company's GitHub profile.
 
 The following optional contact fields are intentionally confined to this maintenance document. Add them to the presentation only after receiving the real values:

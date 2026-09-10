@@ -3,97 +3,68 @@
   <img src="profile/assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
 </picture>
 
-# Software that fits the way you work.
+<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>
 
-Mancar Software designs and develops digital products for businesses: from the website that introduces your company to the systems your team uses every day.
+[Selected work](#selected-work) &nbsp; / &nbsp; [Our toolkit](#our-toolkit) &nbsp; / &nbsp; [Let’s talk](https://www.instagram.com/mancarsoftware/)
 
-**Thoughtful design. Practical software. Built to evolve.**
-
-[Explore our work](#selected-work) · [Our approach](#how-we-build) · [Start a conversation](https://www.instagram.com/mancarsoftware/)
-
-<br>
-
-## From your first impression to your daily operations.
-
-**Websites & digital experiences**<br>
-Corporate websites, landing pages, and catalogs that make your business easy to understand and easy to choose.
-
-**Business systems & desktop software**<br>
-Applications shaped around real workflows, with local and networked solutions where the work calls for them.
-
-**Web applications & custom development**<br>
-Interfaces, services, and databases brought together to solve the needs specific to your business.
-
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-divider.svg" /><img src="profile/assets/mancar-divider.gif" width="100%" height="36" alt="" /></picture>
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-capabilities-mobile.svg" />
+  <img src="profile/assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
+</picture>
 
 ## Selected work
 
-Software for the people behind the business.
+<a href="https://github.com/MancarSoftware/odonto_care">
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/project-odontocare-mobile.svg" />
+  <img src="profile/assets/project-odontocare.svg" width="100%" alt="OdontoCare — explore the repository." />
+</picture>
+</a>
 
-### 01 — OdontoCare
-
-**A dental practice, connected.**
-
-A Windows desktop application for dental clinics, bringing patient records, appointments, treatments, payments, and inventory into a local system that works offline.
-
-`Desktop application` · `React · TypeScript · NestJS · PostgreSQL`
+Patient records, appointments, treatments, and payments in a Windows application that works offline.
 
 [Explore OdontoCare →](https://github.com/MancarSoftware/odonto_care)
 
-<br>
+<a href="https://github.com/MancarSoftware/vetCarePro">
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/project-vetcare-mobile.svg" />
+  <img src="profile/assets/project-vetcare.svg" width="100%" alt="VetCare Pro — explore the repository." />
+</picture>
+</a>
 
-### 02 — VetCare Pro
-
-**One clinic. A shared view of the work.**
-
-Veterinary desktop software for Windows, supporting a single computer or a local network. Clinical records, appointments, and payments stay accessible across the clinic without depending on an internet connection.
-
-`Desktop & LAN application` · `Electron · Node.js · PostgreSQL`
+Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.
 
 [Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
 
-<br>
+<a href="https://github.com/MancarSoftware/beauty-business-template">
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/project-beauty-mobile.svg" />
+  <img src="profile/assets/project-beauty.svg" width="100%" alt="Beauty Business — explore the repository." />
+</picture>
+</a>
 
-### 03 — Beauty Business
-
-**A web presence built around the service.**
-
-A reusable website foundation for barbershops, salons, spas, and beauty businesses. Adaptable service listings, galleries, and contact sections give each business room for its own identity.
-
-`Business websites` · `React · JavaScript · Tailwind CSS`
+Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.
 
 [Explore Beauty Business →](https://github.com/MancarSoftware/beauty-business-template)
 
-<br>
-
-[Browse our repositories →](https://github.com/MancarSoftware?tab=repositories)
-
-## How we build
-
-**Start with the business.** Understand the people, the workflow, and the problem before choosing the tools.
-
-**Design for everyday use.** Clear navigation, useful feedback, and accessible interfaces are part of engineering quality.
-
-**Keep the architecture purposeful.** Favor readable code, clear responsibilities, and foundations that can evolve without unnecessary complexity.
-
-**Care about the handover.** Test critical workflows and make installation, operation, and maintenance part of the delivery.
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.svg" />
+  <img src="profile/assets/mancar-approach.svg" width="100%" alt="How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve." />
+</picture>
 
 ## Our toolkit
 
-Selected to serve the product. Grounded in the work above.
+**Interface** &nbsp; React · TypeScript · Tailwind CSS<br>
+**Application** &nbsp; Node.js · NestJS · Electron<br>
+**Foundation** &nbsp; PostgreSQL · Prisma · Docker · Git
 
-**Interfaces** — React, TypeScript, JavaScript, Tailwind CSS<br>
-**Applications** — Node.js, NestJS, Electron<br>
-**Data & development** — PostgreSQL, Prisma, Docker, Git
+<a href="https://www.instagram.com/mancarsoftware/">
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-contact-mobile.svg" />
+  <img src="profile/assets/mancar-contact.svg" width="100%" alt="What could work better? Talk to Mancar Software about your next project on Instagram." />
+</picture>
+</a>
 
----
+[Start a conversation →](https://www.instagram.com/mancarsoftware/) &nbsp; / &nbsp; [Browse our repositories](https://github.com/MancarSoftware?tab=repositories)
 
-## What should your software make easier?
-
-Tell us about your business, the people who will use the product, and the problem you want to solve. We welcome project conversations and technical collaborations.
-
-**[Talk to Mancar Software →](https://www.instagram.com/mancarsoftware/)**
-
-<br>
-
-<sub>MANCAR SOFTWARE · Clear interfaces. Solid foundations.</sub>
+<sub>MANCAR SOFTWARE · Designed for people. Engineered for business.</sub>
