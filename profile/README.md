@@ -35,7 +35,7 @@ We choose the setup around connectivity, access, data handling, and maintenance 
 
 ## Selected work
 
-A closer look at our work for dental practices, veterinary clinics, and local service businesses. Explore the repositories for implementation details and setup documentation.
+A closer look at our work for dental practices and veterinary clinics. Explore the repositories for implementation details and setup documentation.
 
 <a href="https://github.com/MancarSoftware/odonto_care">
 <picture>
@@ -88,39 +88,6 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 [Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
 
 [Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)
-
-<a href="https://github.com/MancarSoftware/beauty-business-template">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/project-beauty-mobile.svg" />
-  <img src="assets/project-beauty.svg" width="100%" alt="Beauty Business — explore the repository." />
-</picture>
-</a>
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/beauty-business-preview-mobile.png" />
-  <img src="assets/beauty-business-preview.png" width="100%" alt="Actual rendered BarberPro template: dark barbershop imagery, service introduction, and yellow appointment buttons. Demonstration with sample business content." />
-</picture>
-
-<sub>Actual interface rendered from the Beauty Business repository. BarberPro is a template demonstration; business details, ratings, and offers shown are sample content.</sub>
-
-Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.
-
-**For:** barbershops, salons, spas, and beauty businesses presenting their services online.
-
-**Inside the project:** service listings, galleries, packages, and contact sections. Content and business data are organized so the website can be adapted to a different service business without rewriting its interface.
-
-**Built with:** React, JavaScript, Vite, and Tailwind CSS.
-
-<details>
-<summary>Design and implementation details</summary>
-
-A reusable website foundation with shared components and centralized business content. The project separates presentation from business-specific data, making it easier to change the offer, imagery, and contact information together.
-
-</details>
-
-[Explore Beauty Business →](https://github.com/MancarSoftware/beauty-business-template)
-
-[Inspect the example’s content structure](https://github.com/MancarSoftware/beauty-business-template/blob/5ae0e3bd3186fa6aee8a703a0cd4b6e359537018/src/data/barberiaData.js)
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.svg" />

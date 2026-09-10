@@ -40,10 +40,9 @@ for mobile in (False,True):
         p.text(x,y+53,body,22 if mobile else 18,MUTED)
     p.save('mancar-capabilities'+suffix)
 
-    projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE'),('beauty','03','Beauty Business','WEBSITES FOR SERVICE BUSINESSES','Make the first impression count.','BARBERSHOPS / SALONS / SPAS')]
+    projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE')]
     for slug,num,name,category,tag,meta in projects:
-        clinical = slug != 'beauty'
-        p=Panel(w,(436 if mobile else 386) if clinical else (280 if mobile else 270))
+        p=Panel(w,436 if mobile else 386)
         p.line(0,0,0,p.h,LIME,5)
         p.text(32,28,category,17,LIME,True)
         p.text(30,76,name,48 if mobile else 58,bold=True)
@@ -55,17 +54,16 @@ for mobile in (False,True):
             # Abstract structural motif, deliberately not a product screenshot.
             for j in range(3):
                 p.line(770+j*35,174-j*30,875+j*35,174-j*30,LIME if j==1 else LINE,3)
-        if clinical:
-            p.text(32,278,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
-            steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
-            if mobile:
-                p.text(32,316,steps[0]+'  /  '+steps[1],24,bold=True)
-                p.text(32,358,steps[2],24,bold=True)
-            else:
-                for j,step in enumerate(steps):
-                    x=32+j*340
-                    p.text(x,320,step,24,bold=True)
-                    if j<2: p.text(x+295,318,'→',26,LIME)
+        p.text(32,278,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
+        steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
+        if mobile:
+            p.text(32,316,steps[0]+'  /  '+steps[1],24,bold=True)
+            p.text(32,358,steps[2],24,bold=True)
+        else:
+            for j,step in enumerate(steps):
+                x=32+j*340
+                p.text(x,320,step,24,bold=True)
+                if j<2: p.text(x+295,318,'→',26,LIME)
         p.save('project-'+slug+suffix)
 
     p=Panel(w,400 if mobile else 260)
@@ -110,7 +108,7 @@ We choose the setup around connectivity, access, data handling, and maintenance 
 
 </details>''',
     '## Selected work',
-    'A closer look at our work for dental practices, veterinary clinics, and local service businesses. Explore the repositories for implementation details and setup documentation.'
+    'A closer look at our work for dental practices and veterinary clinics. Explore the repositories for implementation details and setup documentation.'
 ]
 project_details = {
     'odontocare': '''**For:** dental clinics managing clinical and administrative work in one place.
@@ -136,37 +134,16 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data; the others connect over the clinic's network. Internet access is not required for this local workflow. The repository includes installation, network configuration, and backup guidance.
 
-</details>''',
-    'beauty': '''**For:** barbershops, salons, spas, and beauty businesses presenting their services online.
-
-**Inside the project:** service listings, galleries, packages, and contact sections. Content and business data are organized so the website can be adapted to a different service business without rewriting its interface.
-
-**Built with:** React, JavaScript, Vite, and Tailwind CSS.
-
-<details>
-<summary>Design and implementation details</summary>
-
-A reusable website foundation with shared components and centralized business content. The project separates presentation from business-specific data, making it easier to change the offer, imagery, and contact information together.
-
 </details>'''
 }
 project_evidence = {
     'odontocare': '[Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)',
-    'vetcare': '[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)',
-    'beauty': '[Inspect the example’s content structure](https://github.com/MancarSoftware/beauty-business-template/blob/5ae0e3bd3186fa6aee8a703a0cd4b6e359537018/src/data/barberiaData.js)'
+    'vetcare': '[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)'
 }
 for slug,name,url,description in [
     ('odontocare','OdontoCare','odonto_care','Patient records, appointments, treatments, and payments in a Windows application that works offline.'),
-    ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.'),
-    ('beauty','Beauty Business','beauty-business-template','Adaptable websites for barbershops, salons, and spas, with service listings, galleries, and contact sections.')]:
+    ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.')]:
     parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' — explore the repository.')+'\n</a>']
-    if slug == 'beauty':
-        parts += ['''<picture>
-  <source media="(max-width: 600px)" srcset="assets/beauty-business-preview-mobile.png" />
-  <img src="assets/beauty-business-preview.png" width="100%" alt="Actual rendered BarberPro template: dark barbershop imagery, service introduction, and yellow appointment buttons. Demonstration with sample business content." />
-</picture>
-
-<sub>Actual interface rendered from the Beauty Business repository. BarberPro is a template demonstration; business details, ratings, and offers shown are sample content.</sub>''']
     parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
 parts += [
     picture('mancar-approach','How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve.'),
@@ -247,7 +224,7 @@ content='\n\n'.join(parts)+'\n'
 (ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/'),encoding='utf-8')
 
 # Inspect the actual artwork together at desktop and phone widths.
-names=['mancar-header-static','mancar-capabilities','project-odontocare','project-vetcare','project-beauty','mancar-approach','mancar-contact']
+names=['mancar-header-static','mancar-capabilities','project-odontocare','project-vetcare','mancar-approach','mancar-contact']
 for mobile in (False,True):
     width=375 if mobile else 900
     images=[]
