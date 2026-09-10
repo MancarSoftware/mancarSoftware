@@ -1,87 +1,96 @@
-<img src="assets/mancar-header.svg" width="100%" alt="Mancar Software — geometric M brand mark on a graphite background." />
+<img src="assets/mancar-header.svg" width="100%" alt="Mancar Software — software design and development." />
 
-# Mancar Software
+# Software that fits the way you work.
 
-## Software shaped around your business.
+Mancar Software designs and develops digital products for businesses: from the website that introduces your company to the systems your team uses every day.
 
-We design and build websites, web applications, and custom business systems for companies and SMEs. Clear interfaces, dependable engineering, and room to grow—built around the way your business works.
+**Thoughtful design. Practical software. Built to evolve.**
 
-[What we build](#what-we-build) · [Selected work](#selected-work) · [Work with us](#work-with-us)
+[Explore our work](#selected-work) · [Our approach](#how-we-build) · [Start a conversation](https://www.instagram.com/mancarsoftware/)
 
-## What we build
+<br>
 
-### Web experiences
-Corporate websites, landing pages, and digital catalogs that help people understand your offer and take the next step.
+## From your first impression to your daily operations.
 
-### Business systems
-Tools that bring everyday operations into one place, reduce repetitive work, and make information easier to act on.
+**Websites & digital experiences**<br>
+Corporate websites, landing pages, and catalogs that make your business easy to understand and easy to choose.
 
-### Web applications
-Connected products with thoughtful interfaces, backend services, databases, authentication, and APIs.
+**Business systems & desktop software**<br>
+Applications shaped around real workflows, with local and networked solutions where the work calls for them.
 
-### Custom software
-Purpose-built solutions for workflows that off-the-shelf tools cannot comfortably support.
+**Web applications & custom development**<br>
+Interfaces, services, and databases brought together to solve the needs specific to your business.
 
 <img src="assets/mancar-divider.svg" width="100%" height="24" alt="" />
 
 ## Selected work
 
-Portfolio entries are being prepared. The names below are candidate projects; scope, availability, and repository links are pending confirmation.
+Software for the people behind the business.
 
-### 01 / OdontoCare
-**Project details pending confirmation.**
+### 01 — OdontoCare
 
-<!-- Replace with a verified one-sentence description, actual technology stack, and a meaningful repository or case-study link. -->
-Repository / case study: `TODO_ODONTOCARE_URL`
+**A dental practice, connected.**
 
-### 02 / VetCare Pro
-**Project details pending confirmation.**
+A Windows desktop application for dental clinics, bringing patient records, appointments, treatments, payments, and inventory into a local system that works offline.
 
-<!-- Replace with a verified one-sentence description, actual technology stack, and a meaningful repository or case-study link. -->
-Repository / case study: `TODO_VETCARE_PRO_URL`
+`Desktop application` · `React · TypeScript · NestJS · PostgreSQL`
 
-### 03 / GymCare
-**Project details pending confirmation.**
+[Explore OdontoCare →](https://github.com/MancarSoftware/odonto_care)
 
-<!-- Replace with a verified one-sentence description, actual technology stack, and a meaningful repository or case-study link. Duplicate this section to add another project. -->
-Repository / case study: `TODO_GYMCARE_URL`
+<br>
+
+### 02 — VetCare Pro
+
+**One clinic. A shared view of the work.**
+
+Veterinary desktop software for Windows, supporting a single computer or a local network. Clinical records, appointments, and payments stay accessible across the clinic without depending on an internet connection.
+
+`Desktop & LAN application` · `Electron · Node.js · PostgreSQL`
+
+[Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
+
+<br>
+
+### 03 — Beauty Business
+
+**A web presence built around the service.**
+
+A reusable website foundation for barbershops, salons, spas, and beauty businesses. Adaptable service listings, galleries, and contact sections give each business room for its own identity.
+
+`Business websites` · `React · JavaScript · Tailwind CSS`
+
+[Explore Beauty Business →](https://github.com/MancarSoftware/beauty-business-template)
+
+<br>
+
+[Browse our repositories →](https://github.com/MancarSoftware?tab=repositories)
 
 ## How we build
 
-**Understand the work first.** Start with the people, constraints, and business problem before choosing a stack.
+**Start with the business.** Understand the people, the workflow, and the problem before choosing the tools.
 
-**Make every interaction count.** Treat usability, accessibility, and performance as part of product quality.
+**Design for everyday use.** Clear navigation, useful feedback, and accessible interfaces are part of engineering quality.
 
-**Keep the foundations clear.** Favor maintainable architecture, readable code, and complexity that earns its place.
+**Keep the architecture purposeful.** Favor readable code, clear responsibilities, and foundations that can evolve without unnecessary complexity.
 
-**Build for the next step.** Validate critical workflows and leave room for the product to evolve.
+**Care about the handover.** Test critical workflows and make installation, operation, and maintenance part of the delivery.
 
-## Technology
+## Our toolkit
 
-A focused toolkit, chosen to fit each project.
+Selected to serve the product. Grounded in the work above.
 
-<!-- Suggested ecosystem from the brief. Confirm these technologies before publishing as the company's established stack. -->
-*Proposed ecosystem — pending confirmation.*
-
-- **Interface:** React, Next.js, TypeScript, Tailwind CSS
-- **Services:** Node.js, Express
-- **Data:** PostgreSQL, MySQL
-- **Delivery:** Git, GitHub, Docker, CI/CD
-
-## Work with us
-
-**Tell us what your business needs to do better.**
-
-A new product, a clearer web presence, or a workflow ready for better software: start with the problem, the people using it, and what success would look like.
-
-Contact channels are awaiting confirmation. Replace the following placeholders before publishing:
-
-- **Website:** `TODO_WEBSITE_URL`
-- **Email:** `TODO_CONTACT_EMAIL`
-- **LinkedIn:** `TODO_LINKEDIN_URL`
-- **Instagram:** `TODO_INSTAGRAM_URL`
-- **WhatsApp:** `TODO_WHATSAPP_URL`
+**Interfaces** — React, TypeScript, JavaScript, Tailwind CSS<br>
+**Applications** — Node.js, NestJS, Electron<br>
+**Data & development** — PostgreSQL, Prisma, Docker, Git
 
 ---
 
-<sub>Mancar Software · Thoughtful interfaces. Dependable foundations.</sub>
+## What should your software make easier?
+
+Tell us about your business, the people who will use the product, and the problem you want to solve. We welcome project conversations and technical collaborations.
+
+**[Talk to Mancar Software →](https://www.instagram.com/mancarsoftware/)**
+
+<br>
+
+<sub>MANCAR SOFTWARE · Clear interfaces. Solid foundations.</sub>

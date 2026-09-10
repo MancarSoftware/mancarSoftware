@@ -1,54 +1,96 @@
-# Mancar Software — GitHub profile kit
+<img src="profile/assets/mancar-header.svg" width="100%" alt="Mancar Software — software design and development." />
 
-El perfil final está en [profile/README.md](profile/README.md). El contenido está en inglés, siguiendo el brief. Los SVG son archivos editables, sin scripts, fuentes remotas ni servicios externos.
+# Software that fits the way you work.
 
-## Estructura
+Mancar Software designs and develops digital products for businesses: from the website that introduces your company to the systems your team uses every day.
 
-```text
-README.md                     Instrucciones de instalación
-profile/
-├── README.md                 Perfil público
-└── assets/
-    ├── mancar-header.svg     Monograma y cabecera animados
-    └── mancar-divider.svg    Separador animado
-```
+**Thoughtful design. Practical software. Built to evolve.**
 
-## Instalar en una organización
+[Explore our work](#selected-work) · [Our approach](#how-we-build) · [Start a conversation](https://www.instagram.com/mancarsoftware/)
 
-1. Usa un repositorio público llamado `.github` dentro de la organización.
-2. Copia la carpeta `profile/` completa a la raíz de ese repositorio.
-3. Conserva los SVG en `profile/assets/`. Las imágenes del README usan rutas relativas a esa carpeta.
-4. Completa los datos pendientes y publica los archivos en la rama predeterminada.
-5. Revisa el perfil público de la organización para confirmar imágenes y enlaces.
+<br>
 
-GitHub requiere `profile/README.md` dentro del repositorio `.github` para el perfil público de una organización: [documentación oficial](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile#adding-a-public-organization-profile-readme).
+## From your first impression to your daily operations.
 
-## Instalar en un perfil personal
+**Websites & digital experiences**<br>
+Corporate websites, landing pages, and catalogs that make your business easy to understand and easy to choose.
 
-En el repositorio público que tenga exactamente el nombre del usuario, copia **el contenido de `profile/`** a la raíz: `README.md` y `assets/` juntos. No copies este archivo de instrucciones como perfil. Las rutas de imágenes se mantienen sin cambios.
+**Business systems & desktop software**<br>
+Applications shaped around real workflows, with local and networked solutions where the work calls for them.
 
-## Completar antes de publicar
+**Web applications & custom development**<br>
+Interfaces, services, and databases brought together to solve the needs specific to your business.
 
-- Reemplaza cada `TODO_*` por información verificada. Convierte las URLs en enlaces Markdown descriptivos y el correo en un enlace `mailto:`.
-- Confirma cuáles de OdontoCare, VetCare Pro y GymCare deben aparecer. Cada entrada necesita una descripción real, tecnologías verificadas y un enlace público autorizado. Elimina las entradas que no correspondan.
-- Confirma el ecosistema tecnológico propuesto. Retira la nota de pendiente únicamente después de validarlo.
-- Elimina los canales de contacto que no quieras mostrar y los avisos de pendiente cuando estén resueltos.
-- Para añadir un proyecto, duplica una entrada y actualiza número, nombre, descripción y enlace.
+<img src="profile/assets/mancar-divider.svg" width="100%" height="24" alt="" />
 
-No hay contactos, resultados comerciales, stacks de proyectos ni enlaces de repositorio inventados.
+## Selected work
 
-## Decisiones visuales y accesibilidad
+Software for the people behind the business.
 
-Grafito, blanco y verde apagado; monograma M estructural; tipografía del sistema; texto alineado a la izquierda. La cabecera mantiene su propio fondo oscuro y el texto Markdown se adapta al tema de GitHub. El titular y toda la información esencial son texto real fuera de las imágenes.
+### 01 — OdontoCare
 
-Hay dos detalles animados: el trazo del monograma y el pequeño acento del separador. Ambos incluyen `prefers-reduced-motion`, usan ciclos lentos y siguen siendo legibles cuando el visor no reproduce animaciones. El SVG contiene estilos internos para la animación; el README no depende de CSS externo, JavaScript ni HTML interactivo.
+**A dental practice, connected.**
 
-## Verificación final
+A Windows desktop application for dental clinics, bringing patient records, appointments, treatments, payments, and inventory into a local system that works offline.
 
-- Comprueba el README renderizado en GitHub y en la portada de la organización, con temas claro y oscuro.
-- Revisa a 375 px de ancho y en escritorio: titular legible, imágenes dentro del contenedor y contenido en una sola columna.
-- Activa la preferencia del sistema para reducir movimiento y confirma que las animaciones se detienen en los clientes que la soportan.
-- Comprueba cada enlace y busca `TODO_` antes de publicar.
-- La reproducción de SVG puede variar según el cliente, especialmente en aplicaciones móviles. El contenido no depende de ella.
+`Desktop application` · `React · TypeScript · NestJS · PostgreSQL`
 
-Los archivos están preparados para instalación; la revisión en GitHub publicado requiere subirlos al repositorio correspondiente. Este kit no publica ni modifica repositorios remotos.
+[Explore OdontoCare →](https://github.com/MancarSoftware/odonto_care)
+
+<br>
+
+### 02 — VetCare Pro
+
+**One clinic. A shared view of the work.**
+
+Veterinary desktop software for Windows, supporting a single computer or a local network. Clinical records, appointments, and payments stay accessible across the clinic without depending on an internet connection.
+
+`Desktop & LAN application` · `Electron · Node.js · PostgreSQL`
+
+[Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
+
+<br>
+
+### 03 — Beauty Business
+
+**A web presence built around the service.**
+
+A reusable website foundation for barbershops, salons, spas, and beauty businesses. Adaptable service listings, galleries, and contact sections give each business room for its own identity.
+
+`Business websites` · `React · JavaScript · Tailwind CSS`
+
+[Explore Beauty Business →](https://github.com/MancarSoftware/beauty-business-template)
+
+<br>
+
+[Browse our repositories →](https://github.com/MancarSoftware?tab=repositories)
+
+## How we build
+
+**Start with the business.** Understand the people, the workflow, and the problem before choosing the tools.
+
+**Design for everyday use.** Clear navigation, useful feedback, and accessible interfaces are part of engineering quality.
+
+**Keep the architecture purposeful.** Favor readable code, clear responsibilities, and foundations that can evolve without unnecessary complexity.
+
+**Care about the handover.** Test critical workflows and make installation, operation, and maintenance part of the delivery.
+
+## Our toolkit
+
+Selected to serve the product. Grounded in the work above.
+
+**Interfaces** — React, TypeScript, JavaScript, Tailwind CSS<br>
+**Applications** — Node.js, NestJS, Electron<br>
+**Data & development** — PostgreSQL, Prisma, Docker, Git
+
+---
+
+## What should your software make easier?
+
+Tell us about your business, the people who will use the product, and the problem you want to solve. We welcome project conversations and technical collaborations.
+
+**[Talk to Mancar Software →](https://www.instagram.com/mancarsoftware/)**
+
+<br>
+
+<sub>MANCAR SOFTWARE · Clear interfaces. Solid foundations.</sub>
