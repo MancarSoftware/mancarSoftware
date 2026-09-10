@@ -1,4 +1,7 @@
-<img src="assets/mancar-header.svg" width="100%" alt="Mancar Software — software design and development." />
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-header-static.png" />
+  <img src="assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
+</picture>
 
 # Software that fits the way you work.
 
@@ -21,7 +24,7 @@ Applications shaped around real workflows, with local and networked solutions wh
 **Web applications & custom development**<br>
 Interfaces, services, and databases brought together to solve the needs specific to your business.
 
-<img src="assets/mancar-divider.svg" width="100%" height="24" alt="" />
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-divider.svg" /><img src="assets/mancar-divider.gif" width="100%" height="36" alt="" /></picture>
 
 ## Selected work
 

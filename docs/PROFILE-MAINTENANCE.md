@@ -4,7 +4,7 @@ The root README is the visitor-facing company presentation. `profile/README.md` 
 
 ## Assets
 
-Keep the two SVG files in `profile/assets/`. Both include subtle animation and a reduced-motion alternative. Essential information remains readable as Markdown without the images.
+Keep all visual assets in `profile/assets/`. The public presentation uses an animated GIF hero and divider for image-viewer compatibility, with reduced-motion alternatives selected through picture elements where supported. Essential information remains readable as Markdown. The original SVG hero is retained as an earlier vector concept; it is no longer embedded in the presentation. Regenerate the current artwork with `scripts/build-brand-assets.py` using Python and Pillow on Windows (Segoe UI fonts). GIF playback and reduced-motion selection still require verification in the target GitHub client.
 
 ## Publishing
 
