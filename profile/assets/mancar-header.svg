@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="title desc">
+  <title id="title">Mancar Software</title>
+  <desc id="desc">A structural M monogram with a quiet mint trace, alongside the Mancar Software wordmark on graphite.</desc>
+  <style>
+    .trace { stroke-dasharray: 420; animation: trace 9s ease-in-out infinite; }
+    @keyframes trace { 0%, 100% { stroke-dashoffset: 420; opacity: 0; } 20%, 65% { stroke-dashoffset: 0; opacity: .85; } 85% { stroke-dashoffset: 0; opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .trace { animation: none; stroke-dashoffset: 0; opacity: .65; } }
+  </style>
+  <rect width="1200" height="240" rx="4" fill="#111416"/>
+  <path d="M48 192H1152" stroke="#343b3e"/>
+  <g fill="none" stroke-width="8" stroke-linejoin="miter">
+    <path d="M56 152V64L100 112L144 64V152" stroke="#f1f4f3"/>
+    <path class="trace" d="M56 152V64L100 112L144 64V152" stroke="#94c9b5"/>
+  </g>
+  <text x="192" y="110" fill="#f1f4f3" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" letter-spacing="5">MANCAR</text>
+  <text x="194" y="147" fill="#aeb8b6" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="7">SOFTWARE</text>
+  <g fill="none" stroke="#343b3e" stroke-width="1">
+    <path d="M900 64V152H988V64H1076V152H1152"/>
+    <path d="M900 108H1152"/>
+  </g>
+  <rect x="984" y="104" width="8" height="8" fill="#94c9b5"/>
+</svg>

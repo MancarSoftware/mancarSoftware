@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="24" viewBox="0 0 1200 24">
+  <style>
+    .mark { animation: drift 12s ease-in-out infinite; }
+    @keyframes drift { 0%, 100% { transform: translateX(0); opacity: .5; } 50% { transform: translateX(48px); opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .mark { animation: none; } }
+  </style>
+  <path d="M0 12H1200" stroke="#788782" stroke-opacity=".35"/>
+  <path class="mark" d="M0 12H48" stroke="#78a995" stroke-width="2"/>
+</svg>
