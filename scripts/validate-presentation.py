@@ -44,7 +44,7 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
     for suffix in ('','-mobile'):
         path=ROOT/f'profile/assets/project-{slug}{suffix}.gif'
         with Image.open(path) as media:
-            expected_size=(560,850) if suffix else (1080,950)
+            expected_size=(560,740) if suffix else (1080,950)
             assert media.size==expected_size,(path,media.size)
             frames=[frame.convert('RGB') for frame in ImageSequence.Iterator(media)]
             assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'

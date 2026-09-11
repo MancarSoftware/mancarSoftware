@@ -5,25 +5,21 @@ from studio_motion import text, DARK, WHITE, MUTED, CYAN, LIME, CORAL
 
 PROJECTS = {
  'odontocare': dict(name='OdontoCare', number='01', color='#54DCEC', category='DENTAL PRACTICE SOFTWARE',
-  headline=['The patient.', 'The whole picture.'],
+ headline=['The patient.', 'The whole picture.'],
   steps=['Meet the patient','Review the history','Plan the next visit'],
-  captions=['Records and clinical context, together.', 'A history that stays with the patient.', 'Appointments in a clear daily view.'],
-  crops=[(580,210,910,585),(580,300,910,610),(185,205,900,560)]),
+  captions=['Records and clinical context, together.', 'A history that stays with the patient.', 'Appointments in a clear daily view.']),
  'vetcare': dict(name='VetCare Pro', number='02', color='#57D7BC', category='VETERINARY DESKTOP SOFTWARE',
   headline=['Every patient.', 'A connected story.'],
   steps=['Find the patient','Follow the history','Prepare an entry'],
-  captions=['Patients and their owners, connected.', 'Clinical context across each visit.', 'A structured place for the next entry.'],
-  crops=[(185,225,675,545),(375,210,905,610),(230,60,720,540)]),
+  captions=['Patients and their owners, connected.', 'Clinical context across each visit.', 'A structured place for the next entry.']),
  'almavet': dict(name='Alma Vet', number='03', color='#7DAEFF', category='VETERINARY CLINIC WEBSITE',
   headline=['From a first visit', 'to a request for care.'],
   steps=['Meet the clinic','Explore services','Prepare a request'],
-  captions=['A clear introduction to the clinic.', 'Find the right starting point for care.', 'Request a visit; the clinic confirms it.'],
-  crops=[(45,85,500,495),(45,85,870,525),(450,125,895,595)]),
+  captions=['A clear introduction to the clinic.', 'Find the right starting point for care.', 'Request a visit; the clinic confirms it.']),
  'casanativa': dict(name='Casa Nativa', number='04', color='#ECAA8C', category='FURNITURE STORE & DIGITAL CATALOG',
   headline=['Find your piece.', 'Make room for it.'],
   steps=['Feel the space','Explore the catalog','Inspect a piece','Save a selection'],
-  captions=['An editorial introduction to the store.', 'Browse pieces, categories, and prices.', 'Materials, dimensions, and color choices.', 'Build a selection before an inquiry.'],
-  crops=[(90,145,850,540),(45,190,890,610),(465,135,875,590),(50,300,905,610)]),
+  captions=['An editorial introduction to the store.', 'Browse pieces, categories, and prices.', 'Materials, dimensions, and color choices.', 'Build a selection before an inquiry.']),
 }
 
 def capture(path):
@@ -41,7 +37,7 @@ def logo(im, path, xy, maxsize):
     im.paste(source,xy,source)
 
 def tour_scene(out,slug,project,index,mobile):
-    w,h=(560,850) if mobile else (1080,950)
+    w,h=(560,740) if mobile else (1080,950)
     im=Image.new('RGB',(w,h),DARK); d=ImageDraw.Draw(im); c=project['color']
     d.rectangle((0,0,w,5),fill=c)
     text(d,(32,28),project['number']+' / '+project['category'],14 if mobile else 17,c,True)
@@ -52,16 +48,17 @@ def tour_scene(out,slug,project,index,mobile):
         for j,line in enumerate(project['headline']): text(d,(515,74+j*49),line,40,WHITE,True)
     screen=capture(out/'captures'/f'{slug}-{index+1:02}.png')
     if mobile:
-        # A complete overview and a separate detail crop; no fake mobile product UI.
-        overview=ImageOps.contain(screen,(496,327),Image.Resampling.LANCZOS)
-        im.paste(overview,((w-overview.width)//2,275))
-        crop=project['crops'][index]
-        focus=screen.crop(crop)
-        focus=ImageOps.fit(focus,(496,130),Image.Resampling.LANCZOS,centering=(.5,.35))
-        im.paste(focus,(32,643))
-        text(d,(32,618),'DETAIL / '+project['steps'][index].upper(),13,c,True)
-        text(d,(32,794),f'{index+1:02} / '+project['steps'][index],23,WHITE,True)
-        text(d,(32,831),'REPOSITORY INTERFACE / DEMO CONTENT',12,MUTED)
+        # Match the desktop tour: one complete interface changes per scene.
+        stepwidth=496/len(project['steps'])
+        for n,step in enumerate(project['steps']):
+            x=32+round(n*stepwidth)
+            d.line((x,270,x+stepwidth-12,270),fill=c if n==index else '#344039',width=3)
+        text(d,(32,283),f'{index+1:02} / '+project['steps'][index],18,c,True)
+        screenshot=ImageOps.contain(screen,(496,334),Image.Resampling.LANCZOS)
+        im.paste(screenshot,((w-screenshot.width)//2,320))
+        d.rectangle((0,667,w,h),fill=DARK)
+        text(d,(32,681),project['captions'][index],20,WHITE,True)
+        text(d,(32,719),'REPOSITORY INTERFACE / DEMO CONTENT',12,MUTED)
     else:
         stepwidth=1016/len(project['steps'])
         for n,step in enumerate(project['steps']):

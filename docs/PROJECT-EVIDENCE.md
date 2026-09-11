@@ -33,6 +33,6 @@ The presentation uses actual interfaces rendered locally from the four repositor
 
 ## Asset handling
 
-Raw captures are retained beside clean stills. Composition removes only the capture-host margin. Mobile showcase panels combine a complete screen overview with a labeled detail crop; they do not imply that the desktop products have a mobile interface. Supplied project logos remain byte-for-byte unchanged, with their transparency and original colors preserved.
+Raw captures are retained beside clean stills. Composition removes only the capture-host margin. Mobile showcase panels present one complete interface at a time, matching the desktop tour without implying that the desktop products have a mobile interface. Supplied project logos remain byte-for-byte unchanged, with their transparency and original colors preserved.
 
 Project scenes hold for 4.2 seconds, followed by a 360 ms crossfade. Full-resolution stills provide a reader-controlled alternative. Reduced-motion picture sources select PNGs in supporting clients. Backend correctness, production deployment, and final GitHub rendering are outside these local capture checks.
