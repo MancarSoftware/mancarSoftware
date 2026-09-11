@@ -1,91 +1,91 @@
 # A closer look at the work
 
-Still frames from the project interface tours. Clinical names and records are fictional demonstration data. Website content comes from the repositories. These previews show interfaces; they are not evidence of a production deployment or an end-to-end backend test.
+Still frames from the project interface tours. All clinical names and records are fictional demonstration data; website content comes from the repositories. These previews document interface design and do not constitute evidence of a production deployment or end-to-end backend testing.
 
 ## OdontoCare
 
-### 01 / Meet the patient
+### 01 / Open record
 
-Records and clinical context, together.
+Clinical and administrative context in one record.
 
-![OdontoCare: Records and clinical context, together.](../profile/assets/captures/odontocare-still-01.png)
+![OdontoCare: Clinical and administrative context in one record.](../profile/assets/captures/odontocare-still-01.png)
 
-### 02 / Review the history
+### 02 / Review history
 
-A history that stays with the patient.
+A complete history across visits.
 
-![OdontoCare: A history that stays with the patient.](../profile/assets/captures/odontocare-still-02.png)
+![OdontoCare: A complete history across visits.](../profile/assets/captures/odontocare-still-02.png)
 
-### 03 / Plan the next visit
+### 03 / Plan next visit
 
-Appointments in a clear daily view.
+Appointments organized in a clear daily view.
 
-![OdontoCare: Appointments in a clear daily view.](../profile/assets/captures/odontocare-still-03.png)
+![OdontoCare: Appointments organized in a clear daily view.](../profile/assets/captures/odontocare-still-03.png)
 
 ## VetCare Pro
 
-### 01 / Find the patient
+### 01 / View records
 
-Patients and their owners, connected.
+Patients and their owners connected in one record.
 
-![VetCare Pro: Patients and their owners, connected.](../profile/assets/captures/vetcare-still-01.png)
+![VetCare Pro: Patients and their owners connected in one record.](../profile/assets/captures/vetcare-still-01.png)
 
-### 02 / Follow the history
+### 02 / Follow history
 
-Clinical context across each visit.
+Clinical context preserved across visits.
 
-![VetCare Pro: Clinical context across each visit.](../profile/assets/captures/vetcare-still-02.png)
+![VetCare Pro: Clinical context preserved across visits.](../profile/assets/captures/vetcare-still-02.png)
 
-### 03 / Prepare an entry
+### 03 / Document visit
 
-A structured place for the next entry.
+A structured workflow for documenting care.
 
-![VetCare Pro: A structured place for the next entry.](../profile/assets/captures/vetcare-still-03.png)
+![VetCare Pro: A structured workflow for documenting care.](../profile/assets/captures/vetcare-still-03.png)
 
 ## Alma Vet
 
 ### 01 / Meet the clinic
 
-A clear introduction to the clinic.
+A clear introduction to the clinic and its approach.
 
-![Alma Vet: A clear introduction to the clinic.](../profile/assets/captures/almavet-still-01.png)
+![Alma Vet: A clear introduction to the clinic and its approach.](../profile/assets/captures/almavet-still-01.png)
 
-### 02 / Explore services
+### 02 / Review services
 
-Find the right starting point for care.
+Services organized around common care needs.
 
-![Alma Vet: Find the right starting point for care.](../profile/assets/captures/almavet-still-02.png)
+![Alma Vet: Services organized around common care needs.](../profile/assets/captures/almavet-still-02.png)
 
-### 03 / Prepare a request
+### 03 / Request a visit
 
-Request a visit; the clinic confirms it.
+A structured request for the clinic to review.
 
-![Alma Vet: Request a visit; the clinic confirms it.](../profile/assets/captures/almavet-still-03.png)
+![Alma Vet: A structured request for the clinic to review.](../profile/assets/captures/almavet-still-03.png)
 
 ## Casa Nativa
 
-### 01 / Feel the space
+### 01 / Discover
 
-An editorial introduction to the store.
+An editorial introduction to the collection.
 
-![Casa Nativa: An editorial introduction to the store.](../profile/assets/captures/casanativa-still-01.png)
+![Casa Nativa: An editorial introduction to the collection.](../profile/assets/captures/casanativa-still-01.png)
 
-### 02 / Explore the catalog
+### 02 / Browse catalog
 
-Browse pieces, categories, and prices.
+Furniture organized by category and price.
 
-![Casa Nativa: Browse pieces, categories, and prices.](../profile/assets/captures/casanativa-still-02.png)
+![Casa Nativa: Furniture organized by category and price.](../profile/assets/captures/casanativa-still-02.png)
 
-### 03 / Inspect a piece
+### 03 / Review details
 
-Materials, dimensions, and color choices.
+Materials, dimensions, and color options in context.
 
-![Casa Nativa: Materials, dimensions, and color choices.](../profile/assets/captures/casanativa-still-03.png)
+![Casa Nativa: Materials, dimensions, and color options in context.](../profile/assets/captures/casanativa-still-03.png)
 
-### 04 / Save a selection
+### 04 / Save selection
 
-Build a selection before an inquiry.
+A saved selection ready for an inquiry.
 
-![Casa Nativa: Build a selection before an inquiry.](../profile/assets/captures/casanativa-still-04.png)
+![Casa Nativa: A saved selection ready for an inquiry.](../profile/assets/captures/casanativa-still-04.png)
 
 [Capture sources and reproduction notes](PROJECT-EVIDENCE.md)

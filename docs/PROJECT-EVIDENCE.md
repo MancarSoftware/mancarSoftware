@@ -18,7 +18,6 @@ The presentation uses actual interfaces rendered locally from the four repositor
 - Casa Nativa uses its built-in fallback catalog and bundled product images. Saving Sofá Olmo to “Mi espacio” was exercised locally. No inquiry was sent and no purchase was made. Prices and availability shown belong to the repository's demonstration content.
 - No clinic database, customer records, production API, email service, or external messaging account was connected.
 - Existing website photography was rendered as used by the source website. The capture process does not assert that stock photography depicts real staff or premises. The Mancar studio introduction uses editorial artwork, not an invented portrait, staff identity, or location.
-- The workflow and wireframe in the “From workflow to working interface” panel are explanatory illustrations inspired by Alma Vet's request form. They are not claimed to be historical project design artifacts.
 
 ## Reproduce the source previews
 

@@ -36,8 +36,8 @@ for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
             headings=re.findall(r'^#{1,6} (.+)$',local.read_text(encoding='utf-8'),re.M)
             slugs=[re.sub(r' +','-',re.sub(r'[^a-z0-9 ]','',h.lower())) for h in headings]
             assert target.fragment in slugs,f'Missing gallery anchor: {target.fragment}'
-    # Original header has one static source; eight responsive animations have two.
-    if relative.endswith('README.md'): assert refs.reduced>=17,'An animated panel is missing static sources'
+    # The original header has one static source; seven responsive animations have two.
+    if relative.endswith('README.md'): assert refs.reduced>=15,'An animated panel is missing static sources'
 
 gif_bytes=0
 for slug in ('odontocare','vetcare','almavet','casanativa'):
@@ -75,11 +75,4 @@ for name,(desktop_size,mobile_size) in studio_sizes.items():
             assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'
         assert path.with_suffix('.png').is_file()
 
-for suffix,expected_size in (('',(1080,550)),('-mobile',(560,1070))):
-    path=ROOT/f'profile/assets/mancar-making{suffix}.gif'
-    with Image.open(path) as media:
-        assert media.size==expected_size,(path,media.size)
-        assert sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))==3*3360,path
-    assert path.with_suffix('.png').is_file()
-
-print(f'PASS: README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, 8 supporting motion loops, 2 workflow animations, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+print(f'PASS: README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, 8 supporting motion loops, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')

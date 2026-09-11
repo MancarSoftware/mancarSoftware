@@ -1,10 +1,11 @@
 # Presentation verification — September 2026
 
-The expanded presentation includes four animated project tours, an illustrated workflow-to-interface sequence, an editorial studio introduction, and a task-focused contact invitation. Thirteen source interface states are available as still images.
+The expanded presentation includes four animated project tours, an editorial studio introduction, a concise delivery process, and a task-focused contact invitation. Thirteen source interface states are available as still images.
 
-- Ran `python -B scripts/validate-presentation.py`: README variants match, local images and gallery targets exist, gallery anchors resolve, image alternatives and reduced-motion PNG sources are present, eight project tours, eight supporting motion loops, and two workflow animations have the expected dimensions and timing, and all 13 stills decode.
+- Ran `python -B scripts/validate-presentation.py`: README variants match, local images and gallery targets exist, gallery anchors resolve, image alternatives and reduced-motion PNG sources are present, eight project tours and eight supporting motion loops have the expected dimensions and timing, and all 13 stills decode.
 - Compared all four stored logos against the original user-supplied PNGs by SHA-256: unchanged.
 - Reviewed captured interfaces and generated desktop/mobile artwork. Corrected capture-host margins and replaced the repeated mobile detail crop with one complete changing interface. Native Spanish product interfaces remain intact.
+- Completed an editorial English review across the public README, project descriptions, calls to action, accessibility text, gallery captions, and text embedded in generated artwork. Terminology now follows consistent American English and parallel project structure.
 - Checked local presentation DOM at 1080 px: all ten images loaded, desktop variants selected, no horizontal overflow.
 - Checked the local presentation at 390 px: nine mobile sources selected, no broken images, no horizontal overflow. Saved the rendered mobile screenshot as `presentation-mobile-check.png`.
 - Followed the presentation's still-image tour link to its correct gallery anchor. All 13 gallery images loaded, with no overflow or captured console errors.

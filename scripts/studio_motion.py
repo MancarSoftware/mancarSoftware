@@ -39,7 +39,7 @@ def hero(w,h,t,mobile):
     im=Image.new('RGB',(w,h),BLUE); d=ImageDraw.Draw(im)
     text(d,(32,25),'MANCAR / DIGITAL PRODUCT STUDIO',16,WHITE,True)
     size=62 if mobile else 76
-    for i,line in enumerate(['MADE TO','LOOK GOOD.','BUILT TO','WORK.']):
+    for i,line in enumerate(['DESIGNED WITH','PURPOSE.','BUILT TO','PERFORM.']):
         text(d,(32,78+i*(size+3)),line,size,WHITE,True)
     cx,cy=(382,472) if mobile else (825,230)
     r=116 if mobile else 172
@@ -52,7 +52,7 @@ def hero(w,h,t,mobile):
         d.rectangle((x-12,y-12,x+12,y+12),fill=c)
     slide=10*math.sin(t*2*math.pi)
     window(d,cx-r*.65,cy-65+slide,r*1.2,130,LIME,t)
-    text(d,(32,h-42),'DESIGN  /  DEVELOPMENT  /  DIGITAL EXPERIENCES',14,WHITE)
+    text(d,(32,h-42),'DESIGN  /  ENGINEERING  /  DIGITAL PRODUCTS',14,WHITE)
     return im
 
 def capabilities(w,h,t,mobile):
@@ -61,7 +61,7 @@ def capabilities(w,h,t,mobile):
     text(d,(32,70),'One studio.',52 if mobile else 62,WHITE,True)
     text(d,(32,135),'Many possibilities.',45 if mobile else 62,WHITE,True)
     titles=['Web experiences','Business systems','Custom applications']
-    subtitles=['Make your offer clear.','Connect the daily work.','Solve a specific problem.']
+    subtitles=['Clarify your offer.','Connect daily operations.','Solve a defined problem.']
     for j in range(3):
         x=32 if mobile else 32+j*350
         y=231+j*140 if mobile else 254
@@ -131,7 +131,7 @@ def invitation(w,h,t,mobile):
         d.line((x-q,y+q,x-q,y-q,x+q,y-q),fill='#B14F43',width=2)
     d.line((x-42+shift,y+42-shift,x+35+shift,y-35-shift),fill=DARK,width=10)
     d.line((x-9+shift,y-35-shift,x+35+shift,y-35-shift,x+35+shift,y+9-shift),fill=DARK,width=10)
-    text(d,(32,h-44),'SHOW US ONE TASK YOU WANT TO IMPROVE',17 if mobile else 22,DARK,True)
+    text(d,(32,h-44),'SHOW US ONE TASK WORTH IMPROVING',17 if mobile else 22,DARK,True)
     return im
 
 def save(frames,stem):

@@ -1,25 +1,25 @@
 """Compose repository interface captures into readable, GitHub-native visual tours."""
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageOps
-from studio_motion import text, DARK, WHITE, MUTED, CYAN, LIME, CORAL
+from studio_motion import text, DARK, WHITE, MUTED, CYAN, LIME
 
 PROJECTS = {
  'odontocare': dict(name='OdontoCare', number='01', color='#54DCEC', category='DENTAL PRACTICE SOFTWARE',
- headline=['The patient.', 'The whole picture.'],
-  steps=['Meet the patient','Review the history','Plan the next visit'],
-  captions=['Records and clinical context, together.', 'A history that stays with the patient.', 'Appointments in a clear daily view.']),
+  headline=['Every patient.', 'The complete picture.'],
+  steps=['Open record','Review history','Plan next visit'],
+  captions=['Clinical and administrative context in one record.', 'A complete history across visits.', 'Appointments organized in a clear daily view.']),
  'vetcare': dict(name='VetCare Pro', number='02', color='#57D7BC', category='VETERINARY DESKTOP SOFTWARE',
-  headline=['Every patient.', 'A connected story.'],
-  steps=['Find the patient','Follow the history','Prepare an entry'],
-  captions=['Patients and their owners, connected.', 'Clinical context across each visit.', 'A structured place for the next entry.']),
+  headline=['Connected care.', 'Complete records.'],
+  steps=['View records','Follow history','Document visit'],
+  captions=['Patients and their owners connected in one record.', 'Clinical context preserved across visits.', 'A structured workflow for documenting care.']),
  'almavet': dict(name='Alma Vet', number='03', color='#7DAEFF', category='VETERINARY CLINIC WEBSITE',
-  headline=['From a first visit', 'to a request for care.'],
-  steps=['Meet the clinic','Explore services','Prepare a request'],
-  captions=['A clear introduction to the clinic.', 'Find the right starting point for care.', 'Request a visit; the clinic confirms it.']),
+  headline=['From discovery', 'to a request for care.'],
+  steps=['Meet the clinic','Review services','Request a visit'],
+  captions=['A clear introduction to the clinic and its approach.', 'Services organized around common care needs.', 'A structured request for the clinic to review.']),
  'casanativa': dict(name='Casa Nativa', number='04', color='#ECAA8C', category='FURNITURE STORE & DIGITAL CATALOG',
   headline=['Find your piece.', 'Make room for it.'],
-  steps=['Feel the space','Explore the catalog','Inspect a piece','Save a selection'],
-  captions=['An editorial introduction to the store.', 'Browse pieces, categories, and prices.', 'Materials, dimensions, and color choices.', 'Build a selection before an inquiry.']),
+  steps=['Discover','Browse catalog','Review details','Save selection'],
+  captions=['An editorial introduction to the collection.', 'Furniture organized by category and price.', 'Materials, dimensions, and color options in context.', 'A saved selection ready for an inquiry.']),
 }
 
 def capture(path):
@@ -91,36 +91,6 @@ def save_tour(scenes,stem,hold_ms=4000,transition_ms=120):
     indexed[0].save(stem.with_suffix('.gif'),save_all=True,append_images=indexed[1:],
                     duration=durations,loop=0,optimize=True,disposal=1)
 
-def method_scene(out,stage,mobile):
-    w,h=(560,1070) if mobile else (1080,550)
-    im=Image.new('RGB',(w,h),DARK);d=ImageDraw.Draw(im)
-    text(d,(32,27),'INSIDE THE STUDIO / FROM WORKFLOW TO SCREEN',14,CYAN,True)
-    text(d,(32,72),'Clarity takes shape.',42 if mobile else 58,WHITE,True)
-    labels=['01 / THE WORKFLOW','02 / THE EXPERIENCE','03 / THE INTERFACE']
-    for i,label in enumerate(labels):
-        x=32 if mobile else 32+i*350; y=166+i*290 if mobile else 176
-        text(d,(x,y),label,18,[CYAN,LIME,CORAL][i] if i==stage else MUTED,True)
-        width=496 if mobile else 316
-        d.rectangle((x,y+36,x+width,y+245),outline=[CYAN,LIME,CORAL][i] if i==stage else '#344039',width=2)
-        if i==0:
-            for k,line in enumerate(['Choose a service','Request a visit','Clinic reviews']):
-                dy=y+61+k*57
-                d.ellipse((x+20,dy,x+29,dy+9),fill=CYAN)
-                text(d,(x+44,dy-4),line,24 if mobile else 21,WHITE)
-                if k<2:d.line((x+24,dy+15,x+24,dy+46),fill='#344039',width=2)
-        elif i==1:
-            text(d,(x+20,y+56),'Appointment request',22,WHITE,True)
-            for k in range(3):
-                yy=y+101+k*38
-                d.line((x+20,yy-8,x+95,yy-8),fill=MUTED,width=2)
-                d.rectangle((x+20,yy,x+width-20,yy+23),outline=LIME,width=1)
-        else:
-            actual=capture(out/'captures/almavet-03.png').crop((455,123,895,570))
-            actual=ImageOps.fit(actual,(width-4,205),Image.Resampling.LANCZOS,centering=(.5,.1))
-            im.paste(actual,(x+2,y+38))
-    text(d,(32,h-48),'ALMA VET / AN ILLUSTRATED PROCESS',16,MUTED)
-    return im
-
 def about(out,mobile):
     w,h=(560,470) if mobile else (1080,360)
     im=Image.new('RGB',(w,h),'#1B2C2B');d=ImageDraw.Draw(im)
@@ -142,9 +112,8 @@ def build_showcases(out):
         for slug,project in PROJECTS.items():
             scenes=[tour_scene(out,slug,project,i,mobile) for i in range(len(project['steps']))]
             save_tour(scenes,out/('project-'+slug+suffix))
-        save_tour([method_scene(out,i,mobile) for i in range(3)],out/('mancar-making'+suffix),hold_ms=3000)
         about(out,mobile)
-    gallery=['# A closer look at the work','Still frames from the project interface tours. Clinical names and records are fictional demonstration data. Website content comes from the repositories. These previews show interfaces; they are not evidence of a production deployment or an end-to-end backend test.']
+    gallery=['# A closer look at the work','Still frames from the project interface tours. All clinical names and records are fictional demonstration data; website content comes from the repositories. These previews document interface design and do not constitute evidence of a production deployment or end-to-end backend testing.']
     for slug,p in PROJECTS.items():
         gallery += ['## '+p['name']]
         for i,caption in enumerate(p['captions']):
