@@ -73,15 +73,17 @@ def tour_scene(out,slug,project,index,mobile):
         text(d,(805,921),'REPOSITORY PREVIEW / DEMO',12,MUTED)
     return im
 
-def save_tour(scenes,stem):
-    # Long holds make screen details legible. Only transitions add extra frames.
+def save_tour(scenes,stem,hold_ms=4000,transition_ms=120):
+    # Long holds keep the evidence readable; eased dissolves make scene changes deliberate.
     scenes[0].save(stem.with_suffix('.png'))
     frames=[];durations=[]
     for i,current in enumerate(scenes):
-        frames.append(current);durations.append(4200)
+        frames.append(current);durations.append(hold_ms)
         following=scenes[(i+1)%len(scenes)]
-        for j in range(1,3):
-            frames.append(Image.blend(current,following,j/3));durations.append(180)
+        for j in range(1,4):
+            progress=j/4
+            eased=progress*progress*(3-2*progress)
+            frames.append(Image.blend(current,following,eased));durations.append(transition_ms)
     strip=Image.new('RGB',(256*len(scenes),192))
     for i,scene in enumerate(scenes): strip.paste(scene.resize((256,192)),(256*i,0))
     palette=strip.quantize(colors=256)
@@ -140,7 +142,7 @@ def build_showcases(out):
         for slug,project in PROJECTS.items():
             scenes=[tour_scene(out,slug,project,i,mobile) for i in range(len(project['steps']))]
             save_tour(scenes,out/('project-'+slug+suffix))
-        save_tour([method_scene(out,i,mobile) for i in range(3)],out/('mancar-making'+suffix))
+        save_tour([method_scene(out,i,mobile) for i in range(3)],out/('mancar-making'+suffix),hold_ms=3000)
         about(out,mobile)
     gallery=['# A closer look at the work','Still frames from the project interface tours. Clinical names and records are fictional demonstration data. Website content comes from the repositories. These previews show interfaces; they are not evidence of a production deployment or an end-to-end backend test.']
     for slug,p in PROJECTS.items():

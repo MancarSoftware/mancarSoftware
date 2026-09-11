@@ -11,6 +11,15 @@ CORAL='#FF866E'
 MUTED='#ABB9B3'
 COLORS=[CYAN,LIME,CORAL]
 
+def ease(value):
+    """Smoothstep easing for calm acceleration and a clean arrival."""
+    value=max(0,min(1,value))
+    return value*value*(3-2*value)
+
+def eased_orbit(t):
+    """A seamless orbit with subtle speed changes instead of mechanical rotation."""
+    return t-math.sin(t*math.tau)/(math.tau*5)
+
 def font(size,bold=False):
     return ImageFont.truetype('C:/Windows/Fonts/'+('segoeuib.ttf' if bold else 'segoeui.ttf'),size)
 
@@ -35,9 +44,10 @@ def hero(w,h,t,mobile):
     cx,cy=(382,472) if mobile else (825,230)
     r=116 if mobile else 172
     d.ellipse((cx-r,cy-r,cx+r,cy+r),outline='#6E88FF',width=2)
-    d.arc((cx-r+13,cy-r+13,cx+r-13,cy+r-13),t*360,t*360+130,fill=CYAN,width=15)
+    orbit=eased_orbit(t)
+    d.arc((cx-r+13,cy-r+13,cx+r-13,cy+r-13),orbit*360,orbit*360+130,fill=CYAN,width=15)
     for i,c in enumerate([LIME,CORAL]):
-        angle=2*math.pi*(t+i*.5)
+        angle=2*math.pi*(orbit+i*.5)
         x=cx+math.cos(angle)*r; y=cy+math.sin(angle)*r
         d.rectangle((x-12,y-12,x+12,y+12),fill=c)
     slide=10*math.sin(t*2*math.pi)
@@ -58,16 +68,18 @@ def capabilities(w,h,t,mobile):
         c=COLORS[j]
         d.rounded_rectangle((x,y,x+76,y+76),radius=8,fill=c)
         p=(t+j/3)%1
+        movement=(1-math.cos(p*math.tau))/2
         if j==0:
-            dx=5*math.sin(p*math.tau)
+            dx=4*(movement*2-1)
             d.rectangle((x+15+dx,y+20,x+61+dx,y+56),outline=DARK,width=3)
             d.line((x+15+dx,y+30,x+61+dx,y+30),fill=DARK,width=3)
         elif j==1:
             for n in range(3):
-                dy=4*math.sin(p*math.tau+n)
+                row_phase=(p+n*.11)%1
+                dy=3*((1-math.cos(row_phase*math.tau))-1)
                 d.rectangle((x+17,y+15+n*17+dy,x+59,y+23+n*17+dy),fill=DARK)
         else:
-            angle=p*math.tau
+            angle=eased_orbit(p)*math.tau
             for n in range(4):
                 a=angle+n*math.pi/2
                 px=x+38+math.cos(a)*19; py=y+38+math.sin(a)*19
@@ -87,12 +99,17 @@ def process(w,h,t,mobile):
     # The moving signal connects four permanent, readable steps.
     points=[(64,184+i*94) for i in range(4)] if mobile else [(72+i*300,211) for i in range(4)]
     d.line(points,fill='#46666B',width=3)
-    segment=min(int(t*4),2); fraction=(t*4)%1 if t<.75 else 1
+    route=min(t/.86,1)*3
+    segment=min(int(route),2)
+    local=route-segment if route<3 else 1
+    # Pause briefly at each milestone before travelling to the next one.
+    fraction=0 if local<.18 else 1 if local>.82 else ease((local-.18)/.64)
     a,b=points[segment],points[segment+1]
+    reached=segment+(1 if fraction>=1 else 0)
     for j,(x,y) in enumerate(points):
-        d.ellipse((x-16,y-16,x+16,y+16),fill=COLORS[j%3] if j<=int(t*4) else '#28474C')
+        d.ellipse((x-16,y-16,x+16,y+16),fill=COLORS[j%3] if j<=reached else '#28474C')
         text(d,(x+42,y-12) if mobile else (x-36,y+39),labels[j],26 if mobile else 25,WHITE,True)
-    if t<.75:
+    if route<3:
         px=a[0]+(b[0]-a[0])*fraction; py=a[1]+(b[1]-a[1])*fraction
         d.ellipse((px-6,py-6,px+6,py+6),fill=WHITE)
     return im
@@ -105,7 +122,9 @@ def invitation(w,h,t,mobile):
     if mobile:
         x,y=410,302
     else: x,y=875,162
-    shift=15*math.sin(t*math.tau)
+    # Ease the arrow at each end of its short diagonal travel.
+    travel=(1-math.cos(t*math.tau))/2
+    shift=14*(travel*2-1)
     # A large diagonal arrow glides through concentric corner frames.
     for i in range(3):
         q=25+i*22
@@ -124,7 +143,7 @@ def save(frames,stem):
     palette=samples.quantize(colors=128)
     frames[0].save(str(stem)+'.png')
     indexed=[frame.quantize(palette=palette,dither=Image.Dither.NONE) for frame in frames]
-    indexed[0].save(str(stem)+'.gif',save_all=True,append_images=indexed[1:],duration=100,loop=0,optimize=True,disposal=1)
+    indexed[0].save(str(stem)+'.gif',save_all=True,append_images=indexed[1:],duration=110,loop=0,optimize=True,disposal=1)
 
 def build_studio(out):
     layouts=[('mancar-studio-cover',hero,450,670),('mancar-capabilities',capabilities,470,680),('mancar-approach',process,340,530),('mancar-contact',invitation,320,410)]
@@ -132,4 +151,9 @@ def build_studio(out):
         for name,render,desktop_h,mobile_h in layouts:
             w=560 if mobile else 1080; h=mobile_h if mobile else desktop_h
             frames=[render(w,h,i/72,mobile) for i in range(72)]
+            if render is process:
+                # Resolve the linear story back to its first state without a hard loop cut.
+                last_state=frames[-8]
+                for i in range(1,8):
+                    frames[-8+i]=Image.blend(last_state,frames[0],ease(i/8))
             save(frames,out/(name+('-mobile' if mobile else '')))

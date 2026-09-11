@@ -50,11 +50,36 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
             assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'
             media.seek(0)
             duration=sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))
-            assert duration==(4 if slug=='casanativa' else 3)*4560,(path,duration)
+            assert duration==(4 if slug=='casanativa' else 3)*4360,(path,duration)
             assert path.with_suffix('.png').is_file()
         gif_bytes+=path.stat().st_size
     count=4 if slug=='casanativa' else 3
     for i in range(count):
         with Image.open(ROOT/f'profile/assets/captures/{slug}-still-{i+1:02}.png') as still:
             still.verify()
-print(f'PASS: README variants, local paths, gallery anchors, alt text, static sources, 8 animated tours, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+
+studio_sizes={
+    'mancar-studio-cover':((1080,450),(560,670)),
+    'mancar-capabilities':((1080,470),(560,680)),
+    'mancar-approach':((1080,340),(560,530)),
+    'mancar-contact':((1080,320),(560,410)),
+}
+for name,(desktop_size,mobile_size) in studio_sizes.items():
+    for suffix,expected_size in (('',desktop_size),('-mobile',mobile_size)):
+        path=ROOT/f'profile/assets/{name}{suffix}.gif'
+        with Image.open(path) as media:
+            assert media.size==expected_size,(path,media.size)
+            frames=[frame.convert('RGB') for frame in ImageSequence.Iterator(media)]
+            assert len(frames)>=24,(path,len(frames))
+            assert sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))==7920,path
+            assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'
+        assert path.with_suffix('.png').is_file()
+
+for suffix,expected_size in (('',(1080,550)),('-mobile',(560,1070))):
+    path=ROOT/f'profile/assets/mancar-making{suffix}.gif'
+    with Image.open(path) as media:
+        assert media.size==expected_size,(path,media.size)
+        assert sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))==3*3360,path
+    assert path.with_suffix('.png').is_file()
+
+print(f'PASS: README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, 8 supporting motion loops, 2 workflow animations, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
