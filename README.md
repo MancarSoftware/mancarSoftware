@@ -24,12 +24,18 @@ Mancar Software designs websites, applications, and business systems around the 
 
 <a href="https://github.com/MancarSoftware/odonto_care">
 <picture>
-  <source media="(max-width: 600px)" srcset="profile/assets/project-odontocare-mobile.png" />
-  <img src="profile/assets/project-odontocare.png" width="100%" alt="OdontoCare logo and project overview — explore the repository." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/project-odontocare-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/project-odontocare.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/project-odontocare-mobile.gif" />
+  <img src="profile/assets/project-odontocare.gif" width="100%" alt="OdontoCare interface tour: patient records, clinical history, and the daily agenda." />
 </picture>
 </a>
 
 Patient records, appointments, treatments, and payments in a Windows application that works offline.
+
+<sub>Actual repository interface · Fictional clinical data · Original Spanish interface</sub>
+
+[View the still-image tour](docs/PROJECT-GALLERY.md#odontocare) &nbsp; / &nbsp; [Explore the repository →](https://github.com/MancarSoftware/odonto_care)
 
 **For:** dental clinics managing clinical and administrative work in one place.
 
@@ -44,20 +50,24 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 </details>
 
-[Explore OdontoCare →](https://github.com/MancarSoftware/odonto_care)
-
 [Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)
 
 ### VetCare Pro
 
 <a href="https://github.com/MancarSoftware/vetCarePro">
 <picture>
-  <source media="(max-width: 600px)" srcset="profile/assets/project-vetcare-mobile.png" />
-  <img src="profile/assets/project-vetcare.png" width="100%" alt="VetCare Pro logo and project overview — explore the repository." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/project-vetcare-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/project-vetcare.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/project-vetcare-mobile.gif" />
+  <img src="profile/assets/project-vetcare.gif" width="100%" alt="VetCare Pro interface tour: patients, clinical history, and the record entry form." />
 </picture>
 </a>
 
 Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.
+
+<sub>Actual repository interface · Fictional clinical data · Original Spanish interface</sub>
+
+[View the still-image tour](docs/PROJECT-GALLERY.md#vetcare-pro) &nbsp; / &nbsp; [Explore the repository →](https://github.com/MancarSoftware/vetCarePro)
 
 **For:** veterinary teams working from one computer or several computers in the same clinic.
 
@@ -72,20 +82,24 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 
 </details>
 
-[Explore VetCare Pro →](https://github.com/MancarSoftware/vetCarePro)
-
 [Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)
 
 ### Alma Vet
 
 <a href="https://github.com/MancarSoftware/veterinaria">
 <picture>
-  <source media="(max-width: 600px)" srcset="profile/assets/project-almavet-mobile.png" />
-  <img src="profile/assets/project-almavet.png" width="100%" alt="Alma Vet logo and project overview — explore the repository." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/project-almavet-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/project-almavet.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/project-almavet-mobile.gif" />
+  <img src="profile/assets/project-almavet.gif" width="100%" alt="Alma Vet interface tour: the clinic homepage, service discovery, and appointment request form." />
 </picture>
 </a>
 
 A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.
+
+<sub>Actual repository interface · Repository demo content · Original Spanish interface</sub>
+
+[View the still-image tour](docs/PROJECT-GALLERY.md#alma-vet) &nbsp; / &nbsp; [Explore the repository →](https://github.com/MancarSoftware/veterinaria)
 
 **For:** Alma Vet veterinary clinic and pet owners requesting care.
 
@@ -93,28 +107,30 @@ A veterinary clinic website that connects pet owners with the clinic through a s
 
 **Built with:** React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.
 
-[Explore Alma Vet →](https://github.com/MancarSoftware/veterinaria)
-
 [Read the architecture and setup guide](https://github.com/MancarSoftware/veterinaria#readme)
 
 ### Casa Nativa
 
 <a href="https://github.com/MancarSoftware/muebleria">
 <picture>
-  <source media="(max-width: 600px)" srcset="profile/assets/project-casanativa-mobile.png" />
-  <img src="profile/assets/project-casanativa.png" width="100%" alt="Casa Nativa logo and project overview — explore the repository." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/project-casanativa-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/project-casanativa.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/project-casanativa-mobile.gif" />
+  <img src="profile/assets/project-casanativa.gif" width="100%" alt="Casa Nativa interface tour: the storefront, furniture catalog, product details, and a saved selection." />
 </picture>
 </a>
 
 A furniture store website with an editable catalog, color variants, and customer inquiry workflows.
+
+<sub>Actual repository interface · Repository demo content · Original Spanish interface</sub>
+
+[View the still-image tour](docs/PROJECT-GALLERY.md#casa-nativa) &nbsp; / &nbsp; [Explore the repository →](https://github.com/MancarSoftware/muebleria)
 
 **For:** Casa Nativa furniture store and customers exploring pieces for their homes.
 
 **Inside the project:** a furniture catalog with product images and color variants, an administration area for publishing products, and tools for space proposals and customer inquiries.
 
 **Built with:** React, TypeScript, Vite, and Supabase.
-
-[Explore Casa Nativa →](https://github.com/MancarSoftware/muebleria)
 
 [Read the catalog and administration guide](https://github.com/MancarSoftware/muebleria#readme)
 
@@ -144,12 +160,16 @@ We choose the setup around connectivity, access, data handling, and maintenance 
 
 </details>
 
+## From workflow to working interface
+
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-approach.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.gif" />
-  <img src="profile/assets/mancar-approach.gif" width="100%" alt="Good work takes shape: understand, design, build, deliver. An animated signal connects the four stages." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-making-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-making.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-making-mobile.gif" />
+  <img src="profile/assets/mancar-making.gif" width="100%" alt="An illustrated Alma Vet design process: define the request workflow, organize the form, and connect it to the real appointment request interface." />
 </picture>
+
+A service inquiry becomes a clear path: choose the service, provide the details, and send a request for the clinic to review. The workflow and wireframe above are explanatory reconstructions; the final screen is captured from Alma Vet’s repository.
 
 ## Working together
 
@@ -181,6 +201,19 @@ Hosting, ongoing maintenance, future features, and support arrangements belong i
 **Recovery belongs in the plan.** Installation, backups, updates, and operating instructions affect the usefulness of a business system as much as its screens. The clinical project guides above make these concerns concrete.
 
 **Design continues after the first screen.** Navigation, validation, empty states, and feedback deserve the same attention as the opening impression. The aim is a product people can understand and keep using.
+
+## Meet Mancar
+
+<picture>
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-studio-mobile.png" />
+  <img src="profile/assets/mancar-studio.png" width="100%" alt="Meet Mancar Software. Close to the work. Clear about the craft. Websites, applications, and business systems." />
+</picture>
+
+We are Mancar Software. Our work connects two sides of a business: the experience customers see and the software a team uses behind the scenes. The four projects above reflect that focus—from a furniture catalog and a clinic website to tools for managing daily clinical work.
+
+Our approach starts with a conversation about the people, the workflow, and the problem. We bring design and development into that same conversation, make the key screens concrete, and build around a useful first release.
+
+**For a project conversation:** tell us what is difficult today. **For a collaboration:** show us what you build and where you would like to contribute.
 
 ## Our toolkit
 
@@ -225,13 +258,15 @@ Maintenance, hosting, updates, and support responsibilities are defined in the p
   <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-contact-mobile.png" />
   <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-contact.png" />
   <source media="(max-width: 600px)" srcset="profile/assets/mancar-contact-mobile.gif" />
-  <img src="profile/assets/mancar-contact.gif" width="100%" alt="Let’s make it work. Tell Mancar Software what you want to build. Contact us on Instagram." />
+  <img src="profile/assets/mancar-contact.gif" width="100%" alt="What does your team still manage manually? Show us one task you would like to improve. Contact Mancar Software on Instagram." />
 </picture>
 </a>
 
-## Start with the problem
+## What does your team still manage manually?
 
-Tell us what your business does, who will use the software, and what is difficult today. A rough idea is enough to start the conversation.
+An appointment book, a spreadsheet, a product inquiry, or a task that depends on copying the same information twice. Tell us where the work gets difficult and who it affects.
+
+**Start with one message:** “We run a [business]. Today we manage [task] using [current tool]. We would like to make [outcome] easier.”
 
 Helpful details include the features you have in mind, existing tools or data, whether the product needs to work locally or online, and your target timeline and budget range.
 

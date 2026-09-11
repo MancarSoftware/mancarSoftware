@@ -100,7 +100,8 @@ def process(w,h,t,mobile):
 def invitation(w,h,t,mobile):
     im=Image.new('RGB',(w,h),CORAL); d=ImageDraw.Draw(im)
     text(d,(32,26),'YOUR NEXT PROJECT / MANCAR SOFTWARE',16,DARK,True)
-    for i,line in enumerate(['LET’S MAKE','IT WORK.']): text(d,(32,85+i*84),line,60 if mobile else 78,DARK,True)
+    lines=['STILL DOING IT','MANUALLY?']
+    for i,line in enumerate(lines): text(d,(32,85+i*74),line,49 if mobile else 68,DARK,True)
     if mobile:
         x,y=410,302
     else: x,y=875,162
@@ -111,7 +112,7 @@ def invitation(w,h,t,mobile):
         d.line((x-q,y+q,x-q,y-q,x+q,y-q),fill='#B14F43',width=2)
     d.line((x-42+shift,y+42-shift,x+35+shift,y-35-shift),fill=DARK,width=10)
     d.line((x-9+shift,y-35-shift,x+35+shift,y-35-shift,x+35+shift,y+9-shift),fill=DARK,width=10)
-    text(d,(32,h-44),'TELL US WHAT YOU WANT TO BUILD',19 if mobile else 22,DARK,True)
+    text(d,(32,h-44),'SHOW US ONE TASK YOU WANT TO IMPROVE',17 if mobile else 22,DARK,True)
     return im
 
 def save(frames,stem):

@@ -4,6 +4,7 @@ from html import escape
 import base64
 from PIL import Image, ImageDraw, ImageFont
 from studio_motion import build_studio
+from project_showcases import build_showcases
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'profile/assets'
@@ -61,30 +62,6 @@ for mobile in (False,True):
         p.text(x,y+53,body,22 if mobile else 18,MUTED)
     p.save('mancar-capabilities'+suffix)
 
-    projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE'),('almavet','03','Alma Vet','VETERINARY CLINIC WEBSITE','A clear path to care.','CLINIC WEBSITE / APPOINTMENT REQUESTS'),('casanativa','04','Casa Nativa','FURNITURE STORE & DIGITAL CATALOG','Find the pieces that feel like home.','FURNITURE / CATALOG / CUSTOMER INQUIRIES')]
-    for slug,num,name,category,tag,meta in projects:
-        clinical = slug in ('odontocare','vetcare')
-        motion_space = 0
-        p=Panel(w,((526 if mobile else 476) if clinical else 360)+motion_space)
-        p.line(0,0,0,p.h,LIME,5)
-        p.text(32,28,num+' / '+category,17,LIME,True)
-        p.logo(slug)
-        p.text(32,278+motion_space,tag,24 if mobile else 28,MUTED)
-        p.text(32,326+motion_space,meta,14 if mobile else 17,MUTED)
-        if clinical:
-            p.line(32,366+motion_space,w-32,366+motion_space)
-            p.text(32,386+motion_space,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
-            steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
-            if mobile:
-                p.text(32,422+motion_space,steps[0]+'  /  '+steps[1],24,bold=True)
-                p.text(32,464+motion_space,steps[2],24,bold=True)
-            else:
-                for j,step in enumerate(steps):
-                    x=32+j*340
-                    p.text(x,426,step,24,bold=True)
-                    if j<2: p.text(x+295,424,'→',26,LIME)
-        p.save('project-'+slug+suffix)
-
     p=Panel(w,400 if mobile else 260)
     p.text(32,26,'03 / HOW WE BUILD',18,LIME,True)
     for i,(title,body) in enumerate([('Understand.','Start with the real workflow.'),('Design.','Make everyday use feel clear.'),('Engineer.','Build foundations that evolve.')]):
@@ -100,11 +77,12 @@ for mobile in (False,True):
     p.save('mancar-contact'+suffix)
 
 build_studio(OUT)
+build_showcases(OUT)
 
 def picture(name,alt):
-    if name in ('mancar-studio-cover','mancar-capabilities','mancar-approach','mancar-contact'):
+    if name.startswith('project-') or name in ('mancar-studio-cover','mancar-capabilities','mancar-approach','mancar-contact','mancar-making'):
         return f'<picture>\n  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/{name}-mobile.png" />\n  <source media="(prefers-reduced-motion: reduce)" srcset="assets/{name}.png" />\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.gif" />\n  <img src="assets/{name}.gif" width="100%" alt="{alt}" />\n</picture>'
-    extension = 'png' if name.startswith('project-') else 'svg'
+    extension = 'png' if name == 'mancar-studio' else 'svg'
     return f'<picture>\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.{extension}" />\n  <img src="assets/{name}.{extension}" width="100%" alt="{alt}" />\n</picture>'
 
 hero=(ROOT/'profile/README.md').read_text(encoding='utf-8').split('</picture>',1)[0]+'</picture>'
@@ -184,11 +162,15 @@ for slug,name,url,description in [
     ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.'),
     ('almavet','Alma Vet','veterinaria','A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.'),
     ('casanativa','Casa Nativa','muebleria','A furniture store website with an editable catalog, color variants, and customer inquiry workflows.')]:
-    parts += ['### '+name,'<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' logo and project overview — explore the repository.')+'\n</a>']
-    parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
+    parts += ['### '+name,'<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' interface tour: '+{'odontocare':'patient records, clinical history, and the daily agenda.','vetcare':'patients, clinical history, and the record entry form.','almavet':'the clinic homepage, service discovery, and appointment request form.','casanativa':'the storefront, furniture catalog, product details, and a saved selection.'}[slug])+'\n</a>']
+    parts += [description,'<sub>Actual repository interface · '+('Fictional clinical data' if slug in ('odontocare','vetcare') else 'Repository demo content')+' · Original Spanish interface</sub>',
+        '[View the still-image tour](../docs/PROJECT-GALLERY.md#'+{'odontocare':'odontocare','vetcare':'vetcare-pro','almavet':'alma-vet','casanativa':'casa-nativa'}[slug]+') &nbsp; / &nbsp; [Explore the repository →](https://github.com/MancarSoftware/'+url+')',
+        project_details[slug],project_evidence[slug]]
 parts += capabilities
 parts += [
-    picture('mancar-approach','Good work takes shape: understand, design, build, deliver. An animated signal connects the four stages.'),
+    '## From workflow to working interface',
+    picture('mancar-making','An illustrated Alma Vet design process: define the request workflow, organize the form, and connect it to the real appointment request interface.'),
+    'A service inquiry becomes a clear path: choose the service, provide the details, and send a request for the clinic to review. The workflow and wireframe above are explanatory reconstructions; the final screen is captured from Alma Vet’s repository.',
     '''## Working together
 
 **01 / Define the right scope.** Start with the business goal, the users, and the current workflow. Identify the essential features, constraints, integrations, and what a successful first release needs to achieve.
@@ -218,6 +200,11 @@ Hosting, ongoing maintenance, future features, and support arrangements belong i
 **Recovery belongs in the plan.** Installation, backups, updates, and operating instructions affect the usefulness of a business system as much as its screens. The clinical project guides above make these concerns concrete.
 
 **Design continues after the first screen.** Navigation, validation, empty states, and feedback deserve the same attention as the opening impression. The aim is a product people can understand and keep using.''',
+    '## Meet Mancar',
+    picture('mancar-studio','Meet Mancar Software. Close to the work. Clear about the craft. Websites, applications, and business systems.'),
+    'We are Mancar Software. Our work connects two sides of a business: the experience customers see and the software a team uses behind the scenes. The four projects above reflect that focus—from a furniture catalog and a clinic website to tools for managing daily clinical work.',
+    'Our approach starts with a conversation about the people, the workflow, and the problem. We bring design and development into that same conversation, make the key screens concrete, and build around a useful first release.',
+    '**For a project conversation:** tell us what is difficult today. **For a collaboration:** show us what you build and where you would like to contribute.',
     '## Our toolkit',
     'A focused ecosystem reflected in the projects above. We choose tools around the product’s needs, deployment environment, and long-term maintenance.',
     '**Interface** &nbsp; React · TypeScript · JavaScript · Tailwind CSS<br>\n**Application** &nbsp; Node.js · NestJS · Electron<br>\n**Foundation** &nbsp; PostgreSQL · Prisma · Docker · Git',
@@ -250,10 +237,12 @@ The critical workflows, design scope, integrations, data migration, and deployme
 Maintenance, hosting, updates, and support responsibilities are defined in the project scope. They should be clear before development starts, alongside the documentation and handover requirements.
 
 </details>''',
-    '<a href="https://www.instagram.com/mancarsoftware/">\n'+picture('mancar-contact','Let’s make it work. Tell Mancar Software what you want to build. Contact us on Instagram.')+'\n</a>',
-    '''## Start with the problem
+    '<a href="https://www.instagram.com/mancarsoftware/">\n'+picture('mancar-contact','What does your team still manage manually? Show us one task you would like to improve. Contact Mancar Software on Instagram.')+'\n</a>',
+    '''## What does your team still manage manually?
 
-Tell us what your business does, who will use the software, and what is difficult today. A rough idea is enough to start the conversation.
+An appointment book, a spreadsheet, a product inquiry, or a task that depends on copying the same information twice. Tell us where the work gets difficult and who it affects.
+
+**Start with one message:** “We run a [business]. Today we manage [task] using [current tool]. We would like to make [outcome] easier.”
 
 Helpful details include the features you have in mind, existing tools or data, whether the product needs to work locally or online, and your target timeline and budget range.
 
@@ -263,10 +252,10 @@ Helpful details include the features you have in mind, existing tools or data, w
 ]
 content='\n\n'.join(parts)+'\n'
 (ROOT/'profile/README.md').write_text(content,encoding='utf-8')
-(ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/'),encoding='utf-8')
+(ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/'),encoding='utf-8')
 
 # Inspect the actual artwork together at desktop and phone widths.
-names=['mancar-header-static','mancar-studio-cover','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-capabilities','mancar-approach','mancar-contact']
+names=['mancar-header-static','mancar-studio-cover','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-capabilities','mancar-making','mancar-studio','mancar-contact']
 for mobile in (False,True):
     width=375 if mobile else 900
     images=[]

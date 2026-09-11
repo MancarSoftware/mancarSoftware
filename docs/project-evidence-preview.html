@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mancar Software — capture sources</title><style>body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1012px;margin:auto;padding:32px}img{max-width:100%;height:auto}a{color:#79b8ff;text-decoration:none}a:hover{text-decoration:underline}p{margin:0 0 16px}h2{font-size:24px;border-bottom:1px solid #30363d;padding-bottom:8px;margin:32px 0 16px}details{border-top:1px solid #30363d;padding:12px 0}summary{cursor:pointer}details[open] summary{margin-bottom:12px}sub{font-size:12px}li{margin:8px 0}a:focus-visible,summary:focus-visible{outline:2px solid #b4e878;outline-offset:4px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #30363d;padding:8px;text-align:left}@media(max-width:600px){main{padding:16px}body{font-size:16px}table{display:block;overflow:auto}}</style></head><body><main><p><a href="presentation-preview.html#selected-work">← Back to the presentation</a></p><h1 id="project-capture-sources">Project capture sources</h1>
+<p>The presentation uses actual interfaces rendered locally from the four repositories supplied by Mancar Software. Screens retain their original Spanish text; editorial captions are in English. The animation is an edited tour of captured interface states, not a continuous screen recording.</p>
+<h2 id="source-revisions">Source revisions</h2>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Repository revision</th>
+<th>Captured views</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OdontoCare</td>
+<td><a href="https://github.com/MancarSoftware/odonto_care/tree/b570cbf13eac29a1e37802d304b02990d203bd35">b570cbf</a></td>
+<td>Patient list, clinical history, daily appointments</td>
+</tr>
+<tr>
+<td>VetCare Pro</td>
+<td><a href="https://github.com/MancarSoftware/vetCarePro/tree/f4f04b80a930000d81ffb841d8a803cfd0e24caa">f4f04b8</a></td>
+<td>Pet list, clinical history, new clinical entry form</td>
+</tr>
+<tr>
+<td>Alma Vet</td>
+<td><a href="https://github.com/MancarSoftware/veterinaria/tree/f7a6f2751468346f44cc79ea5fc0eac019578812">f7a6f27</a></td>
+<td>Homepage, services, appointment request form</td>
+</tr>
+<tr>
+<td>Casa Nativa</td>
+<td><a href="https://github.com/MancarSoftware/muebleria/tree/c7be0eee173c308882c256ea29a93826e929d95b">c7be0ee</a></td>
+<td>Homepage, catalog, furniture detail, saved selection</td>
+</tr>
+</tbody></table>
+<h2 id="what-the-captures-demonstrate">What the captures demonstrate</h2>
+<ul>
+<li>OdontoCare and VetCare Pro use their original React interface components with capture-only authentication and data adapters. All displayed patient names, clinical entries, appointments, and users are fictional. The adapters reject writes. A fixture health response supplies VetCare Pro&#39;s local runtime indicator; this is not a LAN connectivity test.</li>
+<li>Alma Vet uses repository content. The request form was populated with fictional names but was not submitted. The local preview has no production Turnstile or Supabase credentials. The request requires subsequent clinic confirmation; no booking success is implied.</li>
+<li>Casa Nativa uses its built-in fallback catalog and bundled product images. Saving Sofá Olmo to “Mi espacio” was exercised locally. No inquiry was sent and no purchase was made. Prices and availability shown belong to the repository&#39;s demonstration content.</li>
+<li>No clinic database, customer records, production API, email service, or external messaging account was connected.</li>
+<li>Existing website photography was rendered as used by the source website. The capture process does not assert that stock photography depicts real staff or premises. The Mancar studio introduction uses editorial artwork, not an invented portrait, staff identity, or location.</li>
+<li>The workflow and wireframe in the “From workflow to working interface” panel are explanatory illustrations inspired by Alma Vet&#39;s request form. They are not claimed to be historical project design artifacts.</li>
+</ul>
+<h2 id="reproduce-the-source-previews">Reproduce the source previews</h2>
+<ol>
+<li>Clone each repository at the revision above into a disposable directory named <code>mancar-project-evidence</code>. Keep the original repository directory names.</li>
+<li>Install dependencies inside each clone with <code>npm install --ignore-scripts --no-audit --no-fund</code>.</li>
+<li>Run <code>python scripts/prepare-capture.py PATH_TO/mancar-project-evidence</code> once against those disposable clones. The script changes only capture adapters, initial sections, and the capture host; it does not change interface components. Use fresh clones for a rerun.</li>
+<li>Serve OdontoCare from <code>apps/desktop</code> with <code>node ../../node_modules/vite/bin/vite.js --host 127.0.0.1 --port 4191</code>.</li>
+<li>Serve VetCare Pro from <code>apps/desktop</code> with <code>node ../../node_modules/vite/bin/vite.js --config capture.vite.config.mjs</code> (port 4192).</li>
+<li>Serve Alma Vet and Casa Nativa with <code>npm run dev -- --host 127.0.0.1 --port 4193</code> and port <code>4194</code>, respectively.</li>
+<li>Open each server&#39;s <code>/capture.html</code>. This host scales an unchanged 1440 × 960 interface into a single browser capture to avoid display-scaling stitching artifacts. Navigate the views listed above and save PNG screenshots into <code>profile/assets/captures/</code>, using the existing filenames. Wait for data and entrance animations to settle. Do not submit external forms.</li>
+<li>Run <code>python -B scripts/build-presentation.py</code> to regenerate showcase GIFs, static alternatives, the still-image gallery, artwork contact sheets, and both README files. Run <code>node scripts/render-preview.mjs</code> for the local presentation and gallery previews. The renderer uses the bundled Marked module; another installation can be supplied through <code>MARKED_MODULE</code> as a module URL.</li>
+</ol>
+<h2 id="asset-handling">Asset handling</h2>
+<p>Raw captures are retained beside clean stills. Composition removes only the capture-host margin. Mobile showcase panels combine a complete screen overview with a labeled detail crop; they do not imply that the desktop products have a mobile interface. Supplied project logos remain byte-for-byte unchanged, with their transparency and original colors preserved.</p>
+<p>Project scenes hold for 4.2 seconds, followed by a 360 ms crossfade. Full-resolution stills provide a reader-controlled alternative. Reduced-motion picture sources select PNGs in supporting clients. Backend correctness, production deployment, and final GitHub rendering are outside these local capture checks.</p>
+</main></body></html>
