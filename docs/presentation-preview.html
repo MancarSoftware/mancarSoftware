@@ -3,10 +3,84 @@
   <img src="../profile/assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
 </picture>
 
-<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>
+<p><strong>Your business has its own way of working. Your software should reflect it.</strong></p>
+<p>Mancar Software designs websites, applications, and business systems around the people who use them—from the first customer inquiry to the work behind the scenes.</p>
+<p><a href="#selected-work">Explore the projects ↓</a> &nbsp; / &nbsp; <a href="https://www.instagram.com/mancarsoftware/">Discuss your project ↗</a></p>
+<h2 id="selected-work">Selected work</h2>
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/mancar-work-intro-mobile.svg" />
+  <img src="../profile/assets/mancar-work-intro.svg" width="100%" alt="Four selected projects. Different businesses. Specific solutions. Clinical software and business websites." />
+</picture>
 
-<p>A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.</p>
-<p><a href="#capabilities">Capabilities</a> &nbsp; / &nbsp; <a href="#selected-work">Selected work</a> &nbsp; / &nbsp; <a href="#working-together">Working together</a> &nbsp; / &nbsp; <a href="https://www.instagram.com/mancarsoftware/">Let’s talk</a></p>
+<p><a href="#odontocare">01 OdontoCare</a> &nbsp; / &nbsp; <a href="#vetcare-pro">02 VetCare Pro</a> &nbsp; / &nbsp; <a href="#alma-vet">03 Alma Vet</a> &nbsp; / &nbsp; <a href="#casa-nativa">04 Casa Nativa</a></p>
+<h3 id="odontocare">OdontoCare</h3>
+<a href="https://github.com/MancarSoftware/odonto_care">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-odontocare-mobile.png" />
+  <img src="../profile/assets/project-odontocare.png" width="100%" alt="OdontoCare logo and project overview — explore the repository." />
+</picture>
+</a>
+
+<p>Patient records, appointments, treatments, and payments in a Windows application that works offline.</p>
+<p><strong>For:</strong> dental clinics managing clinical and administrative work in one place.</p>
+<p><strong>Inside the product:</strong> patient histories, appointments, odontograms, treatments, payments, inventory, and reporting. Its documented workflows also cover roles, audit records, backups, and restoration.</p>
+<p><strong>Built with:</strong> Electron, React, TypeScript, NestJS, PostgreSQL, and Prisma.</p>
+<details>
+<summary>Deployment and engineering details</summary>
+
+<p>Designed as an installable Windows application with local PostgreSQL storage. The production installer manages the application services so the clinic can work offline. The repository documents verification for critical workflows, packaging, backup restoration, and installation.</p>
+</details>
+
+<p><a href="https://github.com/MancarSoftware/odonto_care">Explore OdontoCare →</a></p>
+<p><a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md">Read the user guide</a> · <a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md">Review the release checklist</a></p>
+<h3 id="vetcare-pro">VetCare Pro</h3>
+<a href="https://github.com/MancarSoftware/vetCarePro">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-vetcare-mobile.png" />
+  <img src="../profile/assets/project-vetcare.png" width="100%" alt="VetCare Pro logo and project overview — explore the repository." />
+</picture>
+</a>
+
+<p>Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.</p>
+<p><strong>For:</strong> veterinary teams working from one computer or several computers in the same clinic.</p>
+<p><strong>Inside the product:</strong> pet records, clinical histories, appointments, vaccines, treatments, images, and payments. Local network operation lets reception, veterinary staff, and the payment desk work with the shared system.</p>
+<p><strong>Built with:</strong> Electron, Node.js, and PostgreSQL.</p>
+<details>
+<summary>Deployment and engineering details</summary>
+
+<p>Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data; the others connect over the clinic&#39;s network. Internet access is not required for this local workflow. The repository includes installation, network configuration, and backup guidance.</p>
+</details>
+
+<p><a href="https://github.com/MancarSoftware/vetCarePro">Explore VetCare Pro →</a></p>
+<p><a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md">Review the LAN test plan</a> · <a href="https://github.com/MancarSoftware/vetCarePro#readme">Read the setup guide</a></p>
+<h3 id="alma-vet">Alma Vet</h3>
+<a href="https://github.com/MancarSoftware/veterinaria">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-almavet-mobile.png" />
+  <img src="../profile/assets/project-almavet.png" width="100%" alt="Alma Vet logo and project overview — explore the repository." />
+</picture>
+</a>
+
+<p>A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.</p>
+<p><strong>For:</strong> Alma Vet veterinary clinic and pet owners requesting care.</p>
+<p><strong>Inside the project:</strong> a React website with an appointment-request flow, server-side validation, bot protection, request storage, and email notifications. Requests are submitted for review; they do not automatically confirm an appointment.</p>
+<p><strong>Built with:</strong> React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.</p>
+<p><a href="https://github.com/MancarSoftware/veterinaria">Explore Alma Vet →</a></p>
+<p><a href="https://github.com/MancarSoftware/veterinaria#readme">Read the architecture and setup guide</a></p>
+<h3 id="casa-nativa">Casa Nativa</h3>
+<a href="https://github.com/MancarSoftware/muebleria">
+<picture>
+  <source media="(max-width: 600px)" srcset="../profile/assets/project-casanativa-mobile.png" />
+  <img src="../profile/assets/project-casanativa.png" width="100%" alt="Casa Nativa logo and project overview — explore the repository." />
+</picture>
+</a>
+
+<p>A furniture store website with an editable catalog, color variants, and customer inquiry workflows.</p>
+<p><strong>For:</strong> Casa Nativa furniture store and customers exploring pieces for their homes.</p>
+<p><strong>Inside the project:</strong> a furniture catalog with product images and color variants, an administration area for publishing products, and tools for space proposals and customer inquiries.</p>
+<p><strong>Built with:</strong> React, TypeScript, Vite, and Supabase.</p>
+<p><a href="https://github.com/MancarSoftware/muebleria">Explore Casa Nativa →</a></p>
+<p><a href="https://github.com/MancarSoftware/muebleria#readme">Read the catalog and administration guide</a></p>
 <picture>
   <source media="(max-width: 600px)" srcset="../profile/assets/mancar-capabilities-mobile.svg" />
   <img src="../profile/assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
@@ -27,72 +101,6 @@
 <p>We choose the setup around connectivity, access, data handling, and maintenance needs. Our featured clinical products demonstrate local and LAN approaches; deployment requirements are defined for each project.</p>
 </details>
 
-<h2 id="selected-work">Selected work</h2>
-<p>From clinical software to veterinary websites and furniture catalogs: four projects shaped around different business needs. Explore the repositories for implementation details and setup documentation.</p>
-<a href="https://github.com/MancarSoftware/odonto_care">
-<picture>
-  <source media="(max-width: 600px)" srcset="../profile/assets/project-odontocare-mobile.png" />
-  <img src="../profile/assets/project-odontocare.png" width="100%" alt="OdontoCare logo and project overview — explore the repository." />
-</picture>
-</a>
-
-<p>Patient records, appointments, treatments, and payments in a Windows application that works offline.</p>
-<p><strong>For:</strong> dental clinics managing clinical and administrative work in one place.</p>
-<p><strong>Inside the product:</strong> patient histories, appointments, odontograms, treatments, payments, inventory, and reporting. Its documented workflows also cover roles, audit records, backups, and restoration.</p>
-<p><strong>Built with:</strong> Electron, React, TypeScript, NestJS, PostgreSQL, and Prisma.</p>
-<details>
-<summary>Deployment and engineering details</summary>
-
-<p>Designed as an installable Windows application with local PostgreSQL storage. The production installer manages the application services so the clinic can work offline. The repository documents verification for critical workflows, packaging, backup restoration, and installation.</p>
-</details>
-
-<p><a href="https://github.com/MancarSoftware/odonto_care">Explore OdontoCare →</a></p>
-<p><a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md">Read the user guide</a> · <a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md">Review the release checklist</a></p>
-<a href="https://github.com/MancarSoftware/vetCarePro">
-<picture>
-  <source media="(max-width: 600px)" srcset="../profile/assets/project-vetcare-mobile.png" />
-  <img src="../profile/assets/project-vetcare.png" width="100%" alt="VetCare Pro logo and project overview — explore the repository." />
-</picture>
-</a>
-
-<p>Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.</p>
-<p><strong>For:</strong> veterinary teams working from one computer or several computers in the same clinic.</p>
-<p><strong>Inside the product:</strong> pet records, clinical histories, appointments, vaccines, treatments, images, and payments. Local network operation lets reception, veterinary staff, and the payment desk work with the shared system.</p>
-<p><strong>Built with:</strong> Electron, Node.js, and PostgreSQL.</p>
-<details>
-<summary>Deployment and engineering details</summary>
-
-<p>Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data; the others connect over the clinic&#39;s network. Internet access is not required for this local workflow. The repository includes installation, network configuration, and backup guidance.</p>
-</details>
-
-<p><a href="https://github.com/MancarSoftware/vetCarePro">Explore VetCare Pro →</a></p>
-<p><a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md">Review the LAN test plan</a> · <a href="https://github.com/MancarSoftware/vetCarePro#readme">Read the setup guide</a></p>
-<a href="https://github.com/MancarSoftware/veterinaria">
-<picture>
-  <source media="(max-width: 600px)" srcset="../profile/assets/project-almavet-mobile.png" />
-  <img src="../profile/assets/project-almavet.png" width="100%" alt="Alma Vet logo and project overview — explore the repository." />
-</picture>
-</a>
-
-<p>A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.</p>
-<p><strong>For:</strong> Alma Vet veterinary clinic and pet owners requesting care.</p>
-<p><strong>Inside the project:</strong> a React website with an appointment-request flow, server-side validation, bot protection, request storage, and email notifications. Requests are submitted for review; they do not automatically confirm an appointment.</p>
-<p><strong>Built with:</strong> React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.</p>
-<p><a href="https://github.com/MancarSoftware/veterinaria">Explore Alma Vet →</a></p>
-<p><a href="https://github.com/MancarSoftware/veterinaria#readme">Read the architecture and setup guide</a></p>
-<a href="https://github.com/MancarSoftware/muebleria">
-<picture>
-  <source media="(max-width: 600px)" srcset="../profile/assets/project-casanativa-mobile.png" />
-  <img src="../profile/assets/project-casanativa.png" width="100%" alt="Casa Nativa logo and project overview — explore the repository." />
-</picture>
-</a>
-
-<p>A furniture store website with an editable catalog, color variants, and customer inquiry workflows.</p>
-<p><strong>For:</strong> Casa Nativa furniture store and customers exploring pieces for their homes.</p>
-<p><strong>Inside the project:</strong> a furniture catalog with product images and color variants, an administration area for publishing products, and tools for space proposals and customer inquiries.</p>
-<p><strong>Built with:</strong> React, TypeScript, Vite, and Supabase.</p>
-<p><a href="https://github.com/MancarSoftware/muebleria">Explore Casa Nativa →</a></p>
-<p><a href="https://github.com/MancarSoftware/muebleria#readme">Read the catalog and administration guide</a></p>
 <picture>
   <source media="(max-width: 600px)" srcset="../profile/assets/mancar-approach-mobile.svg" />
   <img src="../profile/assets/mancar-approach.svg" width="100%" alt="How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve." />

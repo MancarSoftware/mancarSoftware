@@ -38,8 +38,17 @@ class Panel:
 for mobile in (False,True):
     suffix='-mobile' if mobile else ''
     w=560 if mobile else 1080
+    # A static editorial introduction lets the hero remain the motion focal point.
+    p=Panel(w,270 if mobile else 220)
+    p.text(32,24,'01 / SELECTED PROJECTS',17,LIME,True)
+    p.text(32,72,'Different businesses.',38 if mobile else 48,bold=True)
+    p.text(32,124,'Specific solutions.',38 if mobile else 48,bold=True)
+    if not mobile:
+        p.text(888,45,'04',92,LIME,True)
+    p.text(32,220 if mobile else 190,'CLINICAL SOFTWARE  /  BUSINESS WEBSITES',15,MUTED)
+    p.save('mancar-work-intro'+suffix)
     p=Panel(w,530 if mobile else 390)
-    p.text(32,28,'01 / WHAT WE BUILD',18,LIME,True)
+    p.text(32,28,'02 / WHAT WE BUILD',18,LIME,True)
     p.text(32,76,'Your business.',42 if mobile else 50,bold=True)
     p.text(32,132,'Better connected.',42 if mobile else 50,bold=True)
     services=[('Web experiences','Websites, landing pages & catalogs.'),('Business software','Desktop systems & local networks.'),('Custom applications','Interfaces, services & databases.')]
@@ -94,9 +103,14 @@ def picture(name,alt):
 
 hero=(ROOT/'profile/README.md').read_text(encoding='utf-8').split('</picture>',1)[0]+'</picture>'
 parts=[hero,
-    '<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>',
-    'A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.',
-    '[Capabilities](#capabilities) &nbsp; / &nbsp; [Selected work](#selected-work) &nbsp; / &nbsp; [Working together](#working-together) &nbsp; / &nbsp; [Let’s talk](https://www.instagram.com/mancarsoftware/)',
+    '**Your business has its own way of working. Your software should reflect it.**',
+    'Mancar Software designs websites, applications, and business systems around the people who use them—from the first customer inquiry to the work behind the scenes.',
+    '[Explore the projects ↓](#selected-work) &nbsp; / &nbsp; [Discuss your project ↗](https://www.instagram.com/mancarsoftware/)',
+    '## Selected work',
+    picture('mancar-work-intro','Four selected projects. Different businesses. Specific solutions. Clinical software and business websites.'),
+    '[01 OdontoCare](#odontocare) &nbsp; / &nbsp; [02 VetCare Pro](#vetcare-pro) &nbsp; / &nbsp; [03 Alma Vet](#alma-vet) &nbsp; / &nbsp; [04 Casa Nativa](#casa-nativa)'
+]
+capabilities = [
     picture('mancar-capabilities','What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases.'),
     '''## Capabilities
 
@@ -115,9 +129,7 @@ parts=[hero,
 
 We choose the setup around connectivity, access, data handling, and maintenance needs. Our featured clinical products demonstrate local and LAN approaches; deployment requirements are defined for each project.
 
-</details>''',
-    '## Selected work',
-    'From clinical software to veterinary websites and furniture catalogs: four projects shaped around different business needs. Explore the repositories for implementation details and setup documentation.'
+</details>'''
 ]
 project_details = {
     'odontocare': '''**For:** dental clinics managing clinical and administrative work in one place.
@@ -166,8 +178,9 @@ for slug,name,url,description in [
     ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.'),
     ('almavet','Alma Vet','veterinaria','A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.'),
     ('casanativa','Casa Nativa','muebleria','A furniture store website with an editable catalog, color variants, and customer inquiry workflows.')]:
-    parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' logo and project overview — explore the repository.')+'\n</a>']
+    parts += ['### '+name,'<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' logo and project overview — explore the repository.')+'\n</a>']
     parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
+parts += capabilities
 parts += [
     picture('mancar-approach','How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve.'),
     '''## Working together
@@ -247,7 +260,7 @@ content='\n\n'.join(parts)+'\n'
 (ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/'),encoding='utf-8')
 
 # Inspect the actual artwork together at desktop and phone widths.
-names=['mancar-header-static','mancar-capabilities','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-approach','mancar-contact']
+names=['mancar-header-static','mancar-work-intro','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-capabilities','mancar-approach','mancar-contact']
 for mobile in (False,True):
     width=375 if mobile else 900
     images=[]

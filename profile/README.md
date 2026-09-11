@@ -3,39 +3,22 @@
   <img src="assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
 </picture>
 
-<p><strong>Websites, applications, and business systems for the way you work.</strong><br>We bring product design and software engineering together for businesses and SMEs.</p>
+**Your business has its own way of working. Your software should reflect it.**
 
-A customer deciding to get in touch. A receptionist finding the next appointment. A team keeping its records in order. We design around these everyday moments, connecting a clear public presence with useful software behind the scenes.
+Mancar Software designs websites, applications, and business systems around the people who use them—from the first customer inquiry to the work behind the scenes.
 
-[Capabilities](#capabilities) &nbsp; / &nbsp; [Selected work](#selected-work) &nbsp; / &nbsp; [Working together](#working-together) &nbsp; / &nbsp; [Let’s talk](https://www.instagram.com/mancarsoftware/)
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mancar-capabilities-mobile.svg" />
-  <img src="assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
-</picture>
-
-## Capabilities
-
-**Build your digital presence.** Corporate websites, landing pages, and catalogs that explain your services, express your identity, and guide visitors toward an inquiry. Responsive layouts and clear content help people find what matters on any screen.
-
-**Bring your operations together.** Business applications for records, appointments, inventory, payments, and reporting. We shape the workflow around the people doing the work, with roles and access appropriate to each responsibility.
-
-**Create a product around a specific need.** Custom web applications and desktop software that connect interfaces, business logic, and data. The scope can include authentication, APIs, and integrations with existing tools.
-
-<details>
-<summary>Where the software runs</summary>
-
-- **Web:** for products and experiences accessed through a browser.
-- **Local desktop:** for work on a dedicated computer, including workflows that need to operate offline.
-- **Local network:** for teams sharing a system across computers at the same location.
-
-We choose the setup around connectivity, access, data handling, and maintenance needs. Our featured clinical products demonstrate local and LAN approaches; deployment requirements are defined for each project.
-
-</details>
+[Explore the projects ↓](#selected-work) &nbsp; / &nbsp; [Discuss your project ↗](https://www.instagram.com/mancarsoftware/)
 
 ## Selected work
 
-From clinical software to veterinary websites and furniture catalogs: four projects shaped around different business needs. Explore the repositories for implementation details and setup documentation.
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/mancar-work-intro-mobile.svg" />
+  <img src="assets/mancar-work-intro.svg" width="100%" alt="Four selected projects. Different businesses. Specific solutions. Clinical software and business websites." />
+</picture>
+
+[01 OdontoCare](#odontocare) &nbsp; / &nbsp; [02 VetCare Pro](#vetcare-pro) &nbsp; / &nbsp; [03 Alma Vet](#alma-vet) &nbsp; / &nbsp; [04 Casa Nativa](#casa-nativa)
+
+### OdontoCare
 
 <a href="https://github.com/MancarSoftware/odonto_care">
 <picture>
@@ -63,6 +46,8 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 [Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)
 
+### VetCare Pro
+
 <a href="https://github.com/MancarSoftware/vetCarePro">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/project-vetcare-mobile.png" />
@@ -89,6 +74,8 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 
 [Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)
 
+### Alma Vet
+
 <a href="https://github.com/MancarSoftware/veterinaria">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/project-almavet-mobile.png" />
@@ -108,6 +95,8 @@ A veterinary clinic website that connects pet owners with the clinic through a s
 
 [Read the architecture and setup guide](https://github.com/MancarSoftware/veterinaria#readme)
 
+### Casa Nativa
+
 <a href="https://github.com/MancarSoftware/muebleria">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/project-casanativa-mobile.png" />
@@ -126,6 +115,30 @@ A furniture store website with an editable catalog, color variants, and customer
 [Explore Casa Nativa →](https://github.com/MancarSoftware/muebleria)
 
 [Read the catalog and administration guide](https://github.com/MancarSoftware/muebleria#readme)
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/mancar-capabilities-mobile.svg" />
+  <img src="assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
+</picture>
+
+## Capabilities
+
+**Build your digital presence.** Corporate websites, landing pages, and catalogs that explain your services, express your identity, and guide visitors toward an inquiry. Responsive layouts and clear content help people find what matters on any screen.
+
+**Bring your operations together.** Business applications for records, appointments, inventory, payments, and reporting. We shape the workflow around the people doing the work, with roles and access appropriate to each responsibility.
+
+**Create a product around a specific need.** Custom web applications and desktop software that connect interfaces, business logic, and data. The scope can include authentication, APIs, and integrations with existing tools.
+
+<details>
+<summary>Where the software runs</summary>
+
+- **Web:** for products and experiences accessed through a browser.
+- **Local desktop:** for work on a dedicated computer, including workflows that need to operate offline.
+- **Local network:** for teams sharing a system across computers at the same location.
+
+We choose the setup around connectivity, access, data handling, and maintenance needs. Our featured clinical products demonstrate local and LAN approaches; deployment requirements are defined for each project.
+
+</details>
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.svg" />

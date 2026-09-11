@@ -14,6 +14,8 @@ Keep all visual assets in `profile/assets/`. The public presentation uses an ani
 
 ## Editorial updates
 
+The approved direction is a premium software studio: bold and restrained. Lead with the animated hero, a concise positioning statement, and selected work. The static portfolio introduction and four-project index precede the detailed project entries; capabilities and process follow. Preserve the original transparent logos without added backings. Native project headings provide readable names and anchors for direct navigation. Keep the hero as the motion focal point.
+
 ### Evidence and browser review
 
 - Clinical project artwork describes workflows documented in the public repositories. It is not an application screenshot. The public user guide, release checklist, and LAN test plan are linked from the respective entries; a test plan is not evidence that all tests have passed.
