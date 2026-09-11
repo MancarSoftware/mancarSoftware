@@ -1,6 +1,7 @@
 """Generate matching SVG/PNG editorial panels and responsive README files."""
 from pathlib import Path
 from html import escape
+import base64
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +21,16 @@ class Panel:
     def line(self,x1,y1,x2,y2,color=LINE,width=1):
         self.draw.line((x1,y1,x2,y2),fill=color,width=width)
         self.svg.append(f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{color}" stroke-width="{width}"/>')
+    def logo(self, slug):
+        """Place the transparent source logo directly on the panel, preserving its ratio."""
+        source = OUT / 'logos' / (slug + '.png')
+        x, y, width, height = 32, 68, self.w-64, 182
+        logo = Image.open(source).convert('RGBA')
+        logo.thumbnail((min(width-32,660),height-20),Image.Resampling.LANCZOS)
+        left, top = x+16, y+(height-logo.height)//2
+        self.image.paste(logo,(left,top),logo)
+        data = base64.b64encode(source.read_bytes()).decode('ascii')
+        self.svg.append(f'<image x="{left}" y="{top}" width="{logo.width}" height="{logo.height}" preserveAspectRatio="xMidYMid meet" href="data:image/png;base64,{data}"/>')
     def save(self,name):
         (OUT/f'{name}.svg').write_text(''.join(self.svg)+'</svg>',encoding='utf-8')
         self.image.save(OUT/f'{name}.png')
@@ -40,30 +51,27 @@ for mobile in (False,True):
         p.text(x,y+53,body,22 if mobile else 18,MUTED)
     p.save('mancar-capabilities'+suffix)
 
-    projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE')]
+    projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE'),('almavet','03','Alma Vet','VETERINARY CLINIC WEBSITE','A clear path to care.','CLINIC WEBSITE / APPOINTMENT REQUESTS'),('casanativa','04','Casa Nativa','FURNITURE STORE & DIGITAL CATALOG','Find the pieces that feel like home.','FURNITURE / CATALOG / CUSTOMER INQUIRIES')]
     for slug,num,name,category,tag,meta in projects:
-        p=Panel(w,436 if mobile else 386)
+        clinical = slug in ('odontocare','vetcare')
+        p=Panel(w,(526 if mobile else 476) if clinical else 360)
         p.line(0,0,0,p.h,LIME,5)
-        p.text(32,28,category,17,LIME,True)
-        p.text(30,76,name,48 if mobile else 58,bold=True)
-        p.text(32,150,tag,25 if mobile else 28,MUTED)
-        p.line(32,208,w-32,208)
-        p.text(32,230,meta,14 if mobile else 17,MUTED)
-        if not mobile:
-            p.text(900,34,num,88,LINE,True)
-            # Abstract structural motif, deliberately not a product screenshot.
-            for j in range(3):
-                p.line(770+j*35,174-j*30,875+j*35,174-j*30,LIME if j==1 else LINE,3)
-        p.text(32,278,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
-        steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
-        if mobile:
-            p.text(32,316,steps[0]+'  /  '+steps[1],24,bold=True)
-            p.text(32,358,steps[2],24,bold=True)
-        else:
-            for j,step in enumerate(steps):
-                x=32+j*340
-                p.text(x,320,step,24,bold=True)
-                if j<2: p.text(x+295,318,'→',26,LIME)
+        p.text(32,28,num+' / '+category,17,LIME,True)
+        p.logo(slug)
+        p.text(32,278,tag,24 if mobile else 28,MUTED)
+        p.text(32,326,meta,14 if mobile else 17,MUTED)
+        if clinical:
+            p.line(32,366,w-32,366)
+            p.text(32,386,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
+            steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
+            if mobile:
+                p.text(32,422,steps[0]+'  /  '+steps[1],24,bold=True)
+                p.text(32,464,steps[2],24,bold=True)
+            else:
+                for j,step in enumerate(steps):
+                    x=32+j*340
+                    p.text(x,426,step,24,bold=True)
+                    if j<2: p.text(x+295,424,'→',26,LIME)
         p.save('project-'+slug+suffix)
 
     p=Panel(w,400 if mobile else 260)
@@ -81,7 +89,8 @@ for mobile in (False,True):
     p.save('mancar-contact'+suffix)
 
 def picture(name,alt):
-    return f'<picture>\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.svg" />\n  <img src="assets/{name}.svg" width="100%" alt="{alt}" />\n</picture>'
+    extension = 'png' if name.startswith('project-') else 'svg'
+    return f'<picture>\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.{extension}" />\n  <img src="assets/{name}.{extension}" width="100%" alt="{alt}" />\n</picture>'
 
 hero=(ROOT/'profile/README.md').read_text(encoding='utf-8').split('</picture>',1)[0]+'</picture>'
 parts=[hero,
@@ -108,7 +117,7 @@ We choose the setup around connectivity, access, data handling, and maintenance 
 
 </details>''',
     '## Selected work',
-    'A closer look at our work for dental practices and veterinary clinics. Explore the repositories for implementation details and setup documentation.'
+    'From clinical software to veterinary websites and furniture catalogs: four projects shaped around different business needs. Explore the repositories for implementation details and setup documentation.'
 ]
 project_details = {
     'odontocare': '''**For:** dental clinics managing clinical and administrative work in one place.
@@ -134,16 +143,30 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data; the others connect over the clinic's network. Internet access is not required for this local workflow. The repository includes installation, network configuration, and backup guidance.
 
-</details>'''
+</details>''',
+    'almavet': '''**For:** Alma Vet veterinary clinic and pet owners requesting care.
+
+**Inside the project:** a React website with an appointment-request flow, server-side validation, bot protection, request storage, and email notifications. Requests are submitted for review; they do not automatically confirm an appointment.
+
+**Built with:** React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.''',
+    'casanativa': '''**For:** Casa Nativa furniture store and customers exploring pieces for their homes.
+
+**Inside the project:** a furniture catalog with product images and color variants, an administration area for publishing products, and tools for space proposals and customer inquiries.
+
+**Built with:** React, TypeScript, Vite, and Supabase.'''
 }
 project_evidence = {
     'odontocare': '[Read the user guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the release checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)',
-    'vetcare': '[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)'
+    'vetcare': '[Review the LAN test plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the setup guide](https://github.com/MancarSoftware/vetCarePro#readme)',
+    'almavet': '[Read the architecture and setup guide](https://github.com/MancarSoftware/veterinaria#readme)',
+    'casanativa': '[Read the catalog and administration guide](https://github.com/MancarSoftware/muebleria#readme)'
 }
 for slug,name,url,description in [
     ('odontocare','OdontoCare','odonto_care','Patient records, appointments, treatments, and payments in a Windows application that works offline.'),
-    ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.')]:
-    parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' — explore the repository.')+'\n</a>']
+    ('vetcare','VetCare Pro','vetCarePro','Veterinary software for a single PC or a connected clinic, with records and payments available over the local network.'),
+    ('almavet','Alma Vet','veterinaria','A veterinary clinic website that connects pet owners with the clinic through a structured appointment-request process.'),
+    ('casanativa','Casa Nativa','muebleria','A furniture store website with an editable catalog, color variants, and customer inquiry workflows.')]:
+    parts += ['<a href="https://github.com/MancarSoftware/'+url+'">\n'+picture('project-'+slug,name+' logo and project overview — explore the repository.')+'\n</a>']
     parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
 parts += [
     picture('mancar-approach','How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve.'),
@@ -224,7 +247,7 @@ content='\n\n'.join(parts)+'\n'
 (ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/'),encoding='utf-8')
 
 # Inspect the actual artwork together at desktop and phone widths.
-names=['mancar-header-static','mancar-capabilities','project-odontocare','project-vetcare','mancar-approach','mancar-contact']
+names=['mancar-header-static','mancar-capabilities','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-approach','mancar-contact']
 for mobile in (False,True):
     width=375 if mobile else 900
     images=[]
