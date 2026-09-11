@@ -12,8 +12,10 @@ Mancar Software designs websites, applications, and business systems around the 
 ## Selected work
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/mancar-work-intro-mobile.svg" />
-  <img src="assets/mancar-work-intro.svg" width="100%" alt="Four selected projects. Different businesses. Specific solutions. Clinical software and business websites." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-studio-cover.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.gif" />
+  <img src="assets/mancar-studio-cover.gif" width="100%" alt="Mancar Software. Made to look good. Built to work. Animated geometric composition representing digital product design." />
 </picture>
 
 [01 OdontoCare](#odontocare) &nbsp; / &nbsp; [02 VetCare Pro](#vetcare-pro) &nbsp; / &nbsp; [03 Alma Vet](#alma-vet) &nbsp; / &nbsp; [04 Casa Nativa](#casa-nativa)
@@ -117,8 +119,10 @@ A furniture store website with an editable catalog, color variants, and customer
 [Read the catalog and administration guide](https://github.com/MancarSoftware/muebleria#readme)
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/mancar-capabilities-mobile.svg" />
-  <img src="assets/mancar-capabilities.svg" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-capabilities-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-capabilities.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-capabilities-mobile.gif" />
+  <img src="assets/mancar-capabilities.gif" width="100%" alt="What we build: web experiences — websites, landing pages and catalogs; business software — desktop systems and local networks; custom applications — interfaces, services and databases." />
 </picture>
 
 ## Capabilities
@@ -141,8 +145,10 @@ We choose the setup around connectivity, access, data handling, and maintenance 
 </details>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.svg" />
-  <img src="assets/mancar-approach.svg" width="100%" alt="How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-approach-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-approach.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.gif" />
+  <img src="assets/mancar-approach.gif" width="100%" alt="Good work takes shape: understand, design, build, deliver. An animated signal connects the four stages." />
 </picture>
 
 ## Working together
@@ -216,8 +222,10 @@ Maintenance, hosting, updates, and support responsibilities are defined in the p
 
 <a href="https://www.instagram.com/mancarsoftware/">
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/mancar-contact-mobile.svg" />
-  <img src="assets/mancar-contact.svg" width="100%" alt="What could work better? Talk to Mancar Software about your next project on Instagram." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-contact-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-contact.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-contact-mobile.gif" />
+  <img src="assets/mancar-contact.gif" width="100%" alt="Let’s make it work. Tell Mancar Software what you want to build. Contact us on Instagram." />
 </picture>
 </a>
 

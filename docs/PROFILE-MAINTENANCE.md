@@ -4,7 +4,7 @@ The root README is the visitor-facing company presentation. `profile/README.md` 
 
 ## Assets
 
-Keep all visual assets in `profile/assets/`. The public presentation uses an animated GIF hero and divider for image-viewer compatibility, with reduced-motion alternatives selected through picture elements where supported. Essential information remains readable as Markdown. The original SVG hero is retained as an earlier vector concept; it is no longer embedded in the presentation. Regenerate the current artwork with `scripts/build-brand-assets.py` using Python and Pillow on Windows (Segoe UI fonts). GIF playback and reduced-motion selection still require verification in the target GitHub client.
+Keep all visual assets in `profile/assets/`. The public presentation uses an animated brand header, cobalt studio cover, capability illustrations, process sequence, and coral invitation. Every animated image has a static reduced-motion alternative selected through `picture` where supported. Essential information remains readable as Markdown. Regenerate the original brand header with `scripts/build-brand-assets.py`; regenerate the presentation with `python -B scripts/build-presentation.py`. Both use Pillow and Windows Segoe UI fonts. GIF playback and reduced-motion selection still require verification in the target GitHub client.
 
 ## Publishing
 
@@ -14,7 +14,7 @@ Keep all visual assets in `profile/assets/`. The public presentation uses an ani
 
 ## Editorial updates
 
-The approved direction is a premium software studio: bold and restrained. Lead with the animated hero, a concise positioning statement, and selected work. The static portfolio introduction and four-project index precede the detailed project entries; capabilities and process follow. Preserve the original transparent logos without added backings. Native project headings provide readable names and anchors for direct navigation. Keep the hero as the motion focal point.
+The latest direction is an expressive software studio with more color and motion across the page. See `docs/ART-DIRECTION.md` for the concept, palette, and composition rules. The cobalt studio cover and four-project index precede the detailed project entries; illustrated capabilities and process follow. Preserve the original transparent logos without added backings. Native project headings provide readable names and anchors for direct navigation. The project logos are stationary; the studio-level compositions carry the motion.
 
 ### Evidence and browser review
 
@@ -24,9 +24,11 @@ The approved direction is a premium software studio: bold and restrained. Lead w
 
 The presentation includes custom service, project, process, and contact panels. Each has a mobile variant selected below 600 px through `picture` sources. Regenerate these panels and both README files with `scripts/build-presentation.py` (Python, Pillow, and Windows Segoe UI). Edit the copy in that generator before regenerating. The original animated hero is preserved.
 
-The four supplied project logos are stored unchanged in `profile/assets/logos/`: `odontocare.png`, `vetcare.png`, `almavet.png`, and `casanativa.png`. The generator places each transparent logo proportionally directly on its project panel, without a separate background. Project panels use PNG in the README for consistent raster-logo display; SVG versions retain the original embedded PNG data. No logo is redrawn, recolored, or cropped. Alma Vet links to `MancarSoftware/veterinaria`; Casa Nativa links to `MancarSoftware/muebleria`. Their descriptions are based on the public repository documentation.
+The four supplied project logos are stored unchanged in `profile/assets/logos/`: `odontocare.png`, `vetcare.png`, `almavet.png`, and `casanativa.png`. The generator places each transparent logo proportionally directly on its project panel, without a separate background. Project panels use static PNG; SVG layout sources retain the original embedded PNG data. No source logo is redrawn, recolored, or cropped. Alma Vet links to `MancarSoftware/veterinaria`; Casa Nativa links to `MancarSoftware/muebleria`. Their descriptions are based on the public repository documentation.
 
-`docs/artwork-desktop.png` and `docs/artwork-mobile.png` are artwork contact sheets, not screenshots of GitHub rendering. The README embeds PNG project panels and SVG service, process, and contact panels. Native project summaries, navigation, and toolkit text are not included in these contact sheets. Validate the final composition and responsive source selection on GitHub after publishing.
+`scripts/studio_motion.py` draws the orbital studio composition, moving service symbols, connected process, and closing arrow. It is called by `scripts/build-presentation.py`; no extra dependency is needed beyond Pillow. The loops run for 7.2 seconds. Shared GIF palettes keep stationary artwork stable. `picture` selects desktop/mobile static PNGs when reduced motion is requested by supporting clients. These illustrations are conceptual, not screenshots or claims about a running application's state. Earlier SVG drafts remain available but are not the sources for the new colored motion panels.
+
+`docs/artwork-desktop.png` and `docs/artwork-mobile.png` are static artwork contact sheets, not screenshots of GitHub rendering. The README embeds static PNG project panels and GIF studio, service, process, and contact panels with static PNG alternatives. Native project summaries, navigation, and toolkit text are not included in these contact sheets. Validate the final composition and responsive source selection on GitHub after publishing.
 
 Keep both README files synchronized, preserving their respective image paths. Add projects only with verified descriptions and public repository or case-study links. The current project details come from their public repository READMEs; Instagram comes from the company's GitHub profile.
 

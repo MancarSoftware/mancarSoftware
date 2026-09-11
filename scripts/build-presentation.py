@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import base64
 from PIL import Image, ImageDraw, ImageFont
+from studio_motion import build_studio
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'profile/assets'
@@ -63,19 +64,20 @@ for mobile in (False,True):
     projects=[('odontocare','01','OdontoCare','DENTAL PRACTICE SOFTWARE','Local-first. Practice-focused.','PATIENTS / APPOINTMENTS / TREATMENTS'),('vetcare','02','VetCare Pro','VETERINARY SOFTWARE','One clinic. Connected teams.','DESKTOP / LOCAL NETWORK / OFFLINE'),('almavet','03','Alma Vet','VETERINARY CLINIC WEBSITE','A clear path to care.','CLINIC WEBSITE / APPOINTMENT REQUESTS'),('casanativa','04','Casa Nativa','FURNITURE STORE & DIGITAL CATALOG','Find the pieces that feel like home.','FURNITURE / CATALOG / CUSTOMER INQUIRIES')]
     for slug,num,name,category,tag,meta in projects:
         clinical = slug in ('odontocare','vetcare')
-        p=Panel(w,(526 if mobile else 476) if clinical else 360)
+        motion_space = 0
+        p=Panel(w,((526 if mobile else 476) if clinical else 360)+motion_space)
         p.line(0,0,0,p.h,LIME,5)
         p.text(32,28,num+' / '+category,17,LIME,True)
         p.logo(slug)
-        p.text(32,278,tag,24 if mobile else 28,MUTED)
-        p.text(32,326,meta,14 if mobile else 17,MUTED)
+        p.text(32,278+motion_space,tag,24 if mobile else 28,MUTED)
+        p.text(32,326+motion_space,meta,14 if mobile else 17,MUTED)
         if clinical:
-            p.line(32,366,w-32,366)
-            p.text(32,386,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
+            p.line(32,366+motion_space,w-32,366+motion_space)
+            p.text(32,386+motion_space,'A WORKFLOW INSIDE THE PRODUCT',16,LIME,True)
             steps = ('Patient record','Treatment plan','Appointments & payments') if slug=='odontocare' else ('Reception','Clinical records','Payments & reporting')
             if mobile:
-                p.text(32,422,steps[0]+'  /  '+steps[1],24,bold=True)
-                p.text(32,464,steps[2],24,bold=True)
+                p.text(32,422+motion_space,steps[0]+'  /  '+steps[1],24,bold=True)
+                p.text(32,464+motion_space,steps[2],24,bold=True)
             else:
                 for j,step in enumerate(steps):
                     x=32+j*340
@@ -97,7 +99,11 @@ for mobile in (False,True):
     p.text(32,164,'Tell us about your next project  →',25,LIME)
     p.save('mancar-contact'+suffix)
 
+build_studio(OUT)
+
 def picture(name,alt):
+    if name in ('mancar-studio-cover','mancar-capabilities','mancar-approach','mancar-contact'):
+        return f'<picture>\n  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/{name}-mobile.png" />\n  <source media="(prefers-reduced-motion: reduce)" srcset="assets/{name}.png" />\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.gif" />\n  <img src="assets/{name}.gif" width="100%" alt="{alt}" />\n</picture>'
     extension = 'png' if name.startswith('project-') else 'svg'
     return f'<picture>\n  <source media="(max-width: 600px)" srcset="assets/{name}-mobile.{extension}" />\n  <img src="assets/{name}.{extension}" width="100%" alt="{alt}" />\n</picture>'
 
@@ -107,7 +113,7 @@ parts=[hero,
     'Mancar Software designs websites, applications, and business systems around the people who use them—from the first customer inquiry to the work behind the scenes.',
     '[Explore the projects ↓](#selected-work) &nbsp; / &nbsp; [Discuss your project ↗](https://www.instagram.com/mancarsoftware/)',
     '## Selected work',
-    picture('mancar-work-intro','Four selected projects. Different businesses. Specific solutions. Clinical software and business websites.'),
+    picture('mancar-studio-cover','Mancar Software. Made to look good. Built to work. Animated geometric composition representing digital product design.'),
     '[01 OdontoCare](#odontocare) &nbsp; / &nbsp; [02 VetCare Pro](#vetcare-pro) &nbsp; / &nbsp; [03 Alma Vet](#alma-vet) &nbsp; / &nbsp; [04 Casa Nativa](#casa-nativa)'
 ]
 capabilities = [
@@ -182,7 +188,7 @@ for slug,name,url,description in [
     parts += [description,project_details[slug],'[Explore '+name+' →](https://github.com/MancarSoftware/'+url+')',project_evidence[slug]]
 parts += capabilities
 parts += [
-    picture('mancar-approach','How we build: understand the real workflow; design for clear everyday use; engineer foundations that evolve.'),
+    picture('mancar-approach','Good work takes shape: understand, design, build, deliver. An animated signal connects the four stages.'),
     '''## Working together
 
 **01 / Define the right scope.** Start with the business goal, the users, and the current workflow. Identify the essential features, constraints, integrations, and what a successful first release needs to achieve.
@@ -244,7 +250,7 @@ The critical workflows, design scope, integrations, data migration, and deployme
 Maintenance, hosting, updates, and support responsibilities are defined in the project scope. They should be clear before development starts, alongside the documentation and handover requirements.
 
 </details>''',
-    '<a href="https://www.instagram.com/mancarsoftware/">\n'+picture('mancar-contact','What could work better? Talk to Mancar Software about your next project on Instagram.')+'\n</a>',
+    '<a href="https://www.instagram.com/mancarsoftware/">\n'+picture('mancar-contact','Let’s make it work. Tell Mancar Software what you want to build. Contact us on Instagram.')+'\n</a>',
     '''## Start with the problem
 
 Tell us what your business does, who will use the software, and what is difficult today. A rough idea is enough to start the conversation.
@@ -260,7 +266,7 @@ content='\n\n'.join(parts)+'\n'
 (ROOT/'README.md').write_text(content.replace('"assets/','"profile/assets/'),encoding='utf-8')
 
 # Inspect the actual artwork together at desktop and phone widths.
-names=['mancar-header-static','mancar-work-intro','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-capabilities','mancar-approach','mancar-contact']
+names=['mancar-header-static','mancar-studio-cover','project-odontocare','project-vetcare','project-almavet','project-casanativa','mancar-capabilities','mancar-approach','mancar-contact']
 for mobile in (False,True):
     width=375 if mobile else 900
     images=[]
