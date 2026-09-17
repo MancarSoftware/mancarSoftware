@@ -25,9 +25,12 @@ profile_text=(ROOT/'profile/README.md').read_text(encoding='utf-8')
 assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/')==root_text,'README variants diverged'
 assert 'beauty' not in root_text.lower(),'Removed project reintroduced'
 headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
-assert headings[:3]==['# Mancar Software','## Software for the people behind the work.','# Selected Projects'] and len(headings)==7,'Public profile must introduce Mancar before its projects'
-for heading,project in zip(headings[3:],('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
+assert headings[:3]==['# Mancar Software','## Digital products for businesses that need to sell with more clarity, operate with more control, and grow with confidence.','### What We Help Improve'],'Public profile must introduce Mancar before its projects'
+assert '# Selected Projects' in headings,'Public profile must retain its project catalogue'
+project_headings=[heading for heading in headings if heading.endswith(('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa'))]
+for heading,project in zip(project_headings,('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
     assert heading.endswith(project),f'Unexpected project heading: {heading}'
+assert len(project_headings)==4,'Public profile must retain all four selected projects'
 for anchor in ('odontocare','vetcare','almavet','casanativa'):
     assert f'<a id="{anchor}"></a>' in root_text,f'Missing project anchor: {anchor}'
 for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):

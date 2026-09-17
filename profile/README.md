@@ -5,11 +5,32 @@
 
 # Mancar Software
 
-## Software for the people behind the work.
+## Digital products for businesses that need to sell with more clarity, operate with more control, and grow with confidence.
 
-Mancar Software designs and develops digital products for businesses with real day-to-day needs. We study the work, clarify the experience, and build tools people can rely on—from desktop applications for clinical teams to customer-facing platforms and product catalogues.
+Built in Ecuador, Mancar Software works directly with business owners and teams to turn real priorities into practical digital products. We define the need before choosing the technology, so every project has a clear purpose: earn trust, capture demand, reduce repeated effort, or give people a reliable view of the work.
 
-The projects below show that approach in practice: focused products shaped around the people, information, and decisions that matter to each business.
+Our work spans customer-facing sites and catalogues, desktop and local-network applications, and ongoing technical support. The format changes from project to project; the standard does not: make the experience clear, make the work easier to manage, and leave a foundation that can evolve.
+
+### What We Help Improve
+
+**More Confidence.** A clear public presence, useful content, and direct paths from interest to conversation help a business communicate its value from the first visit.
+
+**Less Manual Work.** Focused tools centralize the details that teams need, reduce repetitive tasks, and make daily operations easier to follow.
+
+**Better Follow-Through.** Work progresses through clear stages, visible decisions, and plain-language communication, so the next step is always understood.
+
+### How We Work
+
+1. **Diagnose.** We review the business, its priorities, the people involved, and the outcome that matters most.
+2. **Define a Clear Proposal.** We agree the scope, deliverables, timing, and implementation route before development begins.
+3. **Design and Develop.** We shape a usable experience around the brand, the workflow, and the people using it.
+4. **Launch and Evolve.** We test, publish or install, and remain available for support, refinement, and the next stage of the work.
+
+### Built to Fit the Work
+
+We choose technology in proportion to the job: a lean public presence where clarity and speed matter, a catalog when products need to be explored, or a desktop and local-network application when a team needs continuity and control. We do not add complexity for its own sake.
+
+The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalogue built around real customer inquiries.
 
 # Selected Projects
 
@@ -129,4 +150,10 @@ A furniture retail website with an editable catalog, color variants, and structu
 
 [Read the Catalog and Administration Guide](https://github.com/MancarSoftware/muebleria#readme)
 
-<sub>MANCAR SOFTWARE</sub>
+## Start a Conversation
+
+If your business needs to sell more clearly, make day-to-day work easier to manage, or create a more dependable path for customers, let’s define the right next step.
+
+[mancarsoftwares@gmail.com](mailto:mancarsoftwares@gmail.com) &nbsp; / &nbsp; [+593 98 695 1419](tel:+593986951419) &nbsp; / &nbsp; [Visit Mancar Software →](https://ale-mancar.github.io/mancar_software/)
+
+<sub>MANCAR SOFTWARE · GUAYAQUIL, ECUADOR</sub>
