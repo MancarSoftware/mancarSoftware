@@ -1,52 +1,33 @@
-# Profile maintenance
+# Profile Maintenance
 
-The root README is the visitor-facing company presentation. `profile/README.md` carries the same presentation for installation in an organization's public `.github` repository. Their image and gallery paths differ because the files live at different levels.
+The root `README.md` is the personal-profile version. `profile/README.md` is the organization-profile version. They contain the same project catalogue, with paths adjusted for their respective directories.
+
+## Public Scope
+
+The public profile contains only the Mancar header, the project index, and four verified project entries: OdontoCare, VetCare Pro, Alma Vet, and Casa Nativa. Keep service descriptions, generic studio claims, process explanations, FAQs, contact prompts, and unverified projects out of the profile.
+
+Every project entry must include a repository link, an accurate description, and only claims supported by the repository. Keep the labels in title case: **Designed For**, **Core Functionality**, and **Built With**.
 
 ## Assets
 
-Keep all visual assets in `profile/assets/`. The public presentation uses an animated brand header, cobalt studio cover, capability illustrations, product tours, and coral invitation. Every animated image has a static reduced-motion alternative selected through `picture` where supported. Essential information remains readable as Markdown. Regenerate the original brand header with `scripts/build-brand-assets.py`; regenerate the presentation with `python -B scripts/build-presentation.py`. Both use Pillow and Windows Segoe UI fonts. GIF playback and reduced-motion selection still require verification in the target GitHub client.
+Keep project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. The public project panels use animated GIFs with PNG alternatives; the header has its own static alternative.
+
+Regenerate the presentation with `python -B scripts/build-presentation.py`, then render the local review with `node scripts/render-preview.mjs`. The generator rebuilds both README variants, the project GIFs and PNGs, the still-image gallery, and project-only contact sheets.
 
 ## Publishing
 
-- This repository already uses the account's name, ignoring capitalization. Its root README is the personal-profile version; keep `profile/assets/` with it.
-- For an organization, copy the complete `profile/` directory and `docs/PROJECT-GALLERY.md` and `docs/PROJECT-EVIDENCE.md` into its public `.github` repository, keeping the same directory structure.
-- Review the rendered profile on GitHub in light and dark themes and on mobile after publishing.
+- For a personal profile, keep the root README and `profile/assets/` together in this repository.
+- For an organization profile, copy `profile/` and the two project documentation files into the public `.github` repository, preserving their directory structure.
+- Review the published profile on GitHub in light and dark themes and on mobile.
 
-## Editorial updates
+## Verification
 
-The latest direction is an expressive software studio with more color and motion across the page. See `docs/ART-DIRECTION.md` for the concept, palette, and composition rules. The cobalt studio cover and four-project index precede the detailed project entries; illustrated capabilities and process follow. Preserve the original transparent logos without added backings. Native project headings provide readable names and anchors for direct navigation. The project logos are stationary; screen sequences demonstrate each product. `scripts/project_showcases.py` controls these tours and the studio introduction.
+Run `python -B scripts/validate-presentation.py` after generation. It checks that README variants stay synchronized, only the approved project headings remain, all local paths and gallery anchors resolve, alternatives include accessible text, the eight project tours animate, and all thirteen stills decode.
 
-### Evidence and browser review
+`docs/PROJECT-EVIDENCE.md` records capture sources and limitations. Add a project only after its description and public repository link have been verified.
 
-- Project tours now use real repository interface captures with fictional clinical data and repository website content. See `docs/PROJECT-EVIDENCE.md` for pinned source revisions, capture adapters, and validation limits. The public user guide, release checklist, and LAN test plan are linked from the respective entries; a test plan is not evidence that all tests have passed.
-- `docs/presentation-preview.html` is a local HTML rendering of the complete README with approximate GitHub styling. It includes native copy, disclosure sections, and project images. Its CSS is only for local review and is not embedded in the README.
-- Browser review at 390 px and 960 px confirmed that mobile/desktop image variants load, no image is broken, content has no horizontal overflow, and an expandable answer opens. `docs/presentation-mobile-check.png` records the mobile project layout. This is not a published GitHub verification.
+## Suggested Commit Descriptions
 
-The presentation includes custom service, project, process, and contact panels. Each has a mobile variant selected below 600 px through `picture` sources. Regenerate these panels and both README files with `scripts/build-presentation.py` (Python, Pillow, and Windows Segoe UI). Edit the copy in that generator before regenerating. The original animated hero is preserved.
-
-The four supplied project logos are stored unchanged in `profile/assets/logos/`: `odontocare.png`, `vetcare.png`, `almavet.png`, and `casanativa.png`. The generator places each transparent logo proportionally directly on its project panel, without a separate background. Project panels use animated GIFs with static PNG alternatives. Earlier SVG layout drafts are retained as legacy assets and are not used by the presentation. No source logo is redrawn, recolored, or cropped. Alma Vet links to `MancarSoftware/veterinaria`; Casa Nativa links to `MancarSoftware/muebleria`. Their descriptions are based on the public repository documentation.
-
-`scripts/studio_motion.py` draws the orbital studio composition, moving service symbols, connected process, and closing arrow. It is called by `scripts/build-presentation.py`; no extra dependency is needed beyond Pillow. The supporting loops run for approximately 7.9 seconds with eased motion. Project screens hold for four seconds and change through a 360 ms eased dissolve. Shared GIF palettes keep stationary artwork stable. `picture` selects desktop/mobile static PNGs when reduced motion is requested by supporting clients. These illustrations are conceptual, not screenshots or claims about a running application's state. Earlier SVG drafts remain available but are not the sources for the new colored motion panels.
-
-`docs/artwork-desktop.png` and `docs/artwork-mobile.png` are static artwork contact sheets, not screenshots of GitHub rendering. The README embeds GIF project tours and studio, service, process, and contact panels with static PNG alternatives. The editorial studio introduction is static. `docs/PROJECT-GALLERY.md` contains reader-controlled stills from every project tour. Native project summaries, navigation, and toolkit text are not included in these contact sheets. Validate the final composition and responsive source selection on GitHub after publishing.
-
-Keep both README files synchronized, preserving their respective image paths. Add projects only with verified descriptions and public repository or case-study links. The current project details come from their public repository READMEs; Instagram comes from the company's GitHub profile.
-
-The following optional contact fields are intentionally confined to this maintenance document. Add them to the presentation only after receiving the real values:
-
-- Website: `TODO_WEBSITE_URL`
-- Email: `TODO_CONTACT_EMAIL`
-- LinkedIn: `TODO_LINKEDIN_URL`
-- WhatsApp: `TODO_WHATSAPP_URL`
-
-GymCare remains excluded until its project details and public link are provided.
-
-## Suggested commit descriptions
-
-- `commit(profile): replace setup copy with the public Mancar Software presentation`
-- `commit(content): feature verified projects and add the company contact link`
-- `commit(docs): separate profile maintenance from visitor-facing content`
-
-## Regenerating previews
-
-Run `python -B scripts/build-presentation.py`, then `node scripts/render-preview.mjs`. Serve the repository locally and open `docs/presentation-preview.html`. Gallery links in that preview open `docs/project-gallery-preview.html`; GitHub links correctly target the Markdown gallery. The capture process and source revisions are documented in `docs/PROJECT-EVIDENCE.md`.
+- `commit(profile): focus the company profile on verified projects`
+- `commit(content): update project evidence and repository links`
+- `commit(docs): document project-only profile maintenance`

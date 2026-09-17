@@ -1,7 +1,7 @@
 """Compose repository interface captures into readable, GitHub-native visual tours."""
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageOps
-from studio_motion import text, DARK, WHITE, MUTED, CYAN, LIME
+from project_motion import text, DARK, WHITE, MUTED
 
 PROJECTS = {
  'odontocare': dict(name='OdontoCare', number='01', color='#54DCEC', category='DENTAL PRACTICE SOFTWARE',
@@ -91,28 +91,12 @@ def save_tour(scenes,stem,hold_ms=4000,transition_ms=120):
     indexed[0].save(stem.with_suffix('.gif'),save_all=True,append_images=indexed[1:],
                     duration=durations,loop=0,optimize=True,disposal=1)
 
-def about(out,mobile):
-    w,h=(560,470) if mobile else (1080,360)
-    im=Image.new('RGB',(w,h),'#1B2C2B');d=ImageDraw.Draw(im)
-    text(d,(32,30),'MEET MANCAR / DESIGN & DEVELOPMENT',16,LIME,True)
-    lines=['Close to the work.', 'Clear about the craft.']
-    for i,line in enumerate(lines):text(d,(32,90+i*61),line,42 if mobile else 58,WHITE,True)
-    text(d,(32,264 if mobile else 259),'Websites. Applications. Business systems.',21 if mobile else 25,MUTED)
-    text(d,(32,316 if mobile else 307),'Thoughtful design. Practical software.',22,LIME)
-    if mobile:text(d,(32,403),'MANCAR SOFTWARE',22,WHITE,True)
-    else:
-        # Two precise paths form the M; no portrait or staff claims are invented.
-        d.line((825,205,825,92,890,157,955,92,955,205),fill=LIME,width=10)
-        d.line((847,205,847,145,890,190,933,145,933,205),fill=CYAN,width=3)
-    im.save(out/('mancar-studio'+('-mobile' if mobile else '')+'.png'))
-
 def build_showcases(out):
     for mobile in (False,True):
         suffix='-mobile' if mobile else ''
         for slug,project in PROJECTS.items():
             scenes=[tour_scene(out,slug,project,i,mobile) for i in range(len(project['steps']))]
             save_tour(scenes,out/('project-'+slug+suffix))
-        about(out,mobile)
     gallery=['# A closer look at the work','Still frames from the project interface tours. All clinical names and records are fictional demonstration data; website content comes from the repositories. These previews document interface design and do not constitute evidence of a production deployment or end-to-end backend testing.']
     for slug,p in PROJECTS.items():
         gallery += ['## '+p['name']]

@@ -17,7 +17,7 @@ The presentation uses actual interfaces rendered locally from the four repositor
 - Alma Vet uses repository content. The request form was populated with fictional names but was not submitted. The local preview has no production Turnstile or Supabase credentials. The request requires subsequent clinic confirmation; no booking success is implied.
 - Casa Nativa uses its built-in fallback catalog and bundled product images. Saving Sofá Olmo to “Mi espacio” was exercised locally. No inquiry was sent and no purchase was made. Prices and availability shown belong to the repository's demonstration content.
 - No clinic database, customer records, production API, email service, or external messaging account was connected.
-- Existing website photography was rendered as used by the source website. The capture process does not assert that stock photography depicts real staff or premises. The Mancar studio introduction uses editorial artwork, not an invented portrait, staff identity, or location.
+- Existing website photography was rendered as used by the source website. The capture process does not assert that stock photography depicts real staff or premises.
 
 ## Reproduce the source previews
 
@@ -34,4 +34,4 @@ The presentation uses actual interfaces rendered locally from the four repositor
 
 Raw captures are retained beside clean stills. Composition removes only the capture-host margin. Mobile showcase panels present one complete interface at a time, matching the desktop tour without implying that the desktop products have a mobile interface. Supplied project logos remain byte-for-byte unchanged, with their transparency and original colors preserved.
 
-Project scenes hold for 4.2 seconds, followed by a 360 ms crossfade. Full-resolution stills provide a reader-controlled alternative. Reduced-motion picture sources select PNGs in supporting clients. Backend correctness, production deployment, and final GitHub rendering are outside these local capture checks.
+Project scenes hold for four seconds, followed by a 360 ms eased crossfade. Full-resolution stills provide a reader-controlled alternative. Reduced-motion picture sources select PNGs in supporting clients. Backend correctness, production deployment, and final GitHub rendering are outside these local capture checks.

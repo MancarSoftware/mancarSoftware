@@ -24,6 +24,12 @@ root_text=(ROOT/'README.md').read_text(encoding='utf-8')
 profile_text=(ROOT/'profile/README.md').read_text(encoding='utf-8')
 assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/')==root_text,'README variants diverged'
 assert 'beauty' not in root_text.lower(),'Removed project reintroduced'
+headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
+assert headings[0]=='# Selected Projects' and len(headings)==5,'Public profile must remain project-led'
+for heading,project in zip(headings[1:],('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
+    assert heading.endswith(project),f'Unexpected project heading: {heading}'
+for anchor in ('odontocare','vetcare','almavet','casanativa'):
+    assert f'<a id="{anchor}"></a>' in root_text,f'Missing project anchor: {anchor}'
 for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
     path=ROOT/relative;content=path.read_text(encoding='utf-8');refs=References();refs.feed(content)
     refs.paths.extend(re.findall(r'\]\(([^)]+)\)',content))
@@ -36,8 +42,8 @@ for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
             headings=re.findall(r'^#{1,6} (.+)$',local.read_text(encoding='utf-8'),re.M)
             slugs=[re.sub(r' +','-',re.sub(r'[^a-z0-9 ]','',h.lower())) for h in headings]
             assert target.fragment in slugs,f'Missing gallery anchor: {target.fragment}'
-    # The original header has one static source; seven responsive animations have two.
-    if relative.endswith('README.md'): assert refs.reduced>=15,'An animated panel is missing static sources'
+    # The original header has one static source; each of four project tours has two.
+    if relative.endswith('README.md'): assert refs.reduced==9,'Unexpected or missing animated presentation sources'
 
 gif_bytes=0
 for slug in ('odontocare','vetcare','almavet','casanativa'):
@@ -58,21 +64,4 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
         with Image.open(ROOT/f'profile/assets/captures/{slug}-still-{i+1:02}.png') as still:
             still.verify()
 
-studio_sizes={
-    'mancar-studio-cover':((1080,450),(560,670)),
-    'mancar-capabilities':((1080,470),(560,680)),
-    'mancar-approach':((1080,340),(560,530)),
-    'mancar-contact':((1080,320),(560,410)),
-}
-for name,(desktop_size,mobile_size) in studio_sizes.items():
-    for suffix,expected_size in (('',desktop_size),('-mobile',mobile_size)):
-        path=ROOT/f'profile/assets/{name}{suffix}.gif'
-        with Image.open(path) as media:
-            assert media.size==expected_size,(path,media.size)
-            frames=[frame.convert('RGB') for frame in ImageSequence.Iterator(media)]
-            assert len(frames)>=24,(path,len(frames))
-            assert sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))==7920,path
-            assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'
-        assert path.with_suffix('.png').is_file()
-
-print(f'PASS: README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, 8 supporting motion loops, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+print(f'PASS: project-led README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
