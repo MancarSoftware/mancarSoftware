@@ -126,6 +126,13 @@ content = '\n\n'.join((
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-header-static.png" />
   <img src="assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
 </picture>''',
+    '''# Mancar Software
+
+## Software for the people behind the work.
+
+Mancar Software designs and develops digital products for businesses with real day-to-day needs. We study the work, clarify the experience, and build tools people can rely on—from desktop applications for clinical teams to customer-facing platforms and product catalogues.
+
+The projects below show that approach in practice: focused products shaped around the people, information, and decisions that matter to each business.''',
     '# Selected Projects',
     '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
     *(project_block(slug) for slug in PROJECTS),

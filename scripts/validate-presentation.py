@@ -25,8 +25,8 @@ profile_text=(ROOT/'profile/README.md').read_text(encoding='utf-8')
 assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/')==root_text,'README variants diverged'
 assert 'beauty' not in root_text.lower(),'Removed project reintroduced'
 headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
-assert headings[0]=='# Selected Projects' and len(headings)==5,'Public profile must remain project-led'
-for heading,project in zip(headings[1:],('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
+assert headings[:3]==['# Mancar Software','## Software for the people behind the work.','# Selected Projects'] and len(headings)==7,'Public profile must introduce Mancar before its projects'
+for heading,project in zip(headings[3:],('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
     assert heading.endswith(project),f'Unexpected project heading: {heading}'
 for anchor in ('odontocare','vetcare','almavet','casanativa'):
     assert f'<a id="{anchor}"></a>' in root_text,f'Missing project anchor: {anchor}'
