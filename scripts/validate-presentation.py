@@ -25,8 +25,8 @@ profile_text=(ROOT/'profile/README.md').read_text(encoding='utf-8')
 assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/')==root_text,'README variants diverged'
 assert 'beauty' not in root_text.lower(),'Removed project reintroduced'
 headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
-assert headings[:3]==['# Mancar Software','## Digital products for businesses that need to sell with more clarity, operate with more control, and grow with confidence.','### What We Help Improve'],'Public profile must introduce Mancar before its projects'
-assert '# Selected Projects' in headings,'Public profile must retain its project catalogue'
+assert headings[0]=='# Mancar Software','Public profile must introduce Mancar before its projects'
+assert '## Selected Projects' in headings,'Public profile must retain its project catalogue'
 project_headings=[heading for heading in headings if heading.endswith(('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa'))]
 for heading,project in zip(project_headings,('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
     assert heading.endswith(project),f'Unexpected project heading: {heading}'
@@ -45,8 +45,8 @@ for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
             headings=re.findall(r'^#{1,6} (.+)$',local.read_text(encoding='utf-8'),re.M)
             slugs=[re.sub(r' +','-',re.sub(r'[^a-z0-9 ]','',h.lower())) for h in headings]
             assert target.fragment in slugs,f'Missing gallery anchor: {target.fragment}'
-    # The original header has one static source; each of four project tours has two.
-    if relative.endswith('README.md'): assert refs.reduced==9,'Unexpected or missing animated presentation sources'
+    # Four studio panels and four project tours each have desktop/mobile static alternatives.
+    if relative.endswith('README.md'): assert refs.reduced==16,'Unexpected or missing animated presentation sources'
 
 gif_bytes=0
 for slug in ('odontocare','vetcare','almavet','casanativa'):
@@ -67,4 +67,19 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
         with Image.open(ROOT/f'profile/assets/captures/{slug}-still-{i+1:02}.png') as still:
             still.verify()
 
-print(f'PASS: project-led README variants, local paths, gallery anchors, alt text, static sources, 8 project tours, and 13 stills. Tour assets: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+studio_bytes=0
+for name,desktop_h,mobile_h in (('studio-cover',620,750),('capabilities',650,710),('approach',560,770),('contact',410,460)):
+    for suffix,height in (('',desktop_h),('-mobile',mobile_h)):
+        path=ROOT/f'profile/assets/mancar-{name}{suffix}.gif'
+        with Image.open(path) as media:
+            assert media.size==(560 if suffix else 1080,height),(path,media.size)
+            frames=[frame.convert('RGB') for frame in ImageSequence.Iterator(media)]
+            assert any(ImageChops.difference(frames[0],frame).getbbox() for frame in frames[1:]),f'Static GIF: {path}'
+            media.seek(0)
+            assert sum(frame.info.get('duration',0) for frame in ImageSequence.Iterator(media))==7680
+        with Image.open(path.with_suffix('.png')) as still:
+            assert still.size==(560 if suffix else 1080,height)
+            still.verify()
+        studio_bytes+=path.stat().st_size
+assert studio_bytes<4*1024*1024,'Studio animation exceeds the 4 MiB combined budget'
+print(f'PASS: synchronized README variants, local paths, gallery anchors, alt text, static sources, 8 studio animations, 8 project tours, and 13 stills. Studio: {studio_bytes/1024/1024:.2f} MiB; projects: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')

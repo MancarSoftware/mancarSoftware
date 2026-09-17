@@ -1,15 +1,16 @@
 # Mancar Software — Project-Led Profile Direction
 
-The public profile opens with a substantive statement of who Mancar Software is, the business outcomes it improves, its working method, and how it chooses technology. It then presents a catalogue of verified work. The profile should feel confident and precise through project evidence, editorial typography, controlled motion, and a consistent graphite presentation—not through broad service claims or a studio sales narrative.
+The profile is an animated studio journal: a cobalt cover built around the geometric M, three illustrated business outcomes, a teal delivery timeline, four real project tours, and a coral invitation. Permanent typography carries the message while geometry moves with a calm 7.68-second cycle. It should feel bold, deliberate, and human. Company copy is drawn from the Mancar website; the project repositories supply the evidence.
 
 - **Audience and action:** visitors inspect the four projects, open the still-image tours, and follow the public repositories.
-- **Personality:** quiet, exact, and evidence-led. Avoid generic capability lists, process diagrams, marketing claims, decorative motion, and invented proof.
-- **Concept:** the work speaks first. Each project is a self-contained chapter that explains its audience, functionality, technology, and repository evidence.
-- **Typography:** a compact project index leads into clear, title-cased project labels and factual copy. Large type appears only in the existing project artwork.
-- **Color:** graphite `#101416` provides a neutral stage. Each project retains its established accent: dental cyan, veterinary teal, clinic blue, and Casa Nativa terracotta.
-- **Composition:** a small animated Mancar header, a company statement, three practical outcomes, a four-stage working method, technology principles, a project index, then four full-width project entries and one concise contact route. There are no FAQs or pricing panels in the public profile.
-- **Imagery:** repository interfaces and original transparent project logos are the only featured imagery. Clinical data is fictional; website screens use repository demonstration content. No supplied logo is redrawn, recolored, or placed on a separate background.
-- **Motion:** each project holds a readable interface state for four seconds, then moves through a 360 ms eased dissolve. Reduced-motion sources use complete PNG frames.
-- **Responsive:** mobile presents one complete interface per scene, mirroring the desktop tour without claiming that the desktop products have mobile implementations.
+- **Personality:** bold and restrained, with direct language and visible craft. Avoid invented metrics, decorative dashboards, and generic capability grids.
+- **Concept:** business needs become useful products. The company story establishes that philosophy; each project supplies a concrete example.
+- **Typography:** Segoe UI display copy remains fixed and readable during motion. Small numbered labels, large statements, and concise descriptions create hierarchy. Markdown retains a single H1 and nested section/project headings.
+- **Color:** cobalt `#284BE8` introduces the studio; graphite `#101416` anchors outcomes and projects; teal `#172D31` carries the method; coral `#FF866E` marks the invitation. Cyan and lime provide readable signals. Existing project accents remain intact.
+- **Composition:** an asymmetric animated cover, a short company introduction, illustrated outcome rows, a delivery timeline, four project chapters, and a coral closing. Supporting prose remains accessible in native details disclosures. Shapes use fine rules and open geometry, without repeated containers.
+- **Imagery:** original studio illustrations explain the company story; repository interfaces and transparent project logos provide the project evidence. Clinical data is fictional; website screens use repository demonstration content. No supplied project logo is redrawn, recolored, or placed on a separate background.
+- **Motion:** signals trace the M, focus brackets settle around a point, tasks align, and a marker follows the delivery stages. These are illustrations rather than product UI or performance metrics. Studio loops last 7.68 seconds; project states hold for four seconds before a 360 ms dissolve. Shared GIF palettes keep fixed text steady. Reduced-motion sources use complete PNG frames.
+- **Responsive:** studio panels have dedicated 560-pixel mobile compositions and 1080-pixel desktop compositions. The timeline becomes vertical and descriptions wrap by measured glyph widths. Mobile project tours retain one complete interface per scene.
+- **Interaction:** project indexes and contact links remain real Markdown links. Native disclosures expose full selectable company copy. All panel copy is also provided as image alternatives. No interaction depends on preview-only CSS or scripts.
 
 GitHub compatibility requires local GIF/PNG assets and supported Markdown/HTML. Preview-only CSS must never be required to understand the profile.

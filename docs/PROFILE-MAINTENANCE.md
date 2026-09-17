@@ -4,15 +4,15 @@ The root `README.md` is the personal-profile version. `profile/README.md` is the
 
 ## Public Scope
 
-The public profile contains only the Mancar header, the project index, and four verified project entries: OdontoCare, VetCare Pro, Alma Vet, and Casa Nativa. Keep service descriptions, generic studio claims, process explanations, FAQs, contact prompts, and unverified projects out of the profile.
+The public profile combines the Mancar company story with four verified projects: OdontoCare, VetCare Pro, Alma Vet, and Casa Nativa. Preserve the animated cover, business outcomes, delivery timeline, and contact invitation alongside project evidence. Supporting company copy lives in native details disclosures. Do not add unsupported claims or reintroduce Beauty Business.
 
 Every project entry must include a repository link, an accurate description, and only claims supported by the repository. Keep the labels in title case: **Designed For**, **Core Functionality**, and **Built With**.
 
 ## Assets
 
-Keep project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. The public project panels use animated GIFs with PNG alternatives; the header has its own static alternative.
+Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the four company panels; `scripts/project_showcases.py` builds repository tours.
 
-Regenerate the presentation with `python -B scripts/build-presentation.py`, then render the local review with `node scripts/render-preview.mjs`. The generator rebuilds both README variants, the project GIFs and PNGs, the still-image gallery, and project-only contact sheets.
+Regenerate with `python -B scripts/build-presentation.py`, then run `node scripts/render-preview.mjs` sequentially. The generator rebuilds both README variants, studio and project GIF/PNG assets, the still-image gallery, and combined artwork contact sheets. Studio loops use 64 frames at 120 ms per frame. Keep their combined desktop/mobile GIF weight below 4 MiB.
 
 ## Publishing
 
@@ -22,12 +22,12 @@ Regenerate the presentation with `python -B scripts/build-presentation.py`, then
 
 ## Verification
 
-Run `python -B scripts/validate-presentation.py` after generation. It checks that README variants stay synchronized, only the approved project headings remain, all local paths and gallery anchors resolve, alternatives include accessible text, the eight project tours animate, and all thirteen stills decode.
+Run `python -B scripts/validate-presentation.py` after generation. It checks synchronized README variants, four project entries, paths and gallery anchors, accessible text, static alternatives, animation dimensions and timing, the studio weight budget, and all thirteen captured stills. Review desktop, tablet, and mobile previews visually as well.
 
 `docs/PROJECT-EVIDENCE.md` records capture sources and limitations. Add a project only after its description and public repository link have been verified.
 
 ## Suggested Commit Descriptions
 
-- `commit(profile): focus the company profile on verified projects`
+- `commit(profile): restore expressive studio animations and visual storytelling`
 - `commit(content): update project evidence and repository links`
-- `commit(docs): document project-only profile maintenance`
+- `commit(docs): document studio and project presentation maintenance`

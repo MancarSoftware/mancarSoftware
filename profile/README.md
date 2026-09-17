@@ -1,17 +1,36 @@
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-header-static.png" />
-  <img src="assets/mancar-header.gif" width="100%" alt="Mancar Software. Designed for people. Engineered for business. Animated geometric M." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-studio-cover.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.gif" />
+  <img src="assets/mancar-studio-cover.gif" width="100%" alt="Mancar Software. Independent studio in Ecuador. Built around people. Made for real work. Strategy, design, development, and support. Your business sets the direction." />
 </picture>
 
 # Mancar Software
 
-## Digital products for businesses that need to sell with more clarity, operate with more control, and grow with confidence.
+We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
 
-Built in Ecuador, Mancar Software works directly with business owners and teams to turn real priorities into practical digital products. We define the need before choosing the technology, so every project has a clear purpose: earn trust, capture demand, reduce repeated effort, or give people a reliable view of the work.
+[Explore Our Projects](#selected-projects) &nbsp; / &nbsp; [Meet the Company](https://ale-mancar.github.io/mancar_software/sobre-nosotros/) &nbsp; / &nbsp; [Start a Conversation](#start-a-conversation)
 
-Our work spans customer-facing sites and catalogues, desktop and local-network applications, and ongoing technical support. The format changes from project to project; the standard does not: make the experience clear, make the work easier to manage, and leave a foundation that can evolve.
+<details>
+<summary>What We Bring to a Project</summary>
 
-### What We Help Improve
+We define the business need before choosing the technology. Our work spans digital experiences, product catalogs, desktop and local-network applications, workflow automation, and technical support. Every project starts with the people who will use it, the information they need, and the decisions it should make easier.
+
+We prioritize a clear experience, dependable operation, and a foundation that can evolve as the business changes.
+
+</details>
+
+## What We Help Improve
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-capabilities-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-capabilities.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-capabilities-mobile.gif" />
+  <img src="assets/mancar-capabilities.gif" width="100%" alt="A stronger business starts with a useful change. Earn Trust: communicate your value and make the next step clear. Simplify the Work: connect information and reduce repeated effort. Move Forward: set clear priorities and build a foundation for change." />
+</picture>
+
+<details>
+<summary>What These Outcomes Mean for Your Business</summary>
 
 **More Confidence.** A clear public presence, useful content, and direct paths from interest to conversation help a business communicate its value from the first visit.
 
@@ -19,24 +38,38 @@ Our work spans customer-facing sites and catalogues, desktop and local-network a
 
 **Better Follow-Through.** Work progresses through clear stages, visible decisions, and plain-language communication, so the next step is always understood.
 
-### How We Work
+</details>
+
+## How We Work
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-approach-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-approach.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.gif" />
+  <img src="assets/mancar-approach.gif" width="100%" alt="Clear steps. Direct collaboration. Discover: understand the business and its priorities. Define: agree the scope, deliverables, and timing. Create: design and build around the real workflow. Evolve: launch, support, and refine the product. Business first. Technology with purpose." />
+</picture>
+
+<details>
+<summary>From the First Conversation to Ongoing Support</summary>
 
 1. **Diagnose.** We review the business, its priorities, the people involved, and the outcome that matters most.
 2. **Define a Clear Proposal.** We agree the scope, deliverables, timing, and implementation route before development begins.
 3. **Design and Develop.** We shape a usable experience around the brand, the workflow, and the people using it.
 4. **Launch and Evolve.** We test, publish or install, and remain available for support, refinement, and the next stage of the work.
 
-### Built to Fit the Work
+**Built to Fit the Work**
 
 We choose technology in proportion to the job: a lean public presence where clarity and speed matter, a catalog when products need to be explored, or a desktop and local-network application when a team needs continuity and control. We do not add complexity for its own sake.
 
-The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalogue built around real customer inquiries.
+The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalog built around real customer inquiries.
 
-# Selected Projects
+</details>
+
+## Selected Projects
 
 [01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)
 
-## <a id="odontocare"></a>01 / OdontoCare
+### <a id="odontocare"></a>01 / OdontoCare
 
 <a href="https://github.com/MancarSoftware/odonto_care">
 <picture>
@@ -68,7 +101,7 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 [Read the User Guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the Release Checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)
 
-## <a id="vetcare"></a>02 / VetCare Pro
+### <a id="vetcare"></a>02 / VetCare Pro
 
 <a href="https://github.com/MancarSoftware/vetCarePro">
 <picture>
@@ -100,7 +133,7 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 
 [Review the LAN Test Plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the Setup Guide](https://github.com/MancarSoftware/vetCarePro#readme)
 
-## <a id="almavet"></a>03 / Alma Vet
+### <a id="almavet"></a>03 / Alma Vet
 
 <a href="https://github.com/MancarSoftware/veterinaria">
 <picture>
@@ -125,7 +158,7 @@ A veterinary clinic website that guides pet owners from service discovery to a s
 
 [Read the Architecture and Setup Guide](https://github.com/MancarSoftware/veterinaria#readme)
 
-## <a id="casanativa"></a>04 / Casa Nativa
+### <a id="casanativa"></a>04 / Casa Nativa
 
 <a href="https://github.com/MancarSoftware/muebleria">
 <picture>
@@ -152,7 +185,13 @@ A furniture retail website with an editable catalog, color variants, and structu
 
 ## Start a Conversation
 
-If your business needs to sell more clearly, make day-to-day work easier to manage, or create a more dependable path for customers, let’s define the right next step.
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-contact-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-contact.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-contact-mobile.gif" />
+  <img src="assets/mancar-contact.gif" width="100%" alt="Mancar Software. Your next chapter. What could work better? Tell us about the work. Let’s define the next step." />
+</picture>
+
 
 [mancarsoftwares@gmail.com](mailto:mancarsoftwares@gmail.com) &nbsp; / &nbsp; [+593 98 695 1419](tel:+593986951419) &nbsp; / &nbsp; [Visit Mancar Software →](https://ale-mancar.github.io/mancar_software/)
 

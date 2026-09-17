@@ -17,7 +17,7 @@ for (const [source,target,title] of [
  content=content.replaceAll('"profile/assets/','"../profile/assets/')
  .replaceAll('"docs/PROJECT-GALLERY.md','"project-gallery-preview.html')
  .replaceAll('"PROJECT-EVIDENCE.md','"project-evidence-preview.html');
- const back=source==='README.md'?'':'<p><a href="presentation-preview.html#selected-work">← Back to the presentation</a></p>';
+ const back=source==='README.md'?'':'<p><a href="presentation-preview.html#selected-projects">← Back to the presentation</a></p>';
  fs.writeFileSync(target,`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>${style}</style></head><body><main>${back}${content}</main></body></html>`);
 }
 console.log('Rendered presentation, gallery, and evidence previews.');
