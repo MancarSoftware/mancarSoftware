@@ -9,7 +9,11 @@
 
 We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
 
-[Our Team](#the-people-behind-mancar) &nbsp; / &nbsp; [Our Approach](#how-we-work) &nbsp; / &nbsp; [Selected Projects](#selected-projects) &nbsp; / &nbsp; [Support](#beyond-launch) &nbsp; / &nbsp; [Contact](#start-a-conversation)
+<a href="#the-people-behind-mancar"><img src="profile/assets/buttons/our-team.png" width="115" height="44" alt="Our Team" /></a>
+<a href="#how-we-work"><img src="profile/assets/buttons/our-approach.png" width="141" height="44" alt="Our Approach" /></a>
+<a href="#selected-projects"><img src="profile/assets/buttons/selected-projects.png" width="159" height="44" alt="Selected Projects" /></a>
+<a href="#beyond-launch"><img src="profile/assets/buttons/support.png" width="103" height="44" alt="Support" /></a>
+<a href="#start-a-conversation"><img src="profile/assets/buttons/contact.png" width="101" height="44" alt="Contact" /></a>
 
 <details>
 <summary>What We Bring to a Project</summary>
@@ -31,7 +35,7 @@ We prioritize a clear experience, dependable operation, and a foundation that ca
 
 Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
 
-[Meet the Team →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo)
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo"><img src="profile/assets/buttons/meet-the-team.png" width="148" height="44" alt="Meet the Team" /></a>
 
 ## What We Bring Together
 
@@ -100,11 +104,16 @@ The selected projects below make that approach concrete: two Windows application
 
 We listen before proposing, explain technical decisions in plain language, and work in stages so you can see progress and understand what comes next. Scope, priorities, and timing form part of the conversation from the beginning.
 
-Design quality, performance, security, and maintainability guide our decisions throughout the project. [Read About Mancar →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/)
+Design quality, performance, security, and maintainability guide our decisions throughout the project.
+
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/"><img src="profile/assets/buttons/read-about-mancar.png" width="176" height="44" alt="Read About Mancar" /></a>
 
 ## Selected Projects
 
-[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)
+<a href="#odontocare"><img src="profile/assets/buttons/01-odontocare.png" width="157" height="44" alt="01 / OdontoCare" /></a>
+<a href="#vetcare"><img src="profile/assets/buttons/02-vetcare-pro.png" width="156" height="44" alt="02 / VetCare Pro" /></a>
+<a href="#almavet"><img src="profile/assets/buttons/03-alma-vet.png" width="138" height="44" alt="03 / Alma Vet" /></a>
+<a href="#casanativa"><img src="profile/assets/buttons/04-casa-nativa.png" width="154" height="44" alt="04 / Casa Nativa" /></a>
 
 ### <a id="odontocare"></a>01 / OdontoCare
 
@@ -121,7 +130,8 @@ An offline-ready Windows application for managing patient records, appointments,
 
 <sub>Interface captured from the repository · Fictional clinical data · Original interface in Spanish</sub>
 
-[View the Still-Image Tour](docs/PROJECT-GALLERY.md#odontocare) &nbsp; / &nbsp; [Explore the Repository →](https://github.com/MancarSoftware/odonto_care)
+<a href="docs/PROJECT-GALLERY.md#odontocare"><img src="profile/assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
+<a href="https://github.com/MancarSoftware/odonto_care"><img src="profile/assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
 
 **Designed For:** dental clinics managing clinical and administrative work in one place.
 
@@ -136,7 +146,8 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 
 </details>
 
-[Read the User Guide](https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md) · [Review the Release Checklist](https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md)
+<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md"><img src="profile/assets/buttons/read-the-user-guide.png" width="181" height="44" alt="Read the User Guide" /></a>
+<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md"><img src="profile/assets/buttons/review-the-release-checklist.png" width="232" height="44" alt="Review the Release Checklist" /></a>
 
 ### <a id="vetcare"></a>02 / VetCare Pro
 
@@ -153,7 +164,8 @@ Veterinary practice software for standalone and local network environments, with
 
 <sub>Interface captured from the repository · Fictional clinical data · Original interface in Spanish</sub>
 
-[View the Still-Image Tour](docs/PROJECT-GALLERY.md#vetcare-pro) &nbsp; / &nbsp; [Explore the Repository →](https://github.com/MancarSoftware/vetCarePro)
+<a href="docs/PROJECT-GALLERY.md#vetcare-pro"><img src="profile/assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
+<a href="https://github.com/MancarSoftware/vetCarePro"><img src="profile/assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
 
 **Designed For:** veterinary teams working from a single computer or across several computers in the same clinic.
 
@@ -168,7 +180,8 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 
 </details>
 
-[Review the LAN Test Plan](https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md) · [Read the Setup Guide](https://github.com/MancarSoftware/vetCarePro#readme)
+<a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md"><img src="profile/assets/buttons/review-the-lan-test-plan.png" width="211" height="44" alt="Review the LAN Test Plan" /></a>
+<a href="https://github.com/MancarSoftware/vetCarePro#readme"><img src="profile/assets/buttons/read-the-setup-guide.png" width="189" height="44" alt="Read the Setup Guide" /></a>
 
 ### <a id="almavet"></a>03 / Alma Vet
 
@@ -185,7 +198,8 @@ A veterinary clinic website that guides pet owners from service discovery to a s
 
 <sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
 
-[View the Still-Image Tour](docs/PROJECT-GALLERY.md#alma-vet) &nbsp; / &nbsp; [Explore the Repository →](https://github.com/MancarSoftware/veterinaria)
+<a href="docs/PROJECT-GALLERY.md#alma-vet"><img src="profile/assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
+<a href="https://github.com/MancarSoftware/veterinaria"><img src="profile/assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
 
 **Designed For:** the Alma Vet clinic and pet owners requesting care.
 
@@ -193,7 +207,7 @@ A veterinary clinic website that guides pet owners from service discovery to a s
 
 **Built With:** React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.
 
-[Read the Architecture and Setup Guide](https://github.com/MancarSoftware/veterinaria#readme)
+<a href="https://github.com/MancarSoftware/veterinaria#readme"><img src="profile/assets/buttons/read-the-architecture-and-setup-guide.png" width="295" height="44" alt="Read the Architecture and Setup Guide" /></a>
 
 ### <a id="casanativa"></a>04 / Casa Nativa
 
@@ -210,7 +224,8 @@ A furniture retail website with an editable catalog, color variants, and structu
 
 <sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
 
-[View the Still-Image Tour](docs/PROJECT-GALLERY.md#casa-nativa) &nbsp; / &nbsp; [Explore the Repository →](https://github.com/MancarSoftware/muebleria)
+<a href="docs/PROJECT-GALLERY.md#casa-nativa"><img src="profile/assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
+<a href="https://github.com/MancarSoftware/muebleria"><img src="profile/assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
 
 **Designed For:** Casa Nativa and customers exploring furniture for their homes.
 
@@ -218,7 +233,7 @@ A furniture retail website with an editable catalog, color variants, and structu
 
 **Built With:** React, TypeScript, Vite, and Supabase.
 
-[Read the Catalog and Administration Guide](https://github.com/MancarSoftware/muebleria#readme)
+<a href="https://github.com/MancarSoftware/muebleria#readme"><img src="profile/assets/buttons/read-the-catalog-and-administration-guide.png" width="281" height="56" alt="Read the Catalog and Administration Guide" /></a>
 
 ## In Focus: Casa Nativa
 
@@ -239,7 +254,8 @@ Furniture customers need more than a product name: they need enough detail to ju
 
 <sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
 
-[Explore the Screens →](docs/PROJECT-GALLERY.md#casa-nativa) &nbsp; / &nbsp; [View the Project →](https://github.com/MancarSoftware/muebleria)
+<a href="docs/PROJECT-GALLERY.md#casa-nativa"><img src="profile/assets/buttons/explore-the-screens.png" width="175" height="44" alt="Explore the Screens" /></a>
+<a href="https://github.com/MancarSoftware/muebleria"><img src="profile/assets/buttons/view-the-project.png" width="154" height="44" alt="View the Project" /></a>
 
 ## Beyond Launch
 
@@ -256,7 +272,8 @@ We review the context before making changes and prioritize incidents that affect
 
 **Support Hours:** Monday–Friday, 9:00 a.m.–6:00 p.m., Ecuador time (UTC−5).
 
-[Explore Support Options →](https://ale-mancar.github.io/mancar_software/soporte/) &nbsp; / &nbsp; [Email Mancar](mailto:mancarsoftwares@gmail.com)
+<a href="https://ale-mancar.github.io/mancar_software/soporte/"><img src="profile/assets/buttons/explore-support-options.png" width="205" height="44" alt="Explore Support Options" /></a>
+<a href="mailto:mancarsoftwares@gmail.com"><img src="profile/assets/buttons/email-mancar.png" width="137" height="44" alt="Email Mancar" /></a>
 
 ## Start a Conversation
 
@@ -268,6 +285,8 @@ We review the context before making changes and prioritize incidents that affect
 </picture>
 
 
-[mancarsoftwares@gmail.com](mailto:mancarsoftwares@gmail.com) &nbsp; / &nbsp; [+593 98 695 1419](tel:+593986951419) &nbsp; / &nbsp; [Visit Mancar Software →](https://ale-mancar.github.io/mancar_software/)
+<a href="mailto:mancarsoftwares@gmail.com"><img src="profile/assets/buttons/mancarsoftwares-gmail-com.png" width="235" height="44" alt="mancarsoftwares@gmail.com" /></a>
+<a href="tel:+593986951419"><img src="profile/assets/buttons/593-98-695-1419.png" width="165" height="44" alt="+593 98 695 1419" /></a>
+<a href="https://ale-mancar.github.io/mancar_software/"><img src="profile/assets/buttons/visit-mancar-software.png" width="188" height="44" alt="Visit Mancar Software" /></a>
 
 <sub>MANCAR SOFTWARE · GUAYAQUIL, ECUADOR</sub>

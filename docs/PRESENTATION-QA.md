@@ -1,5 +1,7 @@
 # Project Profile Verification — September 2026
 
+Branded link update: all 32 presentation text links now use coral or deep-teal image buttons with accessible labels. Verified unchanged destinations, no remaining text-only links in the rendered presentation, all 45 images loaded, keyboard focus on the support/contact actions, and no horizontal overflow at 390 or 1200 CSS pixels. The generator validator checks button dimensions, paths, and unused button assets. These checks cover the local preview; publication on GitHub remains a separate review.
+
 The profile combines eight animated company panels, a featured Casa Nativa story, and the four established project tours. Company content covers purpose, the public team, connected disciplines, outcomes, delivery, working principles, post-launch support, and contact. New company information remains visible, with disclosures for additional detail.
 
 The connected-disciplines and Casa Nativa additions passed the asset validator: sixteen studio animations, two featured-story variants, eight project tours, thirteen captured stills, synchronized README variants, and static alternatives. Studio animations total 0.96 MiB. Inspected both new desktop/mobile compositions, checked all thirteen image sources on mobile, and found no horizontal overflow at 390 or 1200 CSS pixels. No browser console errors were reported. The story preserves a single changing screenshot on mobile and provides its complete narrative as visible text. No studio note or photograph was added.

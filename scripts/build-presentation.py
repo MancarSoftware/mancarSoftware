@@ -8,6 +8,7 @@ from PIL import Image
 from project_showcases import build_showcases
 from studio_motion import build_studio
 from project_story import build_story
+from link_buttons import brand_links
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -204,7 +205,9 @@ The selected projects below make that approach concrete: two Windows application
     studio_picture('principles', 'The Mancar standard. Listen first: understand before proposing. Be clear: explain scope, timing, and priorities. Stay involved: collaborate through visible progress and shared decisions. Build responsibly: consider design, performance, security, and maintenance.'),
     '''We listen before proposing, explain technical decisions in plain language, and work in stages so you can see progress and understand what comes next. Scope, priorities, and timing form part of the conversation from the beginning.
 
-Design quality, performance, security, and maintainability guide our decisions throughout the project. [Read About Mancar →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/)''',
+Design quality, performance, security, and maintainability guide our decisions throughout the project.
+
+[Read About Mancar →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/)''',
     '## Selected Projects',
     '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
     *(project_block(slug) for slug in PROJECTS),
@@ -238,8 +241,9 @@ We review the context before making changes and prioritize incidents that affect
 <sub>MANCAR SOFTWARE · GUAYAQUIL, ECUADOR</sub>''',
 )) + '\n'
 
+content = brand_links(content, OUT)
 (ROOT / 'profile' / 'README.md').write_text(content, encoding='utf-8')
-(ROOT / 'README.md').write_text(content.replace('"assets/', '"profile/assets/').replace('(../docs/', '(docs/'), encoding='utf-8')
+(ROOT / 'README.md').write_text(content.replace('"assets/', '"profile/assets/').replace('(../docs/', '(docs/').replace('href="../docs/', 'href="docs/'), encoding='utf-8')
 
 for mobile in (False, True):
     make_contact_sheet(mobile)

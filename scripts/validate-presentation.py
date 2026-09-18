@@ -22,8 +22,16 @@ class References(HTMLParser):
 
 root_text=(ROOT/'README.md').read_text(encoding='utf-8')
 profile_text=(ROOT/'profile/README.md').read_text(encoding='utf-8')
-assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/')==root_text,'README variants diverged'
+assert profile_text.replace('"assets/','"profile/assets/').replace('(../docs/','(docs/').replace('href="../docs/','href="docs/')==root_text,'README variants diverged'
 assert 'beauty' not in root_text.lower(),'Removed project reintroduced'
+assert not re.search(r'\[[^\]]+\]\([^)]+\)', root_text), 'Presentation text links must use branded buttons'
+button_paths = set(re.findall(r'src="(profile/assets/buttons/[^"]+)"', root_text))
+assert button_paths, 'Missing branded link buttons'
+for relative in button_paths:
+    with Image.open(ROOT / relative) as button:
+        assert button.width <= 608 and button.height >= 88, 'Button exceeds mobile width or minimum target height'
+        button.verify()
+assert {p.name for p in (ROOT/'profile/assets/buttons').glob('*.png')} == {Path(p).name for p in button_paths}, 'Unused button artwork'
 headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
 assert headings[0]=='# Mancar Software','Public profile must introduce Mancar before its projects'
 assert '## Selected Projects' in headings,'Public profile must retain its project catalogue'

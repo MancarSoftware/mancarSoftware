@@ -10,6 +10,8 @@ Every project entry must include a repository link, an accurate description, and
 
 ## Assets
 
+Public presentation links are rendered by `scripts/link_buttons.py` as reusable, high-resolution PNG buttons in `profile/assets/buttons/`. Coral identifies primary actions; deep teal and ivory identify navigation, reference, and contact links. Link destinations and accessible image labels remain in the README. Keep each button under 305 CSS pixels wide so groups wrap on mobile without custom CSS. Do not recolor links only in the local preview; the image treatment must also work on GitHub.
+
 Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the eight company panels; `scripts/project_showcases.py` builds repository tours. `scripts/project_story.py` builds the Casa Nativa story from catalog, product-detail, and saved-selection captures, with 5.5-second reading holds and brief dissolves. Keep its three stages available as visible README text and through the still-image gallery.
 
 Regenerate with `python -B scripts/build-presentation.py`, then run `node scripts/render-preview.mjs` sequentially. The generator rebuilds both README variants, studio and project GIF/PNG assets, the still-image gallery, and combined artwork contact sheets. Studio loops use 64 frames at 120 ms per frame. Keep their combined desktop/mobile GIF weight below 4 MiB.
