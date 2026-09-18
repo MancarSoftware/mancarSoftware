@@ -24,6 +24,19 @@ We prioritize a clear experience, dependable operation, and a foundation that ca
 
 </details>
 
+## When to Bring Us In
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-starting-points-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-starting-points.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-starting-points-mobile.gif" />
+  <img src="assets/mancar-starting-points.gif" width="100%" alt="What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes." />
+</picture>
+
+You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
+
+<a href="#start-a-conversation"><img src="assets/buttons/discuss-your-project.png" width="179" height="44" alt="Discuss Your Project" /></a>
+
 ## The People Behind Mancar
 
 <picture>
@@ -149,6 +162,17 @@ Designed as an installable Windows application with local PostgreSQL storage. Th
 <a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md"><img src="assets/buttons/read-the-user-guide.png" width="181" height="44" alt="Read the User Guide" /></a>
 <a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md"><img src="assets/buttons/review-the-release-checklist.png" width="232" height="44" alt="Review the Release Checklist" /></a>
 
+<details>
+<summary>Feature in Focus: Clinical History</summary>
+
+**Follow care across visits.**
+
+<img src="assets/captures/odontocare-still-02.png" width="100%" alt="OdontoCare: Clinical History. Original repository interface with demo content." />
+
+The history view brings previous clinical entries into the patient context, helping the team review earlier care before documenting the next visit.
+
+</details>
+
 ### <a id="vetcare"></a>02 / VetCare Pro
 
 <a href="https://github.com/MancarSoftware/vetCarePro">
@@ -183,6 +207,17 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 <a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md"><img src="assets/buttons/review-the-lan-test-plan.png" width="211" height="44" alt="Review the LAN Test Plan" /></a>
 <a href="https://github.com/MancarSoftware/vetCarePro#readme"><img src="assets/buttons/read-the-setup-guide.png" width="189" height="44" alt="Read the Setup Guide" /></a>
 
+<details>
+<summary>Feature in Focus: Shared Clinical Context</summary>
+
+**Keep the record at the center of care.**
+
+<img src="assets/captures/vetcare-still-02.png" width="100%" alt="VetCare Pro: Shared Clinical Context. Original repository interface with demo content." />
+
+The clinical history view preserves context across visits. In the documented LAN configuration, clinic computers access the same local services and data.
+
+</details>
+
 ### <a id="almavet"></a>03 / Alma Vet
 
 <a href="https://github.com/MancarSoftware/veterinaria">
@@ -209,6 +244,17 @@ A veterinary clinic website that guides pet owners from service discovery to a s
 
 <a href="https://github.com/MancarSoftware/veterinaria#readme"><img src="assets/buttons/read-the-architecture-and-setup-guide.png" width="295" height="44" alt="Read the Architecture and Setup Guide" /></a>
 
+<details>
+<summary>Feature in Focus: Appointment Requests</summary>
+
+**Give the clinic useful information upfront.**
+
+<img src="assets/captures/almavet-still-03.png" width="100%" alt="Alma Vet: Appointment Requests. Original repository interface with demo content." />
+
+The request form collects the details needed for the clinic to review a visit request. Submitting it requests care; it does not confirm an appointment.
+
+</details>
+
 ### <a id="casanativa"></a>04 / Casa Nativa
 
 <a href="https://github.com/MancarSoftware/muebleria">
@@ -234,6 +280,17 @@ A furniture retail website with an editable catalog, color variants, and structu
 **Built With:** React, TypeScript, Vite, and Supabase.
 
 <a href="https://github.com/MancarSoftware/muebleria#readme"><img src="assets/buttons/read-the-catalog-and-administration-guide.png" width="281" height="56" alt="Read the Catalog and Administration Guide" /></a>
+
+<details>
+<summary>Feature in Focus: Saved Selections</summary>
+
+**Bring the shortlist together.**
+
+<img src="assets/captures/casanativa-still-04.png" width="100%" alt="Casa Nativa: Saved Selections. Original repository interface with demo content." />
+
+“Mi espacio” groups selected pieces so customers can review their choices before making an inquiry.
+
+</details>
 
 ## In Focus: Casa Nativa
 
@@ -274,6 +331,23 @@ We review the context before making changes and prioritize incidents that affect
 
 <a href="https://ale-mancar.github.io/mancar_software/soporte/"><img src="assets/buttons/explore-support-options.png" width="205" height="44" alt="Explore Support Options" /></a>
 <a href="mailto:mancarsoftwares@gmail.com"><img src="assets/buttons/email-mancar.png" width="137" height="44" alt="Email Mancar" /></a>
+
+## What Happens After You Contact Us?
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-first-conversation-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-first-conversation.png" />
+  <source media="(max-width: 600px)" srcset="assets/mancar-first-conversation-mobile.gif" />
+  <img src="assets/mancar-first-conversation.gif" width="100%" alt="Three clear steps: tell us about your business and the work you want to improve; review priorities, people, tools, and constraints together; define a proposal with deliverables, timing, and a practical approach." />
+</picture>
+
+**1. Initial Conversation.** Tell us what your business does, what is getting in the way, and what you want to achieve. Share an existing product or a simple example if it helps.
+
+**2. Assessment.** We discuss the workflow, people, current tools, priorities, and constraints to understand where the work should begin.
+
+**3. Scoped Proposal.** We define the proposed deliverables, timing, and approach so you can review the next step with a clear understanding of the work.
+
+You do not need a technical specification to start the conversation.
 
 ## Start a Conversation
 

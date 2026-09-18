@@ -282,7 +282,55 @@ def disciplines(w, h, t, mobile):
     return im
 
 
+def starting_points(w, h, t, mobile):
+    im = Image.new('RGB', (w, h), '#EAE6DB')
+    d = ImageDraw.Draw(im)
+    ink, muted = '#172D28', '#52635B'
+    text(d, (32, 28), 'WHEN TO BRING US IN / YOUR STARTING POINT', 16, ink, True)
+    lines(d, (32, 78), ['What needs', 'to work better?'], 46 if mobile else 60, ink, True)
+    items = [('A new beginning', 'You are launching a business or introducing a new offer.', 'Clarify the experience.'),
+             ('Too much manual work', 'Your team repeats tasks or moves information between tools.', 'Connect the workflow.'),
+             ('A product with potential', 'An existing product needs a clearer, more useful experience.', 'Improve what matters.'),
+             ('The next stage', 'Your product needs care as the business changes.', 'Keep it moving forward.')]
+    for i, (title, copy, outcome) in enumerate(items):
+        x = 32 if mobile else 32 + (i % 2) * 524
+        y = (235 + i * 176) if mobile else (260 + (i // 2) * 211)
+        width = 496 if mobile else 492
+        d.line((x, y, x + width, y), fill='#A4B3A6', width=2)
+        text(d, (x, y + 18), f'0{i+1}', 20, '#A54834', True)
+        text(d, (x + 48, y + 14), title, 27, ink, True)
+        paragraph(d, (x + 48, y + 57), copy, width - 55, 23, muted)
+        text(d, (x + 48, y + 131), outcome, 22, ink, True)
+        phase = (t + i / 4) % 1
+        px = x + width * phase
+        d.line((px, y, min(px + 27, x + width), y), fill='#BD553D', width=4)
+    return im
+
+
+def first_conversation(w, h, t, mobile):
+    im = Image.new('RGB', (w, h), '#193B38')
+    d = ImageDraw.Draw(im)
+    text(d, (32, 28), 'GETTING STARTED / THREE CLEAR STEPS', 17, LIME, True)
+    lines(d, (32, 80), ['Bring the context.', 'We will shape the next step.'], 34 if mobile else 53, bold=True)
+    items = [('Tell us about the work', 'Share your business, the challenge, and what you want to improve.'),
+             ('Review the priorities', 'We discuss the people, existing tools, constraints, and scope.'),
+             ('Define a proposal', 'Agree the deliverables, timing, and a practical approach.')]
+    for i, (title, copy) in enumerate(items):
+        x, y = (32, 228 + i * 161) if mobile else (32 + i * 345, 264)
+        width = 496 if mobile else 310
+        d.ellipse((x, y, x+42, y+42), outline=LIME, width=2)
+        text(d, (x+13, y+10), str(i+1), 22, LIME, True)
+        d.line((x+54, y+21, x+width, y+21), fill='#61847B', width=2)
+        px = x + 54 + (width - 54) * ((t + i / 3) % 1)
+        d.ellipse((px-4,y+17,px+4,y+25), fill=CORAL)
+        text(d, (x, y+58), title, 27 if mobile else 25, WHITE, True)
+        paragraph(d, (x, y+100), copy, width, 22, '#CFDDD5')
+    return im
+
+
 PANELS = [
+    ('mancar-starting-points', starting_points, 720, 970),
+    ('mancar-first-conversation', first_conversation, 530, 745),
     ('mancar-disciplines', disciplines, 690, 815),
     ('mancar-studio-cover', cover, 620, 750),
     ('mancar-capabilities', outcomes, 650, 710),

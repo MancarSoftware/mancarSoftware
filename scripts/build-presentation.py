@@ -105,6 +105,28 @@ Supports standalone, LAN server, and LAN client modes on Windows. One computer h
 }
 
 
+FEATURES = {
+    'odontocare': ('Clinical History', 2, 'Follow care across visits.', 'The history view brings previous clinical entries into the patient context, helping the team review earlier care before documenting the next visit.'),
+    'vetcare': ('Shared Clinical Context', 2, 'Keep the record at the center of care.', 'The clinical history view preserves context across visits. In the documented LAN configuration, clinic computers access the same local services and data.'),
+    'almavet': ('Appointment Requests', 3, 'Give the clinic useful information upfront.', 'The request form collects the details needed for the clinic to review a visit request. Submitting it requests care; it does not confirm an appointment.'),
+    'casanativa': ('Saved Selections', 4, 'Bring the shortlist together.', '“Mi espacio” groups selected pieces so customers can review their choices before making an inquiry.'),
+}
+
+
+def feature_block(slug):
+    title, number, caption, explanation = FEATURES[slug]
+    return f'''<details>
+<summary>Feature in Focus: {title}</summary>
+
+**{caption}**
+
+<img src="assets/captures/{slug}-still-{number:02}.png" width="100%" alt="{PROJECTS[slug]['name']}: {title}. Original repository interface with demo content." />
+
+{explanation}
+
+</details>'''
+
+
 def project_block(slug):
     project = PROJECTS[slug]
     return '\n\n'.join((
@@ -114,6 +136,7 @@ def project_block(slug):
         f'<sub>{project["evidence"]}</sub>',
         f'[View the Still-Image Tour](../docs/PROJECT-GALLERY.md#{project["gallery_anchor"]}) &nbsp; / &nbsp; [Explore the Repository →](https://github.com/MancarSoftware/{project["repository"]})',
         project['facts'],
+        feature_block(slug),
     ))
 
 
@@ -121,7 +144,7 @@ def make_contact_sheet(mobile):
     width = 375 if mobile else 900
     suffix = '-mobile' if mobile else ''
     images = []
-    names = ['mancar-studio-cover', 'mancar-team', 'mancar-disciplines', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-casa-story', 'mancar-support', 'mancar-contact']
+    names = ['mancar-studio-cover', 'mancar-starting-points', 'mancar-team', 'mancar-disciplines', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-casa-story', 'mancar-support', 'mancar-first-conversation', 'mancar-contact']
     for name in names:
         source = Image.open(OUT / f'{name}{suffix}.png')
         images.append(source.resize((width, round(source.height * width / source.width)), Image.Resampling.LANCZOS))
@@ -164,6 +187,11 @@ We define the business need before choosing the technology. Our work spans digit
 We prioritize a clear experience, dependable operation, and a foundation that can evolve as the business changes.
 
 </details>''',
+    '## When to Bring Us In',
+    studio_picture('starting-points', 'What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes.'),
+    '''You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
+
+[Discuss Your Project](#start-a-conversation)''',
     '## The People Behind Mancar',
     studio_picture('team', 'Different strengths. A shared standard. Alejandro Mantilla: Full Stack Development; React, Next.js, Node.js, and UI/UX. Jeremy Macias: Frontend Development; React, Tailwind CSS, and accessibility. Our backend team contributes APIs, databases, security, and automation.'),
     '''Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
@@ -233,6 +261,15 @@ We review the context before making changes and prioritize incidents that affect
 **Support Hours:** Monday–Friday, 9:00 a.m.–6:00 p.m., Ecuador time (UTC−5).
 
 [Explore Support Options →](https://ale-mancar.github.io/mancar_software/soporte/) &nbsp; / &nbsp; [Email Mancar](mailto:mancarsoftwares@gmail.com)''',
+    '## What Happens After You Contact Us?',
+    studio_picture('first-conversation', 'Three clear steps: tell us about your business and the work you want to improve; review priorities, people, tools, and constraints together; define a proposal with deliverables, timing, and a practical approach.'),
+    '''**1. Initial Conversation.** Tell us what your business does, what is getting in the way, and what you want to achieve. Share an existing product or a simple example if it helps.
+
+**2. Assessment.** We discuss the workflow, people, current tools, priorities, and constraints to understand where the work should begin.
+
+**3. Scoped Proposal.** We define the proposed deliverables, timing, and approach so you can review the next step with a clear understanding of the work.
+
+You do not need a technical specification to start the conversation.''',
     '## Start a Conversation',
     studio_picture('contact', 'Mancar Software. Your next chapter. What could work better? Tell us about the work. Let’s define the next step.'),
     '''
