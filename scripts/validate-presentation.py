@@ -34,6 +34,8 @@ for relative in button_paths:
 assert {p.name for p in (ROOT/'profile/assets/buttons').glob('*.png')} == {Path(p).name for p in button_paths}, 'Unused button artwork'
 headings=re.findall(r'^#{1,6} .+$',root_text,re.M)
 assert headings[0]=='# Mancar Software','Public profile must introduce Mancar before its projects'
+assert headings[1] == '## Selected Projects', 'Projects must immediately follow the introduction'
+assert '## Working With Us' in headings, 'Missing practical FAQ'
 assert '## Selected Projects' in headings,'Public profile must retain its project catalogue'
 project_headings=[heading for heading in headings if heading.endswith(('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa'))]
 for heading,project in zip(project_headings,('01 / OdontoCare','02 / VetCare Pro','03 / Alma Vet','04 / Casa Nativa')):
@@ -53,8 +55,8 @@ for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
             headings=re.findall(r'^#{1,6} (.+)$',local.read_text(encoding='utf-8'),re.M)
             slugs=[re.sub(r' +','-',re.sub(r'[^a-z0-9 ]','',h.lower())) for h in headings]
             assert target.fragment in slugs,f'Missing gallery anchor: {target.fragment}'
-    # Ten studio panels, one featured story, and four project tours.
-    if relative.endswith('README.md'): assert refs.reduced==30,'Unexpected or missing animated presentation sources'
+    # Eight animated studio panels, one featured story, and four project tours.
+    if relative.endswith('README.md'): assert refs.reduced==26,'Unexpected or missing animated presentation sources'
 
 gif_bytes=0
 for slug in ('odontocare','vetcare','almavet','casanativa'):
@@ -76,7 +78,7 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
             still.verify()
 
 studio_bytes=0
-for name,desktop_h,mobile_h in (('starting-points',720,970),('first-conversation',530,745),('studio-cover',620,750),('disciplines',690,815),('capabilities',650,710),('approach',560,770),('contact',410,460),('team',670,950),('principles',730,850),('support',650,910)):
+for name,desktop_h,mobile_h in (('starting-points',720,970),('first-conversation',530,745),('studio-cover',620,750),('disciplines',690,815),('approach',560,770),('contact',410,460),('team',670,950),('support',650,910)):
     for suffix,height in (('',desktop_h),('-mobile',mobile_h)):
         path=ROOT/f'profile/assets/mancar-{name}{suffix}.gif'
         with Image.open(path) as media:
@@ -101,4 +103,4 @@ for suffix, size in (('', (1080,700)), ('-mobile', (560,850))):
     with Image.open(path.with_suffix('.png')) as still:
         assert still.size == size
         still.verify()
-print(f'PASS: synchronized README variants, local paths, gallery anchors, alt text, static sources, 20 studio animations, 2 featured stories, 8 project tours, and 13 stills. Studio: {studio_bytes/1024/1024:.2f} MiB; projects: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+print(f'PASS: synchronized README variants, local paths, gallery anchors, alt text, static sources, 16 studio animations, 2 featured stories, 8 project tours, and 13 stills. Studio: {studio_bytes/1024/1024:.2f} MiB; projects: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')

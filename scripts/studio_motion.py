@@ -333,11 +333,9 @@ PANELS = [
     ('mancar-first-conversation', first_conversation, 530, 745),
     ('mancar-disciplines', disciplines, 690, 815),
     ('mancar-studio-cover', cover, 620, 750),
-    ('mancar-capabilities', outcomes, 650, 710),
     ('mancar-approach', method, 560, 770),
     ('mancar-contact', contact, 410, 460),
     ('mancar-team', team, 670, 950),
-    ('mancar-principles', principles, 730, 850),
     ('mancar-support', support, 650, 910),
 ]
 

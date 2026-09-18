@@ -9,117 +9,13 @@
 
 We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
 
-<a href="#the-people-behind-mancar"><img src="profile/assets/buttons/our-team.png" width="115" height="44" alt="Our Team" /></a>
-<a href="#how-we-work"><img src="profile/assets/buttons/our-approach.png" width="141" height="44" alt="Our Approach" /></a>
 <a href="#selected-projects"><img src="profile/assets/buttons/selected-projects.png" width="159" height="44" alt="Selected Projects" /></a>
+<a href="#how-we-work"><img src="profile/assets/buttons/our-approach.png" width="141" height="44" alt="Our Approach" /></a>
+<a href="#the-people-behind-mancar"><img src="profile/assets/buttons/our-team.png" width="115" height="44" alt="Our Team" /></a>
 <a href="#beyond-launch"><img src="profile/assets/buttons/support.png" width="103" height="44" alt="Support" /></a>
 <a href="#start-a-conversation"><img src="profile/assets/buttons/contact.png" width="101" height="44" alt="Contact" /></a>
 
-<details>
-<summary>What We Bring to a Project</summary>
 
-We define the business need before choosing the technology. Our work spans digital experiences, product catalogs, desktop and local-network applications, workflow automation, and technical support. Every project starts with the people who will use it, the information they need, and the decisions it should make easier.
-
-We prioritize a clear experience, dependable operation, and a foundation that can evolve as the business changes.
-
-</details>
-
-## When to Bring Us In
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-starting-points-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-starting-points.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-starting-points-mobile.gif" />
-  <img src="profile/assets/mancar-starting-points.gif" width="100%" alt="What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes." />
-</picture>
-
-You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
-
-<a href="#start-a-conversation"><img src="profile/assets/buttons/discuss-your-project.png" width="179" height="44" alt="Discuss Your Project" /></a>
-
-## The People Behind Mancar
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-team-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-team.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-team-mobile.gif" />
-  <img src="profile/assets/mancar-team.gif" width="100%" alt="Different strengths. A shared standard. Alejandro Mantilla: Full Stack Development; React, Next.js, Node.js, and UI/UX. Jeremy Macias: Frontend Development; React, Tailwind CSS, and accessibility. Our backend team contributes APIs, databases, security, and automation." />
-</picture>
-
-Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
-
-<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo"><img src="profile/assets/buttons/meet-the-team.png" width="148" height="44" alt="Meet the Team" /></a>
-
-## What We Bring Together
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-disciplines.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.gif" />
-  <img src="profile/assets/mancar-disciplines.gif" width="100%" alt="Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward." />
-</picture>
-
-UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.
-
-## What We Help Improve
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-capabilities-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-capabilities.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-capabilities-mobile.gif" />
-  <img src="profile/assets/mancar-capabilities.gif" width="100%" alt="A stronger business starts with a useful change. Earn Trust: communicate your value and make the next step clear. Simplify the Work: connect information and reduce repeated effort. Move Forward: set clear priorities and build a foundation for change." />
-</picture>
-
-<details>
-<summary>What These Outcomes Mean for Your Business</summary>
-
-**More Confidence.** A clear public presence, useful content, and direct paths from interest to conversation help a business communicate its value from the first visit.
-
-**Less Manual Work.** Focused tools centralize the details that teams need, reduce repetitive tasks, and make daily operations easier to follow.
-
-**Better Follow-Through.** Work progresses through clear stages, visible decisions, and plain-language communication, so the next step is always understood.
-
-</details>
-
-## How We Work
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-approach.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.gif" />
-  <img src="profile/assets/mancar-approach.gif" width="100%" alt="Clear steps. Direct collaboration. Discover: understand the business and its priorities. Define: agree the scope, deliverables, and timing. Create: design and build around the real workflow. Evolve: launch, support, and refine the product. Business first. Technology with purpose." />
-</picture>
-
-<details>
-<summary>From the First Conversation to Ongoing Support</summary>
-
-1. **Diagnose.** We review the business, its priorities, the people involved, and the outcome that matters most.
-2. **Define a Clear Proposal.** We agree the scope, deliverables, timing, and implementation route before development begins.
-3. **Design and Develop.** We shape a usable experience around the brand, the workflow, and the people using it.
-4. **Launch and Evolve.** We test, publish or install, and remain available for support, refinement, and the next stage of the work.
-
-**Built to Fit the Work**
-
-We choose technology in proportion to the job: a lean public presence where clarity and speed matter, a catalog when products need to be explored, or a desktop and local-network application when a team needs continuity and control. We do not add complexity for its own sake.
-
-The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalog built around real customer inquiries.
-
-</details>
-
-## What You Can Expect From Us
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-principles-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-principles.png" />
-  <source media="(max-width: 600px)" srcset="profile/assets/mancar-principles-mobile.gif" />
-  <img src="profile/assets/mancar-principles.gif" width="100%" alt="The Mancar standard. Listen first: understand before proposing. Be clear: explain scope, timing, and priorities. Stay involved: collaborate through visible progress and shared decisions. Build responsibly: consider design, performance, security, and maintenance." />
-</picture>
-
-We listen before proposing, explain technical decisions in plain language, and work in stages so you can see progress and understand what comes next. Scope, priorities, and timing form part of the conversation from the beginning.
-
-Design quality, performance, security, and maintainability guide our decisions throughout the project.
-
-<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/"><img src="profile/assets/buttons/read-about-mancar.png" width="176" height="44" alt="Read About Mancar" /></a>
 
 ## Selected Projects
 
@@ -292,6 +188,58 @@ A furniture retail website with an editable catalog, color variants, and structu
 
 </details>
 
+## When to Bring Us In
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-starting-points-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-starting-points.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-starting-points-mobile.gif" />
+  <img src="profile/assets/mancar-starting-points.gif" width="100%" alt="What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes." />
+</picture>
+
+You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
+
+<a href="#start-a-conversation"><img src="profile/assets/buttons/discuss-your-project.png" width="179" height="44" alt="Discuss Your Project" /></a>
+
+## The People Behind Mancar
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-team-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-team.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-team-mobile.gif" />
+  <img src="profile/assets/mancar-team.gif" width="100%" alt="Different strengths. A shared standard. Alejandro Mantilla: Full Stack Development; React, Next.js, Node.js, and UI/UX. Jeremy Macias: Frontend Development; React, Tailwind CSS, and accessibility. Our backend team contributes APIs, databases, security, and automation." />
+</picture>
+
+Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
+
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo"><img src="profile/assets/buttons/meet-the-team.png" width="148" height="44" alt="Meet the Team" /></a>
+
+## What We Bring Together
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-disciplines.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.gif" />
+  <img src="profile/assets/mancar-disciplines.gif" width="100%" alt="Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward." />
+</picture>
+
+UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.
+
+## How We Work
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-approach.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-approach-mobile.gif" />
+  <img src="profile/assets/mancar-approach.gif" width="100%" alt="Clear steps. Direct collaboration. Discover: understand the business and its priorities. Define: agree the scope, deliverables, and timing. Create: design and build around the real workflow. Evolve: launch, support, and refine the product. Business first. Technology with purpose." />
+</picture>
+
+We agree the scope, priorities, and timing before development, then work in visible stages with clear decisions. Design quality, performance, security, and maintainability guide the work through launch and ongoing care.
+
+We choose technology to fit the workflow, including local and LAN operation where continuity matters.
+
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/"><img src="profile/assets/buttons/read-about-mancar.png" width="176" height="44" alt="Read About Mancar" /></a>
+
 ## In Focus: Casa Nativa
 
 <picture>
@@ -341,13 +289,30 @@ We review the context before making changes and prioritize incidents that affect
   <img src="profile/assets/mancar-first-conversation.gif" width="100%" alt="Three clear steps: tell us about your business and the work you want to improve; review priorities, people, tools, and constraints together; define a proposal with deliverables, timing, and a practical approach." />
 </picture>
 
-**1. Initial Conversation.** Tell us what your business does, what is getting in the way, and what you want to achieve. Share an existing product or a simple example if it helps.
+Bring a business challenge, an existing product, or a simple example of what you want to improve. We will use that context to assess the work and define a practical proposal.
 
-**2. Assessment.** We discuss the workflow, people, current tools, priorities, and constraints to understand where the work should begin.
+## Working With Us
 
-**3. Scoped Proposal.** We define the proposed deliverables, timing, and approach so you can review the next step with a clear understanding of the work.
+<details>
+<summary>Can You Improve an Existing Product?</summary>
 
-You do not need a technical specification to start the conversation.
+Yes. We review the current experience, workflow, and technical context before recommending focused improvements.
+
+</details>
+
+<details>
+<summary>What Should I Prepare Before Contacting You?</summary>
+
+A brief description of your business, the problem you want to solve, and your priorities is enough to begin. Include an existing product or an example if available; a technical specification is not required.
+
+</details>
+
+<details>
+<summary>How Is Ongoing Support Arranged?</summary>
+
+We first review the issue and its impact, then agree the intervention and next steps. Support may include availability, performance, forms, updates, backups, or focused improvements. Contact us to discuss the scope your product needs.
+
+</details>
 
 ## Start a Conversation
 

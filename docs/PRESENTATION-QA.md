@@ -1,5 +1,9 @@
 # Project Profile Verification — September 2026
 
+Motion restored following visual feedback: all eight retained company panels again use desktop/mobile GIFs by default, with PNGs only for reduced-motion preferences. The project-first ordering, tightened copy, and FAQ remain. The static-panel experiment described below is superseded.
+
+Editorial refinement: projects now follow the introduction; outcomes and principles have been consolidated into concise company copy. Six supporting company panels now use still artwork. The cover, disciplines, project tours, and Casa Nativa story retain animation and reduced-motion alternatives. A three-question native FAQ covers existing products, preparation, and support without adding pricing or response-time promises. Superseded artwork has been removed; earlier checks below record previous iterations.
+
 September 18 additions: “When to Bring Us In,” four expandable project feature views, and the first-contact sequence. Reviewed desktop/mobile artwork for both new panels. The validator passes with twenty studio animations (1.32 MiB combined), static alternatives, existing project media, and the new branded contact link. Browser checks confirmed loaded images, no horizontal overflow at 390 and 840 CSS pixels, and successful expansion/collapse of the clinical-history feature. Feature screenshots reuse existing repository captures and remain collapsed by default.
 
 Branded link update: all 32 presentation text links now use coral or deep-teal image buttons with accessible labels. Verified unchanged destinations, no remaining text-only links in the rendered presentation, all 45 images loaded, keyboard focus on the support/contact actions, and no horizontal overflow at 390 or 1200 CSS pixels. The generator validator checks button dimensions, paths, and unused button assets. These checks cover the local preview; publication on GitHub remains a separate review.
@@ -17,3 +21,5 @@ The connected-disciplines and Casa Nativa additions passed the asset validator: 
 - Ran `git diff --check`: no whitespace errors.
 
 The local preview verifies presentation assets and links. It does not verify final GitHub rendering, other browsers, production deployments, backend persistence, LAN connectivity, appointment submissions, or external messaging. Capture sources and limitations are documented in [PROJECT-EVIDENCE.md](PROJECT-EVIDENCE.md).
+
+Editorial validation: generation and asset validation passed; all images loaded without horizontal overflow at 390 and 1200 CSS pixels. Confirmed Selected Projects is the first section and the new FAQ expands and collapses. Reviewed the mobile FAQ visually. Studio GIF weight is now 0.31 MiB across desktop and mobile.

@@ -144,7 +144,7 @@ def make_contact_sheet(mobile):
     width = 375 if mobile else 900
     suffix = '-mobile' if mobile else ''
     images = []
-    names = ['mancar-studio-cover', 'mancar-starting-points', 'mancar-team', 'mancar-disciplines', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-casa-story', 'mancar-support', 'mancar-first-conversation', 'mancar-contact']
+    names = ['mancar-studio-cover', *(f'project-{slug}' for slug in PROJECTS), 'mancar-starting-points', 'mancar-team', 'mancar-disciplines', 'mancar-approach', 'mancar-casa-story', 'mancar-support', 'mancar-first-conversation', 'mancar-contact']
     for name in names:
         source = Image.open(OUT / f'{name}{suffix}.png')
         images.append(source.resize((width, round(source.height * width / source.width)), Image.Resampling.LANCZOS))
@@ -177,16 +177,12 @@ content = '\n\n'.join((
 
 We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
 
-[Our Team](#the-people-behind-mancar) &nbsp; / &nbsp; [Our Approach](#how-we-work) &nbsp; / &nbsp; [Selected Projects](#selected-projects) &nbsp; / &nbsp; [Support](#beyond-launch) &nbsp; / &nbsp; [Contact](#start-a-conversation)
+[Selected Projects](#selected-projects) &nbsp; / &nbsp; [Our Approach](#how-we-work) &nbsp; / &nbsp; [Our Team](#the-people-behind-mancar) &nbsp; / &nbsp; [Support](#beyond-launch) &nbsp; / &nbsp; [Contact](#start-a-conversation)
 
-<details>
-<summary>What We Bring to a Project</summary>
-
-We define the business need before choosing the technology. Our work spans digital experiences, product catalogs, desktop and local-network applications, workflow automation, and technical support. Every project starts with the people who will use it, the information they need, and the decisions it should make easier.
-
-We prioritize a clear experience, dependable operation, and a foundation that can evolve as the business changes.
-
-</details>''',
+''',
+    '## Selected Projects',
+    '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
+    *(project_block(slug) for slug in PROJECTS),
     '## When to Bring Us In',
     studio_picture('starting-points', 'What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes.'),
     '''You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
@@ -200,45 +196,14 @@ We prioritize a clear experience, dependable operation, and a foundation that ca
     '## What We Bring Together',
     studio_picture('disciplines', 'Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward.'),
     'UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.',
-    '## What We Help Improve',
-    studio_picture('capabilities', 'A stronger business starts with a useful change. Earn Trust: communicate your value and make the next step clear. Simplify the Work: connect information and reduce repeated effort. Move Forward: set clear priorities and build a foundation for change.'),
-    '''<details>
-<summary>What These Outcomes Mean for Your Business</summary>
-
-**More Confidence.** A clear public presence, useful content, and direct paths from interest to conversation help a business communicate its value from the first visit.
-
-**Less Manual Work.** Focused tools centralize the details that teams need, reduce repetitive tasks, and make daily operations easier to follow.
-
-**Better Follow-Through.** Work progresses through clear stages, visible decisions, and plain-language communication, so the next step is always understood.
-
-</details>''',
     '## How We Work',
     studio_picture('approach', 'Clear steps. Direct collaboration. Discover: understand the business and its priorities. Define: agree the scope, deliverables, and timing. Create: design and build around the real workflow. Evolve: launch, support, and refine the product. Business first. Technology with purpose.'),
-    '''<details>
-<summary>From the First Conversation to Ongoing Support</summary>
+    '''We agree the scope, priorities, and timing before development, then work in visible stages with clear decisions. Design quality, performance, security, and maintainability guide the work through launch and ongoing care.
 
-1. **Diagnose.** We review the business, its priorities, the people involved, and the outcome that matters most.
-2. **Define a Clear Proposal.** We agree the scope, deliverables, timing, and implementation route before development begins.
-3. **Design and Develop.** We shape a usable experience around the brand, the workflow, and the people using it.
-4. **Launch and Evolve.** We test, publish or install, and remain available for support, refinement, and the next stage of the work.
-
-**Built to Fit the Work**
-
-We choose technology in proportion to the job: a lean public presence where clarity and speed matter, a catalog when products need to be explored, or a desktop and local-network application when a team needs continuity and control. We do not add complexity for its own sake.
-
-The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalog built around real customer inquiries.
-
-</details>''',
-    '## What You Can Expect From Us',
-    studio_picture('principles', 'The Mancar standard. Listen first: understand before proposing. Be clear: explain scope, timing, and priorities. Stay involved: collaborate through visible progress and shared decisions. Build responsibly: consider design, performance, security, and maintenance.'),
-    '''We listen before proposing, explain technical decisions in plain language, and work in stages so you can see progress and understand what comes next. Scope, priorities, and timing form part of the conversation from the beginning.
-
-Design quality, performance, security, and maintainability guide our decisions throughout the project.
+We choose technology to fit the workflow, including local and LAN operation where continuity matters.
 
 [Read About Mancar →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/)''',
-    '## Selected Projects',
-    '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
-    *(project_block(slug) for slug in PROJECTS),
+
     '## In Focus: Casa Nativa',
     studio_picture('casa-story', 'Casa Nativa: from discovery to a considered choice. Explore the catalog with category and price filters; evaluate a piece through photography, dimensions, materials, and colors; collect chosen pieces in a saved selection before an inquiry. Three real repository screens with demo content.'),
     '''Furniture customers need more than a product name: they need enough detail to judge whether a piece belongs in their home. Casa Nativa brings browsing, product information, and a saved selection into one connected experience.
@@ -263,13 +228,28 @@ We review the context before making changes and prioritize incidents that affect
 [Explore Support Options →](https://ale-mancar.github.io/mancar_software/soporte/) &nbsp; / &nbsp; [Email Mancar](mailto:mancarsoftwares@gmail.com)''',
     '## What Happens After You Contact Us?',
     studio_picture('first-conversation', 'Three clear steps: tell us about your business and the work you want to improve; review priorities, people, tools, and constraints together; define a proposal with deliverables, timing, and a practical approach.'),
-    '''**1. Initial Conversation.** Tell us what your business does, what is getting in the way, and what you want to achieve. Share an existing product or a simple example if it helps.
+    'Bring a business challenge, an existing product, or a simple example of what you want to improve. We will use that context to assess the work and define a practical proposal.',
+    '## Working With Us',
+    '''<details>
+<summary>Can You Improve an Existing Product?</summary>
 
-**2. Assessment.** We discuss the workflow, people, current tools, priorities, and constraints to understand where the work should begin.
+Yes. We review the current experience, workflow, and technical context before recommending focused improvements.
 
-**3. Scoped Proposal.** We define the proposed deliverables, timing, and approach so you can review the next step with a clear understanding of the work.
+</details>
 
-You do not need a technical specification to start the conversation.''',
+<details>
+<summary>What Should I Prepare Before Contacting You?</summary>
+
+A brief description of your business, the problem you want to solve, and your priorities is enough to begin. Include an existing product or an example if available; a technical specification is not required.
+
+</details>
+
+<details>
+<summary>How Is Ongoing Support Arranged?</summary>
+
+We first review the issue and its impact, then agree the intervention and next steps. Support may include availability, performance, forms, updates, backups, or focused improvements. Contact us to discuss the scope your product needs.
+
+</details>''',
     '## Start a Conversation',
     studio_picture('contact', 'Mancar Software. Your next chapter. What could work better? Tell us about the work. Let’s define the next step.'),
     '''
