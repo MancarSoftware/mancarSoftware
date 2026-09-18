@@ -4,13 +4,13 @@ The root `README.md` is the personal-profile version. `profile/README.md` is the
 
 ## Public Scope
 
-The public profile combines the Mancar company story with four verified projects: OdontoCare, VetCare Pro, Alma Vet, and Casa Nativa. Preserve the animated cover, business outcomes, delivery timeline, and contact invitation alongside project evidence. Supporting company copy lives in native details disclosures. Do not add unsupported claims or reintroduce Beauty Business.
+The public profile combines the Mancar company story with four verified projects: OdontoCare, VetCare Pro, Alma Vet, and Casa Nativa. Preserve the animated cover, team spread, business outcomes, delivery timeline, working principles, post-launch support, and contact invitation alongside project evidence. Company information remains visible, with native disclosures for extra detail. Do not add unsupported claims or reintroduce Beauty Business.
 
 Every project entry must include a repository link, an accurate description, and only claims supported by the repository. Keep the labels in title case: **Designed For**, **Core Functionality**, and **Built With**.
 
 ## Assets
 
-Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the four company panels; `scripts/project_showcases.py` builds repository tours.
+Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the seven company panels; `scripts/project_showcases.py` builds repository tours.
 
 Regenerate with `python -B scripts/build-presentation.py`, then run `node scripts/render-preview.mjs` sequentially. The generator rebuilds both README variants, studio and project GIF/PNG assets, the still-image gallery, and combined artwork contact sheets. Studio loops use 64 frames at 120 ms per frame. Keep their combined desktop/mobile GIF weight below 4 MiB.
 

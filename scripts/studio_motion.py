@@ -166,11 +166,98 @@ def contact(w, h, t, mobile):
     return im
 
 
+def team(w, h, t, mobile):
+    paper = '#EAE7DF'
+    ink = '#173936'
+    im = Image.new('RGB', (w, h), paper)
+    d = ImageDraw.Draw(im)
+    text(d, (32, 28), 'INSIDE MANCAR / THE PEOPLE', 18, ink, True)
+    lines(d, (32, 79), ['Different strengths.', 'A shared standard.'], 44 if mobile else 60, ink, True)
+    people = [
+        ('AM', 'Alejandro Mantilla', 'Full Stack Development', 'Architecture, development, and the experience that connects them.', 'REACT / NEXT.JS / NODE.JS / UI/UX'),
+        ('JM', 'Jeremy Macias', 'Frontend Development', 'Clear, accessible interfaces shaped around real business workflows.', 'REACT / TAILWIND CSS / ACCESSIBILITY'),
+    ]
+    for i, (initials, name, role, description, skills) in enumerate(people):
+        x, y = (32, 230 + i * 264) if mobile else (32 + i * 536, 258)
+        width = w - 64 if mobile else 472
+        d.line((x, y, x + width, y), fill='#A4B4AA')
+        text(d, (x, y + 20), initials, 51 if mobile else 67, ink, True)
+        start = x + 119
+        text(d, (start, y + 25), name, 28 if mobile else 31, ink, True)
+        text(d, (start, y + 65), role, 23, ink)
+        paragraph(d, (x, y + 116), description, width, 24, ink)
+        text(d, (x, y + 202), skills, 17 if mobile else 18, ink)
+        # A short moving rule links each person's monogram to their work.
+        travel = (1 - math.cos((t + i * .25) * math.tau)) / 2
+        px = x + 20 + travel * (width - 76)
+        d.line((px, y, px + 56, y), fill=BLUE, width=4)
+    y = h - (160 if mobile else 140)
+    d.rectangle((0, y, w, h), fill=ink)
+    text(d, (32, y + 22), 'BACKEND & AUTOMATION', 19, LIME, True)
+    paragraph(d, (32, y + 59), 'Our backend team connects APIs, databases, security, and automation to keep the product maintainable.', w - 64, 24, WHITE)
+    return im
+
+
+PRINCIPLES = [
+    ('Listen First.', 'Understand the people and the work before proposing a solution.'),
+    ('Be Clear.', 'Explain scope, timing, and priorities in straightforward language.'),
+    ('Stay Involved.', 'Work as a partner, with visible progress and decisions made together.'),
+    ('Build Responsibly.', 'Consider design, performance, security, and long-term maintenance.'),
+]
+
+
+def principles(w, h, t, mobile):
+    im = Image.new('RGB', (w, h), LIME)
+    d = ImageDraw.Draw(im)
+    text(d, (32, 27), 'THE MANCAR STANDARD / FOUR COMMITMENTS', 17, DARK, True)
+    lines(d, (32, 78), ['The way we work', 'is part of the product.'], 39 if mobile else 56, DARK, True)
+    for i, (title, description) in enumerate(PRINCIPLES):
+        y = (216 if mobile else 240) + i * (151 if mobile else 118)
+        d.line((32, y, w - 32, y), fill='#70934D')
+        text(d, (32, y + 24), f'0{i+1}', 20, DARK)
+        text(d, (89, y + 19), title, 33 if mobile else 40, DARK, True)
+        paragraph(d, (89, y + 65) if mobile else (565, y + 26), description, w - 121 if mobile else 475, 24, DARK)
+        # A small marginal indicator moves through the commitments without hiding copy.
+        phase = (1 - math.cos(t * math.tau)) / 2
+        if min(int(phase * 4), 3) == i:
+            d.rectangle((0, y + 19, 8, y + 68), fill=DARK)
+    return im
+
+
+def support(w, h, t, mobile):
+    im = Image.new('RGB', (w, h), '#142322')
+    d = ImageDraw.Draw(im)
+    text(d, (32, 28), 'AFTER LAUNCH / SUPPORT & MAINTENANCE', 17, CYAN, True)
+    lines(d, (32, 81), ['Launch is a milestone.', 'The work continues.'], 38 if mobile else 57, bold=True)
+    x, y, radius = (280, 335, 93) if mobile else (219, 379, 121)
+    for r in (radius, radius - 18):
+        d.ellipse((x-r, y-r, x+r, y+r), outline=LINE, width=2)
+    d.arc((x-radius,y-radius,x+radius,y+radius), t*360-90, t*360+35, fill=CYAN, width=5)
+    angle = t * math.tau - math.pi / 2
+    px, py = x + radius * math.cos(angle), y + radius * math.sin(angle)
+    d.ellipse((px-6,py-6,px+6,py+6), fill=LIME)
+    text(d, (x-54, y-22), 'CARE', 35, WHITE, True)
+    text(d, (x-58, y+24), 'FOR THE PRODUCT', 12, CYAN)
+    items = [('Diagnose', 'Availability, performance, and visible errors.'),
+             ('Maintain', 'Updates, security improvements, and backups.'),
+             ('Refine', 'Forms, content, and focused feature improvements.')]
+    for i, (title, description) in enumerate(items):
+        tx, ty = (32, 481 + i * 122) if mobile else (475, 257 + i * 110)
+        d.line((tx, ty, w-32, ty), fill=LINE)
+        text(d, (tx, ty+15), title, 28, LIME, True)
+        paragraph(d, (tx, ty+55), description, w-tx-32, 23, '#C6D5D2')
+    text(d, (32, h-39), 'DIAGNOSE THE ISSUE. AGREE THE NEXT STEP.', 17 if mobile else 20, CYAN, True)
+    return im
+
+
 PANELS = [
     ('mancar-studio-cover', cover, 620, 750),
     ('mancar-capabilities', outcomes, 650, 710),
     ('mancar-approach', method, 560, 770),
     ('mancar-contact', contact, 410, 460),
+    ('mancar-team', team, 670, 950),
+    ('mancar-principles', principles, 730, 850),
+    ('mancar-support', support, 650, 910),
 ]
 
 

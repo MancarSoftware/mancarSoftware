@@ -119,7 +119,7 @@ def make_contact_sheet(mobile):
     width = 375 if mobile else 900
     suffix = '-mobile' if mobile else ''
     images = []
-    names = ['mancar-studio-cover', 'mancar-capabilities', 'mancar-approach', *(f'project-{slug}' for slug in PROJECTS), 'mancar-contact']
+    names = ['mancar-studio-cover', 'mancar-team', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-support', 'mancar-contact']
     for name in names:
         source = Image.open(OUT / f'{name}{suffix}.png')
         images.append(source.resize((width, round(source.height * width / source.width)), Image.Resampling.LANCZOS))
@@ -151,7 +151,7 @@ content = '\n\n'.join((
 
 We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
 
-[Explore Our Projects](#selected-projects) &nbsp; / &nbsp; [Meet the Company](https://ale-mancar.github.io/mancar_software/sobre-nosotros/) &nbsp; / &nbsp; [Start a Conversation](#start-a-conversation)
+[Our Team](#the-people-behind-mancar) &nbsp; / &nbsp; [Our Approach](#how-we-work) &nbsp; / &nbsp; [Selected Projects](#selected-projects) &nbsp; / &nbsp; [Support](#beyond-launch) &nbsp; / &nbsp; [Contact](#start-a-conversation)
 
 <details>
 <summary>What We Bring to a Project</summary>
@@ -161,6 +161,11 @@ We define the business need before choosing the technology. Our work spans digit
 We prioritize a clear experience, dependable operation, and a foundation that can evolve as the business changes.
 
 </details>''',
+    '## The People Behind Mancar',
+    studio_picture('team', 'Different strengths. A shared standard. Alejandro Mantilla: Full Stack Development; React, Next.js, Node.js, and UI/UX. Jeremy Macias: Frontend Development; React, Tailwind CSS, and accessibility. Our backend team contributes APIs, databases, security, and automation.'),
+    '''Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
+
+[Meet the Team →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo)''',
     '## What We Help Improve',
     studio_picture('capabilities', 'A stronger business starts with a useful change. Earn Trust: communicate your value and make the next step clear. Simplify the Work: connect information and reduce repeated effort. Move Forward: set clear priorities and build a foundation for change.'),
     '''<details>
@@ -190,9 +195,23 @@ We choose technology in proportion to the job: a lean public presence where clar
 The selected projects below make that approach concrete: two Windows applications for clinical teams, a veterinary clinic experience, and a furniture catalog built around real customer inquiries.
 
 </details>''',
+    '## What You Can Expect From Us',
+    studio_picture('principles', 'The Mancar standard. Listen first: understand before proposing. Be clear: explain scope, timing, and priorities. Stay involved: collaborate through visible progress and shared decisions. Build responsibly: consider design, performance, security, and maintenance.'),
+    '''We listen before proposing, explain technical decisions in plain language, and work in stages so you can see progress and understand what comes next. Scope, priorities, and timing form part of the conversation from the beginning.
+
+Design quality, performance, security, and maintainability guide our decisions throughout the project. [Read About Mancar →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/)''',
     '## Selected Projects',
     '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
     *(project_block(slug) for slug in PROJECTS),
+    '## Beyond Launch',
+    studio_picture('support', 'Launch is a milestone. The work continues. Diagnose availability, performance, and visible errors. Maintain updates, security improvements, and backups. Refine forms, content, and focused features. Diagnose the issue and agree the next step.'),
+    '''A product needs attention as the business changes. Our support work covers availability and performance issues, form submissions and email delivery, updates, backups, and focused improvements to content or functionality.
+
+We review the context before making changes and prioritize incidents that affect sales, forms, or availability. The intervention and next steps are agreed after diagnosis.
+
+**Support Hours:** Monday–Friday, 9:00 a.m.–6:00 p.m., Ecuador time (UTC−5).
+
+[Explore Support Options →](https://ale-mancar.github.io/mancar_software/soporte/) &nbsp; / &nbsp; [Email Mancar](mailto:mancarsoftwares@gmail.com)''',
     '## Start a Conversation',
     studio_picture('contact', 'Mancar Software. Your next chapter. What could work better? Tell us about the work. Let’s define the next step.'),
     '''

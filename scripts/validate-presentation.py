@@ -45,8 +45,8 @@ for relative in ('README.md','profile/README.md','docs/PROJECT-GALLERY.md'):
             headings=re.findall(r'^#{1,6} (.+)$',local.read_text(encoding='utf-8'),re.M)
             slugs=[re.sub(r' +','-',re.sub(r'[^a-z0-9 ]','',h.lower())) for h in headings]
             assert target.fragment in slugs,f'Missing gallery anchor: {target.fragment}'
-    # Four studio panels and four project tours each have desktop/mobile static alternatives.
-    if relative.endswith('README.md'): assert refs.reduced==16,'Unexpected or missing animated presentation sources'
+    # Seven studio panels and four project tours have desktop/mobile static alternatives.
+    if relative.endswith('README.md'): assert refs.reduced==22,'Unexpected or missing animated presentation sources'
 
 gif_bytes=0
 for slug in ('odontocare','vetcare','almavet','casanativa'):
@@ -68,7 +68,7 @@ for slug in ('odontocare','vetcare','almavet','casanativa'):
             still.verify()
 
 studio_bytes=0
-for name,desktop_h,mobile_h in (('studio-cover',620,750),('capabilities',650,710),('approach',560,770),('contact',410,460)):
+for name,desktop_h,mobile_h in (('studio-cover',620,750),('capabilities',650,710),('approach',560,770),('contact',410,460),('team',670,950),('principles',730,850),('support',650,910)):
     for suffix,height in (('',desktop_h),('-mobile',mobile_h)):
         path=ROOT/f'profile/assets/mancar-{name}{suffix}.gif'
         with Image.open(path) as media:
@@ -82,4 +82,4 @@ for name,desktop_h,mobile_h in (('studio-cover',620,750),('capabilities',650,710
             still.verify()
         studio_bytes+=path.stat().st_size
 assert studio_bytes<4*1024*1024,'Studio animation exceeds the 4 MiB combined budget'
-print(f'PASS: synchronized README variants, local paths, gallery anchors, alt text, static sources, 8 studio animations, 8 project tours, and 13 stills. Studio: {studio_bytes/1024/1024:.2f} MiB; projects: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
+print(f'PASS: synchronized README variants, local paths, gallery anchors, alt text, static sources, 14 studio animations, 8 project tours, and 13 stills. Studio: {studio_bytes/1024/1024:.2f} MiB; projects: {gif_bytes/1024/1024:.2f} MiB across desktop + mobile.')
