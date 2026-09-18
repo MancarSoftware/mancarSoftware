@@ -1,6 +1,8 @@
 # Project Profile Verification — September 2026
 
-The profile combines seven animated company panels with the four established project tours. Company content covers purpose, the public team, outcomes, delivery, working principles, post-launch support, and contact. New company information remains visible, with disclosures for additional detail.
+The profile combines eight animated company panels, a featured Casa Nativa story, and the four established project tours. Company content covers purpose, the public team, connected disciplines, outcomes, delivery, working principles, post-launch support, and contact. New company information remains visible, with disclosures for additional detail.
+
+The connected-disciplines and Casa Nativa additions passed the asset validator: sixteen studio animations, two featured-story variants, eight project tours, thirteen captured stills, synchronized README variants, and static alternatives. Studio animations total 0.96 MiB. Inspected both new desktop/mobile compositions, checked all thirteen image sources on mobile, and found no horizontal overflow at 390 or 1200 CSS pixels. No browser console errors were reported. The story preserves a single changing screenshot on mobile and provides its complete narrative as visible text. No studio note or photograph was added.
 
 - Passed `python -B scripts/validate-presentation.py`: matching README variants, paths and gallery anchors, accessible image alternatives, fourteen studio animations, eight project animations, static PNG alternatives, studio media budget, and thirteen captured stills. Studio GIFs total 0.84 MiB across desktop and mobile.
 - Verified that the four supplied logos match their original user-provided PNG files by SHA-256.

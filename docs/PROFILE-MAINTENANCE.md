@@ -10,7 +10,7 @@ Every project entry must include a repository link, an accurate description, and
 
 ## Assets
 
-Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the seven company panels; `scripts/project_showcases.py` builds repository tours.
+Keep studio panels, project tours, static reduced-motion alternatives, supplied logos, and captured stills in `profile/assets/`. The four supplied logos in `profile/assets/logos/` must remain byte-for-byte unchanged. Every displayed animation has a desktop/mobile PNG alternative and descriptive alt text. `scripts/studio_motion.py` builds the eight company panels; `scripts/project_showcases.py` builds repository tours. `scripts/project_story.py` builds the Casa Nativa story from catalog, product-detail, and saved-selection captures, with 5.5-second reading holds and brief dissolves. Keep its three stages available as visible README text and through the still-image gallery.
 
 Regenerate with `python -B scripts/build-presentation.py`, then run `node scripts/render-preview.mjs` sequentially. The generator rebuilds both README variants, studio and project GIF/PNG assets, the still-image gallery, and combined artwork contact sheets. Studio loops use 64 frames at 120 ms per frame. Keep their combined desktop/mobile GIF weight below 4 MiB.
 

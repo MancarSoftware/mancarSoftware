@@ -250,7 +250,40 @@ def support(w, h, t, mobile):
     return im
 
 
+def disciplines(w, h, t, mobile):
+    im = Image.new('RGB', (w, h), '#182B47')
+    d = ImageDraw.Draw(im)
+    text(d, (32, 28), 'MANCAR / CONNECTED DISCIPLINES', 17, CYAN, True)
+    lines(d, (32, 78), ['Different skills.', 'One considered product.'], 37 if mobile else 57, bold=True)
+    items = [('UX/UI Design', 'Make the next step clear.', CYAN),
+             ('Frontend', 'Bring the experience to life.', CORAL),
+             ('Backend', 'Connect data and business rules.', LIME),
+             ('Automation', 'Reduce repetitive work.', CYAN),
+             ('Support', 'Keep the product moving forward.', CORAL)]
+    for i, (title, description, accent) in enumerate(items):
+        y = (223 if mobile else 245) + i * (110 if mobile else 81)
+        x = 65 if mobile else 90
+        d.line((32, y + 13, 32, min(y + 123 if mobile else y + 94, h - 60)), fill=LINE, width=2)
+        d.ellipse((25, y + 6, 39, y + 20), fill=accent)
+        text(d, (x, y), title, 28, accent, True)
+        paragraph(d, (x, y + 40) if mobile else (345, y + 4), description, w - x - 32 if mobile else 405, 22, WHITE)
+        if not mobile:
+            route = [(770, y + 16), (805, y + 16), (858, 425)]
+            d.line(route, fill=LINE, width=2)
+            px, py = route_point(route, (t + i / 5) % 1)
+            d.ellipse((px-4, py-4, px+4, py+4), fill=accent)
+    if not mobile:
+        d.ellipse((853, 351, 1023, 521), outline=CYAN, width=2)
+        text(d, (887, 393), 'YOUR', 24, WHITE, True)
+        text(d, (871, 431), 'PRODUCT', 24, WHITE, True)
+    else:
+        py = 236 + ((t * 540) % 540)
+        d.ellipse((27, py-5, 37, py+5), fill=WHITE)
+    return im
+
+
 PANELS = [
+    ('mancar-disciplines', disciplines, 690, 815),
     ('mancar-studio-cover', cover, 620, 750),
     ('mancar-capabilities', outcomes, 650, 710),
     ('mancar-approach', method, 560, 770),

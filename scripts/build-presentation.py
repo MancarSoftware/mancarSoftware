@@ -7,6 +7,7 @@ from PIL import Image
 
 from project_showcases import build_showcases
 from studio_motion import build_studio
+from project_story import build_story
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -119,7 +120,7 @@ def make_contact_sheet(mobile):
     width = 375 if mobile else 900
     suffix = '-mobile' if mobile else ''
     images = []
-    names = ['mancar-studio-cover', 'mancar-team', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-support', 'mancar-contact']
+    names = ['mancar-studio-cover', 'mancar-team', 'mancar-disciplines', 'mancar-capabilities', 'mancar-approach', 'mancar-principles', *(f'project-{slug}' for slug in PROJECTS), 'mancar-casa-story', 'mancar-support', 'mancar-contact']
     for name in names:
         source = Image.open(OUT / f'{name}{suffix}.png')
         images.append(source.resize((width, round(source.height * width / source.width)), Image.Resampling.LANCZOS))
@@ -144,6 +145,7 @@ def make_contact_sheet(mobile):
 
 build_showcases(OUT)
 build_studio(OUT)
+build_story(OUT)
 
 content = '\n\n'.join((
     studio_picture('studio-cover', 'Mancar Software. Independent studio in Ecuador. Built around people. Made for real work. Strategy, design, development, and support. Your business sets the direction.'),
@@ -166,6 +168,9 @@ We prioritize a clear experience, dependable operation, and a foundation that ca
     '''Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
 
 [Meet the Team →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo)''',
+    '## What We Bring Together',
+    studio_picture('disciplines', 'Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward.'),
+    'UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.',
     '## What We Help Improve',
     studio_picture('capabilities', 'A stronger business starts with a useful change. Earn Trust: communicate your value and make the next step clear. Simplify the Work: connect information and reduce repeated effort. Move Forward: set clear priorities and build a foundation for change.'),
     '''<details>
@@ -203,6 +208,19 @@ Design quality, performance, security, and maintainability guide our decisions t
     '## Selected Projects',
     '[01 / OdontoCare](#odontocare) &nbsp; / &nbsp; [02 / VetCare Pro](#vetcare) &nbsp; / &nbsp; [03 / Alma Vet](#almavet) &nbsp; / &nbsp; [04 / Casa Nativa](#casanativa)',
     *(project_block(slug) for slug in PROJECTS),
+    '## In Focus: Casa Nativa',
+    studio_picture('casa-story', 'Casa Nativa: from discovery to a considered choice. Explore the catalog with category and price filters; evaluate a piece through photography, dimensions, materials, and colors; collect chosen pieces in a saved selection before an inquiry. Three real repository screens with demo content.'),
+    '''Furniture customers need more than a product name: they need enough detail to judge whether a piece belongs in their home. Casa Nativa brings browsing, product information, and a saved selection into one connected experience.
+
+**The Customer Task:** narrow the options and understand how a piece fits the space.
+
+**The Interface Decision:** place photography alongside dimensions, materials, and color options, with catalog filters to support discovery.
+
+**The Resulting Functionality:** customers can explore the catalog, inspect a product, and save pieces to “Mi espacio” before making an inquiry.
+
+<sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
+
+[Explore the Screens →](../docs/PROJECT-GALLERY.md#casa-nativa) &nbsp; / &nbsp; [View the Project →](https://github.com/MancarSoftware/muebleria)''',
     '## Beyond Launch',
     studio_picture('support', 'Launch is a milestone. The work continues. Diagnose availability, performance, and visible errors. Maintain updates, security improvements, and backups. Refine forms, content, and focused features. Diagnose the issue and agree the next step.'),
     '''A product needs attention as the business changes. Our support work covers availability and performance issues, form submissions and email delivery, updates, backups, and focused improvements to content or functionality.

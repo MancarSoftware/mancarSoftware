@@ -33,6 +33,17 @@ Mancar brings together full stack development, frontend craft, and backend engin
 
 [Meet the Team →](https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo)
 
+## What We Bring Together
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-disciplines.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-disciplines-mobile.gif" />
+  <img src="profile/assets/mancar-disciplines.gif" width="100%" alt="Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward." />
+</picture>
+
+UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.
+
 ## What We Help Improve
 
 <picture>
@@ -208,6 +219,27 @@ A furniture retail website with an editable catalog, color variants, and structu
 **Built With:** React, TypeScript, Vite, and Supabase.
 
 [Read the Catalog and Administration Guide](https://github.com/MancarSoftware/muebleria#readme)
+
+## In Focus: Casa Nativa
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/assets/mancar-casa-story-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="profile/assets/mancar-casa-story.png" />
+  <source media="(max-width: 600px)" srcset="profile/assets/mancar-casa-story-mobile.gif" />
+  <img src="profile/assets/mancar-casa-story.gif" width="100%" alt="Casa Nativa: from discovery to a considered choice. Explore the catalog with category and price filters; evaluate a piece through photography, dimensions, materials, and colors; collect chosen pieces in a saved selection before an inquiry. Three real repository screens with demo content." />
+</picture>
+
+Furniture customers need more than a product name: they need enough detail to judge whether a piece belongs in their home. Casa Nativa brings browsing, product information, and a saved selection into one connected experience.
+
+**The Customer Task:** narrow the options and understand how a piece fits the space.
+
+**The Interface Decision:** place photography alongside dimensions, materials, and color options, with catalog filters to support discovery.
+
+**The Resulting Functionality:** customers can explore the catalog, inspect a product, and save pieces to “Mi espacio” before making an inquiry.
+
+<sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
+
+[Explore the Screens →](docs/PROJECT-GALLERY.md#casa-nativa) &nbsp; / &nbsp; [View the Project →](https://github.com/MancarSoftware/muebleria)
 
 ## Beyond Launch
 
