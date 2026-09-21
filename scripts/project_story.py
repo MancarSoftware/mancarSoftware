@@ -2,6 +2,7 @@
 from PIL import Image, ImageDraw, ImageOps
 from project_showcases import capture, save_tour
 from studio_motion import text, lines, paragraph
+import locale_runtime as locale
 
 
 STEPS = [
@@ -15,6 +16,7 @@ STEPS = [
 
 
 def scene(out, index, mobile):
+    locale.PANEL = 'mancar-casa-story'
     w, h = (560, 850) if mobile else (1080, 700)
     im = Image.new('RGB', (w, h), '#EAE6DB')
     d = ImageDraw.Draw(im)

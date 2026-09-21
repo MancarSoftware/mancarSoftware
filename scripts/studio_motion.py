@@ -2,6 +2,7 @@
 import math
 from PIL import Image, ImageDraw
 from project_motion import text, font, DARK, WHITE, MUTED
+import locale_runtime as locale
 
 BLUE = '#284BE8'
 CYAN = '#54DCEC'
@@ -19,17 +20,7 @@ def lines(draw, xy, copy, size, color=WHITE, bold=False, leading=None):
 
 def paragraph(draw, xy, copy, width, size=24, color=MUTED):
     """Wrap copy by measured glyph width; never crop responsive text."""
-    row = ''
-    y = xy[1]
-    for word in copy.split():
-        candidate = f'{row} {word}'.strip()
-        if row and draw.textlength(candidate, font=font(size)) > width:
-            text(draw, (xy[0], y), row, size, color)
-            y += size * 1.4
-            row = word
-        else:
-            row = candidate
-    text(draw, (xy[0], y), row, size, color)
+    locale.draw_paragraph(draw, xy, copy, width, size, color)
 
 
 def route_point(points, progress):
@@ -343,6 +334,7 @@ PANELS = [
 def build_studio(out):
     for mobile in (False, True):
         for name, render, desktop_h, mobile_h in PANELS:
+            locale.PANEL = name
             width, height = (560, mobile_h) if mobile else (1080, desktop_h)
             frames = [render(width, height, i / FRAMES, mobile) for i in range(FRAMES)]
             stem = out / (name + ('-mobile' if mobile else ''))

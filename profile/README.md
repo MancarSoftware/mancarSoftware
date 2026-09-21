@@ -1,71 +1,78 @@
+<a href="README.md"><img src="assets/languages/es.png" width="120" height="44" alt="Español" /></a>
+<a href="README.en.md"><img src="assets/languages/en.png" width="120" height="44" alt="English" /></a>
+<a href="README.zh.md"><img src="assets/languages/zh.png" width="120" height="44" alt="简体中文" /></a>
+<a href="README.hi.md"><img src="assets/languages/hi.png" width="120" height="44" alt="हिन्दी" /></a>
+
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-studio-cover.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-studio-cover-mobile.gif" />
-  <img src="assets/mancar-studio-cover.gif" width="100%" alt="Mancar Software. Independent studio in Ecuador. Built around people. Made for real work. Strategy, design, development, and support. Your business sets the direction." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-studio-cover-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-studio-cover.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-studio-cover-mobile.gif" />
+  <img src="assets/es/mancar-studio-cover.gif" width="100%" alt="MANCAR SOFTWARE · ESTUDIO INDEPENDIENTE / ECUADOR · Pensado para · las personas. · Creado para · el trabajo real. · ESTRATEGIA / DISEÑO / DESARROLLO / SOPORTE · TU NEGOCIO MARCA EL RUMBO. · Estrategia. · Diseño. · Desarrollo. · Soporte." />
 </picture>
 
 # Mancar Software
 
-We bring strategy, design, and development together to help businesses earn trust, simplify daily work, and build for what comes next. Based in Guayaquil, Ecuador, we work directly with the people behind each business, from the first conversation through launch and ongoing support.
+Unimos estrategia, diseño y desarrollo para ayudar a los negocios a generar confianza, simplificar el trabajo diario y prepararse para lo que viene. Desde Guayaquil, Ecuador, colaboramos directamente con quienes impulsan cada negocio, desde la primera conversación hasta el lanzamiento y el soporte continuo.
 
-<a href="#selected-projects"><img src="assets/buttons/selected-projects.png" width="159" height="44" alt="Selected Projects" /></a>
-<a href="#how-we-work"><img src="assets/buttons/our-approach.png" width="141" height="44" alt="Our Approach" /></a>
-<a href="#the-people-behind-mancar"><img src="assets/buttons/our-team.png" width="115" height="44" alt="Our Team" /></a>
-<a href="#beyond-launch"><img src="assets/buttons/support.png" width="103" height="44" alt="Support" /></a>
-<a href="#start-a-conversation"><img src="assets/buttons/contact.png" width="101" height="44" alt="Contact" /></a>
+<a href="#selected-projects"><img src="assets/es/buttons/selected-projects.png" width="187" height="44" alt="Proyectos destacados" /></a>
+<a href="#how-we-work"><img src="assets/es/buttons/our-approach.png" width="162" height="44" alt="Cómo trabajamos" /></a>
+<a href="#the-people-behind-mancar"><img src="assets/es/buttons/our-team.png" width="150" height="44" alt="Nuestro equipo" /></a>
+<a href="#beyond-launch"><img src="assets/es/buttons/support.png" width="102" height="44" alt="Soporte" /></a>
+<a href="#start-a-conversation"><img src="assets/es/buttons/contact.png" width="109" height="44" alt="Contacto" /></a>
 
 
 
-## Selected Projects
+<a id="selected-projects"></a>
 
-<a href="#odontocare"><img src="assets/buttons/01-odontocare.png" width="157" height="44" alt="01 / OdontoCare" /></a>
-<a href="#vetcare"><img src="assets/buttons/02-vetcare-pro.png" width="156" height="44" alt="02 / VetCare Pro" /></a>
-<a href="#almavet"><img src="assets/buttons/03-alma-vet.png" width="138" height="44" alt="03 / Alma Vet" /></a>
-<a href="#casanativa"><img src="assets/buttons/04-casa-nativa.png" width="154" height="44" alt="04 / Casa Nativa" /></a>
+## Proyectos destacados
+
+<a href="#odontocare"><img src="assets/es/buttons/01-odontocare.png" width="157" height="44" alt="01 / OdontoCare" /></a>
+<a href="#vetcare"><img src="assets/es/buttons/02-vetcare-pro.png" width="156" height="44" alt="02 / VetCare Pro" /></a>
+<a href="#almavet"><img src="assets/es/buttons/03-alma-vet.png" width="138" height="44" alt="03 / Alma Vet" /></a>
+<a href="#casanativa"><img src="assets/es/buttons/04-casa-nativa.png" width="154" height="44" alt="04 / Casa Nativa" /></a>
 
 ### <a id="odontocare"></a>01 / OdontoCare
 
 <a href="https://github.com/MancarSoftware/odonto_care">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/project-odontocare-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/project-odontocare.png" />
-  <source media="(max-width: 600px)" srcset="assets/project-odontocare-mobile.gif" />
-  <img src="assets/project-odontocare.gif" width="100%" alt="OdontoCare interface tour: patient records, clinical history, and the daily agenda." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/project-odontocare-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/project-odontocare.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/project-odontocare-mobile.gif" />
+  <img src="assets/es/project-odontocare.gif" width="100%" alt="01 / SOFTWARE PARA CLÍNICAS DENTALES · Cada paciente. · El panorama completo. · 01  Abrir historia · 02  Revisar historia · 03  Planificar cita · Información clínica y administrativa en una historia. · VISTA DEL REPOSITORIO / DEMO · Una historia completa entre visitas. · Citas organizadas en una agenda diaria clara. · 01 / Abrir historia · INTERFAZ DEL REPOSITORIO / DEMOSTRACIÓN · 02 / Revisar historia · 03 / Planificar cita" />
 </picture>
 </a>
 
-An offline-ready Windows application for managing patient records, appointments, treatments, and payments.
+Una aplicación para Windows que permite gestionar pacientes, citas, tratamientos y pagos sin depender de internet.
 
-<sub>Interface captured from the repository · Fictional clinical data · Original interface in Spanish</sub>
+<sub>Interfaz capturada del repositorio · Datos clínicos ficticios · Interfaz original en español</sub>
 
-<a href="../docs/PROJECT-GALLERY.md#odontocare"><img src="assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
-<a href="https://github.com/MancarSoftware/odonto_care"><img src="assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
+<a href="../docs/PROJECT-GALLERY.md#odontocare"><img src="assets/es/buttons/view-the-still-image-tour.png" width="151" height="44" alt="Ver las capturas" /></a>
+<a href="https://github.com/MancarSoftware/odonto_care"><img src="assets/es/buttons/explore-the-repository.png" width="185" height="44" alt="Explora el repositorio" /></a>
 
-**Designed For:** dental clinics managing clinical and administrative work in one place.
+**Diseñado para:** clínicas dentales que gestionan el trabajo clínico y administrativo en un solo lugar.
 
-**Core Functionality:** patient histories, appointments, odontograms, treatments, payments, inventory, and reporting. The documented workflows also cover user roles, audit records, backups, and restoration.
+**Funciones principales:** historias clínicas, citas, odontogramas, tratamientos, pagos, inventario e informes. Los flujos documentados también incluyen roles de usuario, auditoría, copias de seguridad y restauración.
 
-**Built With:** Electron, React, TypeScript, NestJS, PostgreSQL, and Prisma.
+**Desarrollado con:** Electron, React, TypeScript, NestJS, PostgreSQL y Prisma.
 
 <details>
-<summary>Deployment and Engineering Details</summary>
+<summary>Instalación y detalles técnicos</summary>
 
-Designed as an installable Windows application with local PostgreSQL storage. The production installer manages the required application services, allowing the clinic to work offline. The repository documents verification procedures for critical workflows, packaging, backup restoration, and installation.
+Diseñada como una aplicación instalable para Windows con almacenamiento local en PostgreSQL. El instalador administra los servicios necesarios para que la clínica trabaje sin conexión. El repositorio documenta la verificación de flujos críticos, empaquetado, restauración de copias de seguridad e instalación.
 
 </details>
 
-<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md"><img src="assets/buttons/read-the-user-guide.png" width="181" height="44" alt="Read the User Guide" /></a>
-<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md"><img src="assets/buttons/review-the-release-checklist.png" width="232" height="44" alt="Review the Release Checklist" /></a>
+<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/USER_GUIDE.md"><img src="assets/es/buttons/read-the-user-guide.png" width="151" height="44" alt="Guía de usuario" /></a>
+<a href="https://github.com/MancarSoftware/odonto_care/blob/main/docs/RELEASE_CHECKLIST.md"><img src="assets/es/buttons/review-the-release-checklist.png" width="175" height="44" alt="Lista de verificación" /></a>
 
 <details>
-<summary>Feature in Focus: Clinical History</summary>
+<summary>Función destacada: historia clínica</summary>
 
-**Follow care across visits.**
+**Da seguimiento a cada visita.**
 
-<img src="assets/captures/odontocare-still-02.png" width="100%" alt="OdontoCare: Clinical History. Original repository interface with demo content." />
+<img src="assets/captures/odontocare-still-02.png" width="100%" alt="OdontoCare: Historia clínica. Interfaz original del repositorio con contenido de demostración." />
 
-The history view brings previous clinical entries into the patient context, helping the team review earlier care before documenting the next visit.
+La vista de historia clínica reúne los registros anteriores del paciente para que el equipo revise la atención previa antes de documentar una nueva visita.
 
 </details>
 
@@ -73,44 +80,44 @@ The history view brings previous clinical entries into the patient context, help
 
 <a href="https://github.com/MancarSoftware/vetCarePro">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/project-vetcare-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/project-vetcare.png" />
-  <source media="(max-width: 600px)" srcset="assets/project-vetcare-mobile.gif" />
-  <img src="assets/project-vetcare.gif" width="100%" alt="VetCare Pro interface tour: patients, clinical history, and the record entry form." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/project-vetcare-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/project-vetcare.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/project-vetcare-mobile.gif" />
+  <img src="assets/es/project-vetcare.gif" width="100%" alt="02 / SOFTWARE VETERINARIO DE ESCRITORIO · Atención conectada. · Historias completas. · 01  Ver pacientes · 02  Consultar historia · 03  Registrar visita · Pacientes y tutores conectados en una historia. · VISTA DEL REPOSITORIO / DEMO · Contexto clínico conservado entre visitas. · Un flujo estructurado para documentar la atención. · 01 / Ver pacientes · INTERFAZ DEL REPOSITORIO / DEMOSTRACIÓN · 02 / Consultar historia · 03 / Registrar visita" />
 </picture>
 </a>
 
-Veterinary practice software for standalone and local network environments, with clinical records, scheduling, and payments accessible across the clinic.
+Software veterinario para un equipo independiente o una red local, con historias clínicas, agenda y pagos accesibles en toda la clínica.
 
-<sub>Interface captured from the repository · Fictional clinical data · Original interface in Spanish</sub>
+<sub>Interfaz capturada del repositorio · Datos clínicos ficticios · Interfaz original en español</sub>
 
-<a href="../docs/PROJECT-GALLERY.md#vetcare-pro"><img src="assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
-<a href="https://github.com/MancarSoftware/vetCarePro"><img src="assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
+<a href="../docs/PROJECT-GALLERY.md#vetcare-pro"><img src="assets/es/buttons/view-the-still-image-tour.png" width="151" height="44" alt="Ver las capturas" /></a>
+<a href="https://github.com/MancarSoftware/vetCarePro"><img src="assets/es/buttons/explore-the-repository.png" width="185" height="44" alt="Explora el repositorio" /></a>
 
-**Designed For:** veterinary teams working from a single computer or across several computers in the same clinic.
+**Diseñado para:** equipos veterinarios que trabajan desde una computadora o varias dentro de la misma clínica.
 
-**Core Functionality:** patient records, clinical histories, appointments, vaccinations, treatments, images, and payments. Local network support allows reception, veterinary staff, and the payment desk to access the same system.
+**Funciones principales:** pacientes, historias clínicas, citas, vacunas, tratamientos, imágenes y pagos. La red local permite que recepción, personal veterinario y caja accedan al mismo sistema.
 
-**Built With:** Electron, Node.js, and PostgreSQL.
+**Desarrollado con:** Electron, Node.js y PostgreSQL.
 
 <details>
-<summary>Deployment and Engineering Details</summary>
+<summary>Instalación y detalles técnicos</summary>
 
-Supports standalone, LAN server, and LAN client modes on Windows. One computer hosts the local services and data, while the others connect through the clinic's network. This local workflow does not require internet access. The repository includes guidance for installation, network configuration, and backups.
+Admite los modos independiente, servidor LAN y cliente LAN en Windows. Una computadora aloja los servicios y datos locales; las demás se conectan por la red de la clínica. Este flujo local no requiere internet. El repositorio incluye guías de instalación, configuración de red y copias de seguridad.
 
 </details>
 
-<a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md"><img src="assets/buttons/review-the-lan-test-plan.png" width="211" height="44" alt="Review the LAN Test Plan" /></a>
-<a href="https://github.com/MancarSoftware/vetCarePro#readme"><img src="assets/buttons/read-the-setup-guide.png" width="189" height="44" alt="Read the Setup Guide" /></a>
+<a href="https://github.com/MancarSoftware/vetCarePro/blob/main/docs/release-1.1-lan-test-plan.md"><img src="assets/es/buttons/review-the-lan-test-plan.png" width="183" height="44" alt="Plan de pruebas LAN" /></a>
+<a href="https://github.com/MancarSoftware/vetCarePro#readme"><img src="assets/es/buttons/read-the-setup-guide.png" width="171" height="44" alt="Guía de instalación" /></a>
 
 <details>
-<summary>Feature in Focus: Shared Clinical Context</summary>
+<summary>Función destacada: contexto clínico compartido</summary>
 
-**Keep the record at the center of care.**
+**La historia clínica, en el centro de la atención.**
 
-<img src="assets/captures/vetcare-still-02.png" width="100%" alt="VetCare Pro: Shared Clinical Context. Original repository interface with demo content." />
+<img src="assets/captures/vetcare-still-02.png" width="100%" alt="VetCare Pro: Contexto clínico compartido. Interfaz original del repositorio con contenido de demostración." />
 
-The clinical history view preserves context across visits. In the documented LAN configuration, clinic computers access the same local services and data.
+La historia clínica conserva el contexto entre visitas. En la configuración LAN documentada, las computadoras de la clínica acceden a los mismos servicios y datos locales.
 
 </details>
 
@@ -118,36 +125,36 @@ The clinical history view preserves context across visits. In the documented LAN
 
 <a href="https://github.com/MancarSoftware/veterinaria">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/project-almavet-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/project-almavet.png" />
-  <source media="(max-width: 600px)" srcset="assets/project-almavet-mobile.gif" />
-  <img src="assets/project-almavet.gif" width="100%" alt="Alma Vet interface tour: the clinic homepage, service discovery, and appointment request form." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/project-almavet-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/project-almavet.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/project-almavet-mobile.gif" />
+  <img src="assets/es/project-almavet.gif" width="100%" alt="03 / SITIO DE CLÍNICA VETERINARIA · Desde el descubrimiento · hasta solicitar atención. · 01  Conocer la clínica · 02  Ver servicios · 03  Solicitar cita · Una presentación clara de la clínica y su enfoque. · VISTA DEL REPOSITORIO / DEMO · Servicios organizados según las necesidades de atención. · Una solicitud estructurada para revisión de la clínica. · 01 / Conocer la clínica · INTERFAZ DEL REPOSITORIO / DEMOSTRACIÓN · 02 / Ver servicios · 03 / Solicitar cita" />
 </picture>
 </a>
 
-A veterinary clinic website that guides pet owners from service discovery to a structured appointment request.
+Un sitio para una clínica veterinaria que guía a los tutores desde la consulta de servicios hasta una solicitud de cita estructurada.
 
-<sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
+<sub>Interfaz capturada del repositorio · Contenido de demostración · Interfaz original en español</sub>
 
-<a href="../docs/PROJECT-GALLERY.md#alma-vet"><img src="assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
-<a href="https://github.com/MancarSoftware/veterinaria"><img src="assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
+<a href="../docs/PROJECT-GALLERY.md#alma-vet"><img src="assets/es/buttons/view-the-still-image-tour.png" width="151" height="44" alt="Ver las capturas" /></a>
+<a href="https://github.com/MancarSoftware/veterinaria"><img src="assets/es/buttons/explore-the-repository.png" width="185" height="44" alt="Explora el repositorio" /></a>
 
-**Designed For:** the Alma Vet clinic and pet owners requesting care.
+**Diseñado para:** la clínica Alma Vet y los tutores que solicitan atención para sus mascotas.
 
-**Core Functionality:** service discovery and structured appointment requests, supported by server-side validation, bot protection, persistent request storage, and email notifications. Each request is submitted for review and does not automatically confirm an appointment.
+**Funciones principales:** consulta de servicios y solicitudes de cita estructuradas, con validación en el servidor, protección contra bots, almacenamiento persistente y notificaciones por correo. Cada solicitud se envía para revisión y no confirma automáticamente una cita.
 
-**Built With:** React, Supabase, PostgreSQL, Cloudflare Turnstile, and Resend.
+**Desarrollado con:** React, Supabase, PostgreSQL, Cloudflare Turnstile y Resend.
 
-<a href="https://github.com/MancarSoftware/veterinaria#readme"><img src="assets/buttons/read-the-architecture-and-setup-guide.png" width="295" height="44" alt="Read the Architecture and Setup Guide" /></a>
+<a href="https://github.com/MancarSoftware/veterinaria#readme"><img src="assets/es/buttons/read-the-architecture-and-setup-guide.png" width="211" height="44" alt="Arquitectura e instalación" /></a>
 
 <details>
-<summary>Feature in Focus: Appointment Requests</summary>
+<summary>Función destacada: solicitudes de cita</summary>
 
-**Give the clinic useful information upfront.**
+**Información útil desde el primer contacto.**
 
-<img src="assets/captures/almavet-still-03.png" width="100%" alt="Alma Vet: Appointment Requests. Original repository interface with demo content." />
+<img src="assets/captures/almavet-still-03.png" width="100%" alt="Alma Vet: Solicitudes de cita. Interfaz original del repositorio con contenido de demostración." />
 
-The request form collects the details needed for the clinic to review a visit request. Submitting it requests care; it does not confirm an appointment.
+El formulario recoge los datos necesarios para que la clínica revise la solicitud. Enviarlo solicita atención; no confirma una cita.
 
 </details>
 
@@ -155,177 +162,195 @@ The request form collects the details needed for the clinic to review a visit re
 
 <a href="https://github.com/MancarSoftware/muebleria">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/project-casanativa-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/project-casanativa.png" />
-  <source media="(max-width: 600px)" srcset="assets/project-casanativa-mobile.gif" />
-  <img src="assets/project-casanativa.gif" width="100%" alt="Casa Nativa interface tour: the storefront, furniture catalog, product details, and a saved selection." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/project-casanativa-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/project-casanativa.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/project-casanativa-mobile.gif" />
+  <img src="assets/es/project-casanativa.gif" width="100%" alt="04 / MUEBLERÍA Y CATÁLOGO DIGITAL · Encuentra tu pieza. · Hazle espacio. · 01  Descubrir · 02  Explorar catálogo · 03  Ver detalles · 04  Guardar selección · Una presentación cuidada de la colección. · VISTA DEL REPOSITORIO / DEMO · Muebles organizados por categoría y precio. · Materiales, medidas y colores en contexto. · Una selección guardada para consultar. · 01 / Descubrir · INTERFAZ DEL REPOSITORIO / DEMOSTRACIÓN · 02 / Explorar catálogo · 03 / Ver detalles · 04 / Guardar selección" />
 </picture>
 </a>
 
-A furniture retail website with an editable catalog, color variants, and structured customer inquiry workflows.
+Un sitio de muebles con catálogo editable, variantes de color y flujos estructurados para consultas de clientes.
 
-<sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
+<sub>Interfaz capturada del repositorio · Contenido de demostración · Interfaz original en español</sub>
 
-<a href="../docs/PROJECT-GALLERY.md#casa-nativa"><img src="assets/buttons/view-the-still-image-tour.png" width="210" height="44" alt="View the Still-Image Tour" /></a>
-<a href="https://github.com/MancarSoftware/muebleria"><img src="assets/buttons/explore-the-repository.png" width="193" height="44" alt="Explore the Repository" /></a>
+<a href="../docs/PROJECT-GALLERY.md#casa-nativa"><img src="assets/es/buttons/view-the-still-image-tour.png" width="151" height="44" alt="Ver las capturas" /></a>
+<a href="https://github.com/MancarSoftware/muebleria"><img src="assets/es/buttons/explore-the-repository.png" width="185" height="44" alt="Explora el repositorio" /></a>
 
-**Designed For:** Casa Nativa and customers exploring furniture for their homes.
+**Diseñado para:** Casa Nativa y clientes que buscan muebles para su hogar.
 
-**Core Functionality:** a furniture catalog with product photography and color variants, an administration area for publishing products, and tools for space proposals and customer inquiries.
+**Funciones principales:** un catálogo con fotografías y variantes de color, un área de administración para publicar productos y herramientas para propuestas de espacios y consultas de clientes.
 
-**Built With:** React, TypeScript, Vite, and Supabase.
+**Desarrollado con:** React, TypeScript, Vite y Supabase.
 
-<a href="https://github.com/MancarSoftware/muebleria#readme"><img src="assets/buttons/read-the-catalog-and-administration-guide.png" width="281" height="56" alt="Read the Catalog and Administration Guide" /></a>
+<a href="https://github.com/MancarSoftware/muebleria#readme"><img src="assets/es/buttons/read-the-catalog-and-administration-guide.png" width="222" height="44" alt="Guía del catálogo y gestión" /></a>
 
 <details>
-<summary>Feature in Focus: Saved Selections</summary>
+<summary>Función destacada: selección guardada</summary>
 
-**Bring the shortlist together.**
+**Reúne tus opciones favoritas.**
 
-<img src="assets/captures/casanativa-still-04.png" width="100%" alt="Casa Nativa: Saved Selections. Original repository interface with demo content." />
+<img src="assets/captures/casanativa-still-04.png" width="100%" alt="Casa Nativa: Selección guardada. Interfaz original del repositorio con contenido de demostración." />
 
-“Mi espacio” groups selected pieces so customers can review their choices before making an inquiry.
+«Mi espacio» reúne las piezas seleccionadas para que el cliente revise sus opciones antes de hacer una consulta.
 
 </details>
 
-## When to Bring Us In
+<a id="when-to-bring-us-in"></a>
+
+## Cuándo contar con nosotros
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-starting-points-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-starting-points.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-starting-points-mobile.gif" />
-  <img src="assets/mancar-starting-points.gif" width="100%" alt="What needs to work better? A new beginning: clarify the experience when launching a business or offer. Too much manual work: connect repetitive workflows. A product with potential: improve the existing experience. The next stage: support the product as the business changes." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-starting-points-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-starting-points.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-starting-points-mobile.gif" />
+  <img src="assets/es/mancar-starting-points.gif" width="100%" alt="CUÁNDO CONTAR CON NOSOTROS · ¿Qué necesita · funcionar mejor? · 01 · Un nuevo comienzo · Vas a lanzar un negocio o presentar una nueva oferta. · Clarificar la experiencia. · 02 · Demasiado trabajo manual · Tu equipo repite tareas o mueve datos entre herramientas. · Conectar el flujo de trabajo. · 03 · Un producto con potencial · Tu producto necesita una experiencia más clara y útil. · Mejorar lo importante. · 04 · La siguiente etapa · Tu producto necesita atención mientras cambia el negocio. · Seguir avanzando." />
 </picture>
 
-You may be starting something new, spending too much time on repetitive tasks, improving a product you already have, or looking for ongoing technical support. We begin with that situation and identify a useful next step together.
+Quizá estés empezando algo nuevo, dedicando demasiado tiempo a tareas repetitivas, mejorando un producto existente o buscando soporte técnico continuo. Partimos de esa situación para definir juntos un próximo paso útil.
 
-<a href="#start-a-conversation"><img src="assets/buttons/discuss-your-project.png" width="179" height="44" alt="Discuss Your Project" /></a>
+<a href="#start-a-conversation"><img src="assets/es/buttons/discuss-your-project.png" width="210" height="44" alt="Hablemos de tu proyecto" /></a>
 
-## The People Behind Mancar
+<a id="the-people-behind-mancar"></a>
+
+## Las personas detrás de Mancar
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-team-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-team.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-team-mobile.gif" />
-  <img src="assets/mancar-team.gif" width="100%" alt="Different strengths. A shared standard. Alejandro Mantilla: Full Stack Development; React, Next.js, Node.js, and UI/UX. Jeremy Macias: Frontend Development; React, Tailwind CSS, and accessibility. Our backend team contributes APIs, databases, security, and automation." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-team-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-team.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-team-mobile.gif" />
+  <img src="assets/es/mancar-team.gif" width="100%" alt="DENTRO DE MANCAR / LAS PERSONAS · Distintas fortalezas. · Un mismo estándar. · AM · Alejandro Mantilla · Desarrollo integral · Arquitectura, desarrollo y experiencia de uso conectados. · REACT / NEXT.JS / NODE.JS / UI/UX · JM · Jeremy Macias · Desarrollo de interfaces · Interfaces claras y accesibles para los flujos del negocio. · REACT / TAILWIND CSS / ACCESIBILIDAD · SERVIDOR Y AUTOMATIZACIÓN · Nuestro equipo conecta API, bases de datos, seguridad y automatización para facilitar el mantenimiento." />
 </picture>
 
-Mancar brings together full stack development, frontend craft, and backend engineering. Alejandro Mantilla connects technical architecture with the user experience. Jeremy Macias turns business workflows into clear, accessible interfaces. Our backend team develops the services and automation that support the product.
+Mancar reúne desarrollo integral, especialización en interfaces e ingeniería de servidor. Alejandro Mantilla conecta la arquitectura técnica con la experiencia de uso. Jeremy Macias transforma los flujos del negocio en interfaces claras y accesibles. Nuestro equipo de servidor desarrolla los servicios y la automatización que sostienen el producto.
 
-<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo"><img src="assets/buttons/meet-the-team.png" width="148" height="44" alt="Meet the Team" /></a>
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/#equipo"><img src="assets/es/buttons/meet-the-team.png" width="162" height="44" alt="Conoce al equipo" /></a>
 
-## What We Bring Together
+<a id="what-we-bring-together"></a>
+
+## Capacidades que conectamos
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-disciplines-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-disciplines.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-disciplines-mobile.gif" />
-  <img src="assets/mancar-disciplines.gif" width="100%" alt="Different skills. One considered product. UX/UI design makes the next step clear. Frontend brings the experience to life. Backend connects data and business rules. Automation reduces repetitive work. Support keeps the product moving forward." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-disciplines-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-disciplines.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-disciplines-mobile.gif" />
+  <img src="assets/es/mancar-disciplines.gif" width="100%" alt="MANCAR / CAPACIDADES CONECTADAS · Distintas capacidades. · Un producto bien pensado. · Diseño UX/UI · Hacer claro el siguiente paso. · Interfaces · Dar vida a la experiencia. · Servidor · Conectar datos y reglas del negocio. · Automatización · Reducir el trabajo repetitivo. · Soporte · Mantener el producto en evolución. · TU · PRODUCTO" />
 </picture>
 
-UX/UI design, frontend development, backend engineering, automation, and support contribute to the same goal: a product that fits the business and is clear for the people using it. We bring in the disciplines each project needs, with decisions connected across the experience and the technology behind it.
+Diseño de experiencia e interfaces, desarrollo visual, ingeniería de servidor, automatización y soporte comparten un objetivo: un producto adecuado para el negocio y claro para quienes lo usan. Integramos las capacidades necesarias en cada proyecto y conectamos las decisiones de experiencia y tecnología.
 
-## How We Work
+<a id="how-we-work"></a>
+
+## Cómo trabajamos
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-approach-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-approach.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-approach-mobile.gif" />
-  <img src="assets/mancar-approach.gif" width="100%" alt="Clear steps. Direct collaboration. Discover: understand the business and its priorities. Define: agree the scope, deliverables, and timing. Create: design and build around the real workflow. Evolve: launch, support, and refine the product. Business first. Technology with purpose." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-approach-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-approach.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-approach-mobile.gif" />
+  <img src="assets/es/mancar-approach.gif" width="100%" alt="02 / CÓMO TRABAJAMOS JUNTOS · Pasos claros. · Colaboración directa. · 1 · Descubrir · Conocer el negocio y sus prioridades. · 2 · Definir · Acordar alcance, entregables y plazos. · 3 · Crear · Diseñar y crear según el trabajo real. · 4 · Evolucionar · Lanzar, acompañar y mejorar el producto. · PRIMERO EL NEGOCIO. TECNOLOGÍA CON PROPÓSITO." />
 </picture>
 
-We agree the scope, priorities, and timing before development, then work in visible stages with clear decisions. Design quality, performance, security, and maintainability guide the work through launch and ongoing care.
+Acordamos alcance, prioridades y plazos antes del desarrollo; luego avanzamos por etapas visibles y con decisiones claras. La calidad del diseño, el rendimiento, la seguridad y la facilidad de mantenimiento guían el trabajo hasta el lanzamiento y durante su evolución.
 
-We choose technology to fit the workflow, including local and LAN operation where continuity matters.
+Elegimos la tecnología según el flujo de trabajo, con operación local o en red LAN cuando la continuidad lo requiere.
 
-<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/"><img src="assets/buttons/read-about-mancar.png" width="176" height="44" alt="Read About Mancar" /></a>
+<a href="https://ale-mancar.github.io/mancar_software/sobre-nosotros/"><img src="assets/es/buttons/read-about-mancar.png" width="150" height="44" alt="Conoce Mancar" /></a>
 
-## In Focus: Casa Nativa
+<a id="in-focus-casa-nativa"></a>
+
+## En detalle: Casa Nativa
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-casa-story-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-casa-story.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-casa-story-mobile.gif" />
-  <img src="assets/mancar-casa-story.gif" width="100%" alt="Casa Nativa: from discovery to a considered choice. Explore the catalog with category and price filters; evaluate a piece through photography, dimensions, materials, and colors; collect chosen pieces in a saved selection before an inquiry. Three real repository screens with demo content." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-casa-story-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-casa-story.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-casa-story-mobile.gif" />
+  <img src="assets/es/mancar-casa-story.gif" width="100%" alt="PROYECTO EN DETALLE / CASA NATIVA · Desde el descubrimiento · a una elección informada. · 01 / Explorar · 02 / Evaluar · 03 / Guardar · Encuentra por dónde empezar. · Los filtros de categoría y precio ayudan a encontrar las opciones adecuadas. · INTERFAZ REAL / CONTENIDO DE DEMOSTRACIÓN · Descubre cómo encaja. · La página reúne fotos, medidas, materiales y opciones de color. · Guarda tus opciones. · La selección guardada reúne las piezas elegidas antes de consultar." />
 </picture>
 
-Furniture customers need more than a product name: they need enough detail to judge whether a piece belongs in their home. Casa Nativa brings browsing, product information, and a saved selection into one connected experience.
+Quien busca muebles necesita más que un nombre: requiere detalles para decidir si una pieza encaja en su hogar. Casa Nativa conecta la exploración, la información del producto y la selección guardada en una misma experiencia.
 
-**The Customer Task:** narrow the options and understand how a piece fits the space.
+**La necesidad del cliente:** reducir las opciones y entender cómo encaja una pieza en el espacio.
 
-**The Interface Decision:** place photography alongside dimensions, materials, and color options, with catalog filters to support discovery.
+**La decisión de diseño:** mostrar fotografías junto a medidas, materiales y colores, con filtros de catálogo que facilitan la búsqueda.
 
-**The Resulting Functionality:** customers can explore the catalog, inspect a product, and save pieces to “Mi espacio” before making an inquiry.
+**La funcionalidad resultante:** el cliente puede explorar el catálogo, revisar un producto y guardar piezas en «Mi espacio» antes de consultar.
 
-<sub>Interface captured from the repository · Repository demo content · Original interface in Spanish</sub>
+<sub>Interfaz capturada del repositorio · Contenido de demostración · Interfaz original en español</sub>
 
-<a href="../docs/PROJECT-GALLERY.md#casa-nativa"><img src="assets/buttons/explore-the-screens.png" width="175" height="44" alt="Explore the Screens" /></a>
-<a href="https://github.com/MancarSoftware/muebleria"><img src="assets/buttons/view-the-project.png" width="154" height="44" alt="View the Project" /></a>
+<a href="../docs/PROJECT-GALLERY.md#casa-nativa"><img src="assets/es/buttons/explore-the-screens.png" width="178" height="44" alt="Explora las pantallas" /></a>
+<a href="https://github.com/MancarSoftware/muebleria"><img src="assets/es/buttons/view-the-project.png" width="148" height="44" alt="Ver el proyecto" /></a>
 
-## Beyond Launch
+<a id="beyond-launch"></a>
+
+## Después del lanzamiento
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-support-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-support.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-support-mobile.gif" />
-  <img src="assets/mancar-support.gif" width="100%" alt="Launch is a milestone. The work continues. Diagnose availability, performance, and visible errors. Maintain updates, security improvements, and backups. Refine forms, content, and focused features. Diagnose the issue and agree the next step." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-support-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-support.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-support-mobile.gif" />
+  <img src="assets/es/mancar-support.gif" width="100%" alt="DESPUÉS DEL LANZAMIENTO / SOPORTE · Lanzar es un hito. · El trabajo continúa. · CUIDADO · DEL PRODUCTO · Diagnosticar · Disponibilidad, rendimiento y errores. · Mantener · Actualizaciones, seguridad y respaldos. · Mejorar · Formularios, contenido y mejoras puntuales. · DIAGNOSTICAR Y ACORDAR EL SIGUIENTE PASO." />
 </picture>
 
-A product needs attention as the business changes. Our support work covers availability and performance issues, form submissions and email delivery, updates, backups, and focused improvements to content or functionality.
+El producto necesita atención a medida que cambia el negocio. Nuestro soporte cubre disponibilidad y rendimiento, formularios y envío de correos, actualizaciones, copias de seguridad y mejoras puntuales de contenido o funcionalidad.
 
-We review the context before making changes and prioritize incidents that affect sales, forms, or availability. The intervention and next steps are agreed after diagnosis.
+Revisamos el contexto antes de intervenir y priorizamos los incidentes que afectan ventas, formularios o disponibilidad. Después del diagnóstico acordamos la intervención y los siguientes pasos.
 
-**Support Hours:** Monday–Friday, 9:00 a.m.–6:00 p.m., Ecuador time (UTC−5).
+**Horario de soporte:** Lunes a viernes, de 9:00 a 18:00, hora de Ecuador (UTC−5).
 
-<a href="https://ale-mancar.github.io/mancar_software/soporte/"><img src="assets/buttons/explore-support-options.png" width="205" height="44" alt="Explore Support Options" /></a>
-<a href="mailto:mancarsoftwares@gmail.com"><img src="assets/buttons/email-mancar.png" width="137" height="44" alt="Email Mancar" /></a>
+<a href="https://ale-mancar.github.io/mancar_software/soporte/"><img src="assets/es/buttons/explore-support-options.png" width="182" height="44" alt="Opciones de soporte" /></a>
+<a href="mailto:mancarsoftwares@gmail.com"><img src="assets/es/buttons/email-mancar.png" width="158" height="44" alt="Escribe a Mancar" /></a>
 
-## What Happens After You Contact Us?
+<a id="what-happens-after-you-contact-us"></a>
+
+## ¿Qué pasa cuando nos contactas?
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-first-conversation-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-first-conversation.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-first-conversation-mobile.gif" />
-  <img src="assets/mancar-first-conversation.gif" width="100%" alt="Three clear steps: tell us about your business and the work you want to improve; review priorities, people, tools, and constraints together; define a proposal with deliverables, timing, and a practical approach." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-first-conversation-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-first-conversation.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-first-conversation-mobile.gif" />
+  <img src="assets/es/mancar-first-conversation.gif" width="100%" alt="PARA EMPEZAR / TRES PASOS CLAROS · Cuéntanos el contexto. · Daremos forma al siguiente paso. · 1 · Cuéntanos del trabajo · Comparte tu negocio, el reto y lo que quieres mejorar. · 2 · Revisar prioridades · Revisamos personas, herramientas, límites y alcance. · 3 · Definir la propuesta · Acordamos entregables, plazos y un enfoque práctico." />
 </picture>
 
-Bring a business challenge, an existing product, or a simple example of what you want to improve. We will use that context to assess the work and define a practical proposal.
+Cuéntanos un reto del negocio, muéstranos un producto existente o comparte un ejemplo de lo que quieres mejorar. Con ese contexto evaluaremos el trabajo y definiremos una propuesta práctica.
 
-## Working With Us
+<a id="working-with-us"></a>
+
+## Trabajar con nosotros
 
 <details>
-<summary>Can You Improve an Existing Product?</summary>
+<summary>¿Pueden mejorar un producto existente?</summary>
 
-Yes. We review the current experience, workflow, and technical context before recommending focused improvements.
+Sí. Revisamos la experiencia actual, el flujo de trabajo y el contexto técnico antes de recomendar mejoras concretas.
 
 </details>
 
 <details>
-<summary>What Should I Prepare Before Contacting You?</summary>
+<summary>¿Qué debo preparar antes de contactarles?</summary>
 
-A brief description of your business, the problem you want to solve, and your priorities is enough to begin. Include an existing product or an example if available; a technical specification is not required.
+Para empezar basta una breve descripción de tu negocio, el problema que quieres resolver y tus prioridades. Si tienes un producto o ejemplo, compártelo; no necesitas una especificación técnica.
 
 </details>
 
 <details>
-<summary>How Is Ongoing Support Arranged?</summary>
+<summary>¿Cómo se organiza el soporte continuo?</summary>
 
-We first review the issue and its impact, then agree the intervention and next steps. Support may include availability, performance, forms, updates, backups, or focused improvements. Contact us to discuss the scope your product needs.
+Primero revisamos el problema y su impacto; luego acordamos la intervención y los siguientes pasos. El soporte puede incluir disponibilidad, rendimiento, formularios, actualizaciones, copias de seguridad o mejoras puntuales. Contáctanos para definir el alcance que necesita tu producto.
 
 </details>
 
-## Start a Conversation
+<a id="start-a-conversation"></a>
+
+## Conversemos
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mancar-contact-mobile.png" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mancar-contact.png" />
-  <source media="(max-width: 600px)" srcset="assets/mancar-contact-mobile.gif" />
-  <img src="assets/mancar-contact.gif" width="100%" alt="Mancar Software. Your next chapter. What could work better? Tell us about the work. Let’s define the next step." />
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/es/mancar-contact-mobile.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/es/mancar-contact.png" />
+  <source media="(max-width: 600px)" srcset="assets/es/mancar-contact-mobile.gif" />
+  <img src="assets/es/mancar-contact.gif" width="100%" alt="MANCAR SOFTWARE / TU PRÓXIMA ETAPA · ¿Qué podemos · mejorar? · Cuéntanos qué necesitas. · Definamos el siguiente paso." />
 </picture>
 
 
-<a href="mailto:mancarsoftwares@gmail.com"><img src="assets/buttons/mancarsoftwares-gmail-com.png" width="235" height="44" alt="mancarsoftwares@gmail.com" /></a>
-<a href="tel:+593986951419"><img src="assets/buttons/593-98-695-1419.png" width="165" height="44" alt="+593 98 695 1419" /></a>
-<a href="https://ale-mancar.github.io/mancar_software/"><img src="assets/buttons/visit-mancar-software.png" width="188" height="44" alt="Visit Mancar Software" /></a>
+<a href="mailto:mancarsoftwares@gmail.com"><img src="assets/es/buttons/mancarsoftwares-gmail-com.png" width="235" height="44" alt="mancarsoftwares@gmail.com" /></a>
+<a href="tel:+593986951419"><img src="assets/es/buttons/593-98-695-1419.png" width="165" height="44" alt="+593 98 695 1419" /></a>
+<a href="https://ale-mancar.github.io/mancar_software/"><img src="assets/es/buttons/visit-mancar-software.png" width="195" height="44" alt="Visita Mancar Software" /></a>
 
 <sub>MANCAR SOFTWARE · GUAYAQUIL, ECUADOR</sub>

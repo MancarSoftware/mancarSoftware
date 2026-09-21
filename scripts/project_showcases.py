@@ -2,6 +2,7 @@
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageOps
 from project_motion import text, DARK, WHITE, MUTED
+import locale_runtime as locale
 
 PROJECTS = {
  'odontocare': dict(name='OdontoCare', number='01', color='#54DCEC', category='DENTAL PRACTICE SOFTWARE',
@@ -24,6 +25,8 @@ PROJECTS = {
 
 def capture(path):
     """Remove only the outer capture-host margin, never alter interface content."""
+    if not path.exists():
+        path = Path(__file__).resolve().parents[1] / 'profile/assets/captures' / path.name
     image = Image.open(path).convert('RGB')
     # The browser may color-manage the host background by a channel value.
     background = image.getpixel((image.width-1,image.height-1))
@@ -32,11 +35,14 @@ def capture(path):
     return image.crop(bbox) if bbox else image
 
 def logo(im, path, xy, maxsize):
+    if not path.exists():
+        path = Path(__file__).resolve().parents[1] / 'profile/assets/logos' / path.name
     source=Image.open(path).convert('RGBA')
     source.thumbnail(maxsize,Image.Resampling.LANCZOS)
     im.paste(source,xy,source)
 
 def tour_scene(out,slug,project,index,mobile):
+    locale.PANEL = 'project-' + slug
     w,h=(560,740) if mobile else (1080,950)
     im=Image.new('RGB',(w,h),DARK); d=ImageDraw.Draw(im); c=project['color']
     d.rectangle((0,0,w,5),fill=c)
@@ -91,12 +97,14 @@ def save_tour(scenes,stem,hold_ms=4000,transition_ms=120):
     indexed[0].save(stem.with_suffix('.gif'),save_all=True,append_images=indexed[1:],
                     duration=durations,loop=0,optimize=True,disposal=1)
 
-def build_showcases(out):
+def build_showcases(out, write_gallery=True):
     for mobile in (False,True):
         suffix='-mobile' if mobile else ''
         for slug,project in PROJECTS.items():
             scenes=[tour_scene(out,slug,project,i,mobile) for i in range(len(project['steps']))]
             save_tour(scenes,out/('project-'+slug+suffix))
+    if not write_gallery:
+        return
     gallery=['# A closer look at the work','Still frames from the project interface tours. All clinical names and records are fictional demonstration data; website content comes from the repositories. These previews document interface design and do not constitute evidence of a production deployment or end-to-end backend testing.']
     for slug,p in PROJECTS.items():
         gallery += ['## '+p['name']]

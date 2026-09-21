@@ -1,91 +1,99 @@
-# A closer look at the work
+# Una mirada más cercana
 
-Still frames from the project interface tours. All clinical names and records are fictional demonstration data; website content comes from the repositories. These previews document interface design and do not constitute evidence of a production deployment or end-to-end backend testing.
+Capturas de los recorridos de cada proyecto. Los nombres y registros clínicos son ficticios; el contenido web proviene de los repositorios. Estas vistas documentan el diseño de interfaz, no un despliegue en producción ni pruebas completas del servidor.
+
+<a id="odontocare"></a>
 
 ## OdontoCare
 
-### 01 / Open record
+### 01 / Abrir historia
 
-Clinical and administrative context in one record.
+Información clínica y administrativa en una historia.
 
-![OdontoCare: Clinical and administrative context in one record.](../profile/assets/captures/odontocare-still-01.png)
+![OdontoCare: Información clínica y administrativa en una historia.](../profile/assets/captures/odontocare-still-01.png)
 
-### 02 / Review history
+### 02 / Revisar historia
 
-A complete history across visits.
+Una historia completa entre visitas.
 
-![OdontoCare: A complete history across visits.](../profile/assets/captures/odontocare-still-02.png)
+![OdontoCare: Una historia completa entre visitas.](../profile/assets/captures/odontocare-still-02.png)
 
-### 03 / Plan next visit
+### 03 / Planificar cita
 
-Appointments organized in a clear daily view.
+Citas organizadas en una agenda diaria clara.
 
-![OdontoCare: Appointments organized in a clear daily view.](../profile/assets/captures/odontocare-still-03.png)
+![OdontoCare: Citas organizadas en una agenda diaria clara.](../profile/assets/captures/odontocare-still-03.png)
+
+<a id="vetcare-pro"></a>
 
 ## VetCare Pro
 
-### 01 / View records
+### 01 / Ver pacientes
 
-Patients and their owners connected in one record.
+Pacientes y tutores conectados en una historia.
 
-![VetCare Pro: Patients and their owners connected in one record.](../profile/assets/captures/vetcare-still-01.png)
+![VetCare Pro: Pacientes y tutores conectados en una historia.](../profile/assets/captures/vetcare-still-01.png)
 
-### 02 / Follow history
+### 02 / Consultar historia
 
-Clinical context preserved across visits.
+Contexto clínico conservado entre visitas.
 
-![VetCare Pro: Clinical context preserved across visits.](../profile/assets/captures/vetcare-still-02.png)
+![VetCare Pro: Contexto clínico conservado entre visitas.](../profile/assets/captures/vetcare-still-02.png)
 
-### 03 / Document visit
+### 03 / Registrar visita
 
-A structured workflow for documenting care.
+Un flujo estructurado para documentar la atención.
 
-![VetCare Pro: A structured workflow for documenting care.](../profile/assets/captures/vetcare-still-03.png)
+![VetCare Pro: Un flujo estructurado para documentar la atención.](../profile/assets/captures/vetcare-still-03.png)
+
+<a id="alma-vet"></a>
 
 ## Alma Vet
 
-### 01 / Meet the clinic
+### 01 / Conocer la clínica
 
-A clear introduction to the clinic and its approach.
+Una presentación clara de la clínica y su enfoque.
 
-![Alma Vet: A clear introduction to the clinic and its approach.](../profile/assets/captures/almavet-still-01.png)
+![Alma Vet: Una presentación clara de la clínica y su enfoque.](../profile/assets/captures/almavet-still-01.png)
 
-### 02 / Review services
+### 02 / Ver servicios
 
-Services organized around common care needs.
+Servicios organizados según las necesidades de atención.
 
-![Alma Vet: Services organized around common care needs.](../profile/assets/captures/almavet-still-02.png)
+![Alma Vet: Servicios organizados según las necesidades de atención.](../profile/assets/captures/almavet-still-02.png)
 
-### 03 / Request a visit
+### 03 / Solicitar cita
 
-A structured request for the clinic to review.
+Una solicitud estructurada para revisión de la clínica.
 
-![Alma Vet: A structured request for the clinic to review.](../profile/assets/captures/almavet-still-03.png)
+![Alma Vet: Una solicitud estructurada para revisión de la clínica.](../profile/assets/captures/almavet-still-03.png)
+
+<a id="casa-nativa"></a>
 
 ## Casa Nativa
 
-### 01 / Discover
+### 01 / Descubrir
 
-An editorial introduction to the collection.
+Una presentación cuidada de la colección.
 
-![Casa Nativa: An editorial introduction to the collection.](../profile/assets/captures/casanativa-still-01.png)
+![Casa Nativa: Una presentación cuidada de la colección.](../profile/assets/captures/casanativa-still-01.png)
 
-### 02 / Browse catalog
+### 02 / Explorar catálogo
 
-Furniture organized by category and price.
+Muebles organizados por categoría y precio.
 
-![Casa Nativa: Furniture organized by category and price.](../profile/assets/captures/casanativa-still-02.png)
+![Casa Nativa: Muebles organizados por categoría y precio.](../profile/assets/captures/casanativa-still-02.png)
 
-### 03 / Review details
+### 03 / Ver detalles
 
-Materials, dimensions, and color options in context.
+Materiales, medidas y colores en contexto.
 
-![Casa Nativa: Materials, dimensions, and color options in context.](../profile/assets/captures/casanativa-still-03.png)
+![Casa Nativa: Materiales, medidas y colores en contexto.](../profile/assets/captures/casanativa-still-03.png)
 
-### 04 / Save selection
+### 04 / Guardar selección
 
-A saved selection ready for an inquiry.
+Una selección guardada para consultar.
 
-![Casa Nativa: A saved selection ready for an inquiry.](../profile/assets/captures/casanativa-still-04.png)
+![Casa Nativa: Una selección guardada para consultar.](../profile/assets/captures/casanativa-still-04.png)
 
-[Capture sources and reproduction notes](PROJECT-EVIDENCE.md)
+[Fuentes de las capturas y notas técnicas (English)](PROJECT-EVIDENCE.md)

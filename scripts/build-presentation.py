@@ -167,10 +167,6 @@ def make_contact_sheet(mobile):
             temporary.unlink(missing_ok=True)
 
 
-build_showcases(OUT)
-build_studio(OUT)
-build_story(OUT)
-
 content = '\n\n'.join((
     studio_picture('studio-cover', 'Mancar Software. Independent studio in Ecuador. Built around people. Made for real work. Strategy, design, development, and support. Your business sets the direction.'),
     '''# Mancar Software
@@ -258,11 +254,6 @@ We first review the issue and its impact, then agree the intervention and next s
 <sub>MANCAR SOFTWARE · GUAYAQUIL, ECUADOR</sub>''',
 )) + '\n'
 
-content = brand_links(content, OUT)
-(ROOT / 'profile' / 'README.md').write_text(content, encoding='utf-8')
-(ROOT / 'README.md').write_text(content.replace('"assets/', '"profile/assets/').replace('(../docs/', '(docs/').replace('href="../docs/', 'href="docs/'), encoding='utf-8')
-
-for mobile in (False, True):
-    make_contact_sheet(mobile)
-
-print('Built project-led presentation and project artwork previews.')
+if __name__ == '__main__':
+    from localize_presentation import build_all
+    build_all(content)
